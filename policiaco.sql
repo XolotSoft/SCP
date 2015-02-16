@@ -18,9 +18,9 @@ noPue varchar(30) not null);
 go
 INSERT INTO puestos(noPue) VALUES
 ('Cuerpos de vigilancia'),
-('Policía Preventiva'),
-('Policía montada'),
-('Policía turística'),
+('PolicÃ­a Preventiva'),
+('PolicÃ­a montada'),
+('PolicÃ­a turÃ­stica'),
 ('Cuerpo de granaderos');
 go
 CREATE TABLE municipios(
@@ -41,19 +41,19 @@ idMun int identity primary key not null,
 noMun varchar(30) not null);
 go
 INSERT INTO delegaciones(noMun) VALUES
-('Álvaro Obregón'),
+('Ãlvaro ObregÃ³n'),
 ('Azcapotzalco'),
-('Benito Juárez'),
-('Coyoacán'),
+('Benito JuÃ¡rez'),
+('CoyoacÃ¡n'),
 ('Cuajimalpa de Morelos'),
-('Cuauhtémoc'),
+('CuauhtÃ©moc'),
 ('Gustavo A. Madero'),
 ('Iztacalco'),
 ('Iztapalapa'),
 ('La Magdalena Contreras'),
 ('Miguel Hidalgo'),
 ('Milpa Alta'),
-('Tláhuac'),
+('TlÃ¡huac'),
 ('Tlalpan'),
 ('Venustiano Carranza'),
 ('Xochimilco');
@@ -123,3 +123,12 @@ celAsp varchar(10) not null,
 emaAsp varchar(50) not null,
 fotAsp varchar(MAX) null,
 gueAsp varchar(MAX) null);
+
+CREATE TABLE cursos(
+idCur int identity (1000001,1) primary key not null, 
+nomCur varchar(30) not null,
+tipo varchar(25) not null);
+//CREATE TABLE estudios(
+idNivel int identity (1000001,1) primary key not null, //
+
+
