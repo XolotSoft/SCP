@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69A84540-A0CD-4020-85BB-292DA55BF2DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemadeControlPoliciaco</RootNamespace>
+    <AssemblyName>SistemadeControlPoliciaco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Yasha\Desktop\instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>922B240BB4D177485C1AE353F69A6330F0E2AB9C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SistemadeControlPoliciaco_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\WebCam cs\WebCam\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\WebCam cs\WebCam\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogoAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogoAspirantes.Designer.cs">
+      <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\Calculadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\Calculadora.Designer.cs">
+      <DependentUpon>Calculadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ElinarAspirantes\EliminarAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ElinarAspirantes\EliminarAspirantes.Designer.cs">
+      <DependentUpon>EliminarAspirantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarDatPerAsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarDatPerAsp.Designer.cs">
+      <DependentUpon>EditarDatPerAsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarAspirante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarAspirante.Designer.cs">
+      <DependentUpon>EditarAspirante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\EliminarUsuario.Designer.cs">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MDIs\AdminMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MDIs\AdminMDI.Designer.cs">
+      <DependentUpon>AdminMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\ManejoBD.cs" />
+    <Compile Include="Clases\Limpiar.cs" />
+    <Compile Include="Formularios\RegistroAspirantes\Contacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Contacto.Designer.cs">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Domicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Domicilio.Designer.cs">
+      <DependentUpon>Domicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Escaneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Escaneo.Designer.cs">
+      <DependentUpon>Escaneo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Foto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Foto.Designer.cs">
+      <DependentUpon>Foto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Formularios\Usuarios\NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios\NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\Vacio.cs" />
+    <Compile Include="Clases\Validar.cs" />
+    <Compile Include="Clases\Variables.cs" />
+    <Compile Include="Formularios\MDIs\UserMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MDIs\UserMDI.Designer.cs">
+      <DependentUpon>UserMDI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CatalogoAspirantes.resx">
+      <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ElinarAspirantes\EliminarAspirantes.resx">
+      <DependentUpon>EliminarAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarDatPerAsp.resx">
+      <DependentUpon>EditarDatPerAsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarAspirante.resx">
+      <DependentUpon>EditarAspirante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MDIs\AdminMDI.resx">
+      <DependentUpon>AdminMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\Contacto.resx">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\Domicilio.resx">
+      <DependentUpon>Domicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\Escaneo.resx">
+      <DependentUpon>Escaneo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\Foto.resx">
+      <DependentUpon>Foto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios\EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Formularios\MDIs\UserMDI.resx">
+      <DependentUpon>UserMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SistemadeControlPoliciaco_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1412453987_new-24-16.png" />
+    <None Include="Resources\1412453866_search-16.png" />
+    <None Include="Resources\1412453811_67-16.png" />
+    <None Include="Resources\modaspirantes.png" />
+    <None Include="Resources\huella1.jpg" />
+    <None Include="Resources\logomdi.png" />
+    <None Include="Resources\policia.jpg" />
+    <None Include="Resources\captura.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\deleteDates.png" />
+    <None Include="Resources\Camara.png" />
+    <None Include="Resources\1401844351_plus-24.png" />
+    <None Include="Resources\1401844351_menos-24.png" />
+    <None Include="Resources\1401844327_checkmark-24.png" />
+    <None Include="Resources\1401843226_maximize.png" />
+    <None Include="Resources\1401843024_refresh1.png" />
+    <None Include="Resources\1401843024_refresh.png" />
+    <None Include="Resources\1401842826_cross-24.png" />
+    <None Include="Resources\Domicilio.png" />
+    <None Include="Resources\contacto.png" />
+    <None Include="Resources\Escaneo.png" />
+    <None Include="Resources\fotografia.png" />
+    <None Include="Resources\Datosper.png" />
+    <None Include="Resources\flecha.png" />
+    <None Include="Resources\loginbg1.png" />
+    <None Include="Resources\loginbg.png" />
+    <None Include="Resources\1401839576_lock-unlock_blue.png" />
+    <None Include="Resources\1401839390_user_blue.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\Dependencia061113.png" />
+    <None Include="Resources\logoSEGOB_hoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha Dista Icon 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha Dista Icon 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha Dista Icon 36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha Dista Icon 35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha Dista Icon 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delaspirantes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nueuser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nueuserok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DELUSER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDIUSER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fotos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

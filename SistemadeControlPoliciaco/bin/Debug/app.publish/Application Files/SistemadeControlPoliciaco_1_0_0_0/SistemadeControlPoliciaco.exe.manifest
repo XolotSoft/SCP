@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SistemadeControlPoliciaco.exe" version="1.0.0.0" publicKeyToken="5758ff2c2ae46139" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SistemadeControlPoliciaco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SistemadeControlPoliciaco.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la 
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AForge.Video.dll" size="13824">
+      <assemblyIdentity name="AForge.Video" version="2.1.0.0" publicKeyToken="CBFB6E07D173C401" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Md2xBkK9f/V4/zSbPx7fuzrVLnQugR4fJD3bERgl5GE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AForge.Video.DirectShow.dll" size="31232">
+      <assemblyIdentity name="AForge.Video.DirectShow" version="2.1.0.0" publicKeyToken="61EA4348D43881B7" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jPzZL921aXltKGRt84/GOZcXM4q5awK+a9PNV4eawQo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemadeControlPoliciaco.exe" size="1488384">
+      <assemblyIdentity name="SistemadeControlPoliciaco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6Hd5oX7KLnx/YrSMSvzsRyGICsRPLFlQa+pUVmkX9II=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="SistemadeControlPoliciaco.exe.config" size="182">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PbQiHFOih9uz3RPvvsStiPKcsu3PE8/gyCn2QGUyyf4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=YASHA\Yasha" issuerKeyHash="9b2a222317bb3007a1280b57a9315cbfa2e947fa" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>pf3xnvqYA5nzQmA1zpPuMsywvqa+MAk5S+t6XdXeL9w=</DigestValue></Reference></SignedInfo><SignatureValue>X65kQan2IJxHYs32Ey/nJvZBr9X075Chvq9Bs/BKtWvFFv8/pg6QKO+724zqV0hJ01e7OjSg9m8YnRfo2xXmQksfVoqWLNdKzp5n+ck9cBamxBacFUi2K5yddld6C6ad4oaZni+sVJZOsLYIP7WOV/F/fnlb6mWJB0RUSXBMEUQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>icfvKWbiPm2w4WrGuGC7yoR2sDjNxlkl49StoglRbEYXIFzlnMaEpXYEVxUfp/5fhY6CYaQMwZO79DQQaRerLPxrSzyf+AWhfLd1kj4O8cqVkquY2sMbHwCSeoL8DQMWxYxyAKZWp2VIuRfdfn6GukF0BdAZJESBimYCnncF6Vc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="dc2fded55d7aeb4b390930bea6beb0cc32ee93ce356042f3990398fa9ef1fda5" Description="" Url=""><as:assemblyIdentity name="SistemadeControlPoliciaco.exe" version="1.0.0.0" publicKeyToken="5758ff2c2ae46139" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=YASHA\Yasha</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KCs0xN59TT8t4+AKFzVf7JIpstQx5oc7o7ed0idPnHw=</DigestValue></Reference></SignedInfo><SignatureValue>fT0uL9VAyopq0TLnpot53m7X4GncKpeU2ULmL6ZTFKVL3+1s8y4RDmrS7gwJY0SO/o4/fxxLl5t7gb/kg8h/V2XxzLMi5oabGdWvY4s4A0jfc2Gd5ql/ASDvOWPNy35Yz2QVY1t6I6PZQ2gFR/fLuRzn/7KChHjLmnXJBxYZgjw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>icfvKWbiPm2w4WrGuGC7yoR2sDjNxlkl49StoglRbEYXIFzlnMaEpXYEVxUfp/5fhY6CYaQMwZO79DQQaRerLPxrSzyf+AWhfLd1kj4O8cqVkquY2sMbHwCSeoL8DQMWxYxyAKZWp2VIuRfdfn6GukF0BdAZJESBimYCnncF6Vc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQG4QwBXQXV5RPB/adq1pk0jANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAWQBBAFMASABBAFwAWQBhAHMAaABhMB4XDTE0MTExODEwMzYzMVoXDTE1MTExODE2MzYzMVowITEfMB0GA1UEAx4WAFkAQQBTAEgAQQBcAFkAYQBzAGgAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAicfvKWbiPm2w4WrGuGC7yoR2sDjNxlkl49StoglRbEYXIFzlnMaEpXYEVxUfp/5fhY6CYaQMwZO79DQQaRerLPxrSzyf+AWhfLd1kj4O8cqVkquY2sMbHwCSeoL8DQMWxYxyAKZWp2VIuRfdfn6GukF0BdAZJESBimYCnncF6VcCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBvaCs0xXSybDsIrMrsof6nNWa+0saVGK1IDQP66MdwLVkrZlWRcbFsVd7m/PqsnJKmYfBPDB0B/nKnyJNqbOzDZNA92JH30+iosq8sFmcg2u79I1fRBQMSotZz6Sr/d2gfkK6nROWeCraUvjpfQUiMZn3l/ac7phNDv8mzg38hcw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

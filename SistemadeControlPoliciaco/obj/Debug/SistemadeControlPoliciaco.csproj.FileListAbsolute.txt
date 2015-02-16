@@ -1,0 +1,213 @@
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\bin\Debug\bdSCP.mdf
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\bin\Debug\bdSCP_log.ldf
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\controlpolicial\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\SistemedeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\SistemedeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Teenagedream\Documents\Visual Studio 2013\Projects\SistemedeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\bdSCP.mdf
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\bdSCP_log.ldf
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+E:\Documentos\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\bin\Debug\bdSCP.mdf
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\bin\Debug\bdSCP_log.ldf
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\guillermo2318\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\bdSCP.mdf
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\bdSCP_log.ldf
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\bluedemonjr\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\bin\Debug\bdSCP.mdf
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\bin\Debug\bdSCP_log.ldf
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\SISPOL\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+C:\Users\StarKiller\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarAspirantes.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+C:\Users\Luis\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarAspirantes.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+E:\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\AForge.Video.dll
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarAspirantes.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\StarKiller\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.CatalogoAspirantes.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.manifest
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.application
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.CatalogoAspirantes.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarAspirantes.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe.manifest
+C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.application
