@@ -211,3 +211,6 @@ C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\D
 C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
 C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe.manifest
 C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.application
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
