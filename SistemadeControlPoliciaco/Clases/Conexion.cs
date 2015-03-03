@@ -12,13 +12,13 @@ namespace SistemadeControlPoliciaco
     {
         public static SqlConnection conectar()
         {
-            SqlConnection conectado = new SqlConnection(@"Data Source=DARTHVADER\SQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
+            SqlConnection conectado = new SqlConnection(@"Data Source=GUILLERMO\MSSQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
             conectado.Open();
             return conectado;
         }
         public static SqlConnection desconectar()
         {
-            SqlConnection conectado = new SqlConnection(@"Data Source==DARTHVADER\SQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
+            SqlConnection conectado = new SqlConnection(@"Data Source=GUILLERMO\MSSQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
             conectado.Close();
             return conectado;
         }

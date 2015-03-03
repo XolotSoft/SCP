@@ -20,23 +20,12 @@ namespace SistemadeControlPoliciaco
 
         private void Formacion_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-           
-            
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "PDF File|*.pdf";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                FileStream fsi = File.OpenRead(ofd.FileName);
-                FileStream fso = File.Create(Rutas.pdf()+"prueba2.pdf");
-                fsi.CopyTo(fso);
-                textBox1.Text = ofd.FileName;
-            }
+            pictureBox1.Visible = false;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,7 +40,14 @@ namespace SistemadeControlPoliciaco
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBox1.SelectedIndex == 0)
+            {
+                button1.Enabled = false;
+            }
+            else
+            {
+                button1.Enabled = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +57,82 @@ namespace SistemadeControlPoliciaco
 
         private void btnEdi_Click(object sender, EventArgs e)
         {
-
+            Pdf.guardar();
         }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Pdf.cargar(0, File.OpenRead(ofd.FileName));
+                pictureBox1.Visible = true;
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+
+                Pdf.cargar(1, File.OpenRead(ofd.FileName));
+                pictureBox2.Visible = true;
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Pdf.cargar(2, File.OpenRead(ofd.FileName));
+                pictureBox3.Visible = true;
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Pdf.cargar(3, File.OpenRead(ofd.FileName));
+                pictureBox4.Visible = true;
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Pdf.cargar(4, File.OpenRead(ofd.FileName));
+                pictureBox5.Visible = true;
+
+            }
+        }
+
+        private void radioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = true;
+        }
+
+        private void radioButton9_CheckedChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+        }
+
+ 
+
     }
 }

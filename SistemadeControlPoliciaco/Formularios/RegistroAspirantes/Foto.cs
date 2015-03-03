@@ -70,7 +70,7 @@ namespace SistemadeControlPoliciaco
         private void button4_Click(object sender, EventArgs e)
         {
             string foto = Variables.idAsp;
-            string ruta =  "C:/Users/StarKiller/Desktop/SistemadeControlPoliciaco/SistemadeControlPoliciaco/Fotos/IMG" + Variables.rfcAsp + ".jpg";
+            string ruta = Rutas.foto() + "IMG" + Variables.rfcAsp + ".jpg";
             pcbCap.Image.Save(ruta);
             Variables.Foto(ruta);
             MessageBox.Show("Imagen guardada correctamente","Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);

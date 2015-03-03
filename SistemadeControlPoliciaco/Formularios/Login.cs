@@ -30,6 +30,9 @@ namespace SistemadeControlPoliciaco
             string tipo;
             string user = txbUser.Text;
             string pass = txbPass.Text;
+            string salt = "hbxOlOt23";
+            pass= Hash.sha1(Hash.md5(pass + salt));
+
             string sql = "SELECT * FROM Usuarios WHERE noUsu ='" + user + "' AND pwUsu ='" + pass + "'";
 
             if (Vacio.txb(this))
