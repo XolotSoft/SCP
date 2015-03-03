@@ -463,6 +463,7 @@
             this.btnEdi.Text = "Continuar";
             this.btnEdi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdi.UseVisualStyleBackColor = true;
+            this.btnEdi.Click += new System.EventHandler(this.btnEdi_Click);
             // 
             // Formacion
             // 

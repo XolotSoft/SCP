@@ -84,10 +84,10 @@
     <Compile Include="CatalogoAspirantes.Designer.cs">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formacion.cs">
+    <Compile Include="Formularios\PerfilAspirantes\Formacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formacion.Designer.cs">
+    <Compile Include="Formularios\PerfilAspirantes\Formacion.Designer.cs">
       <DependentUpon>Formacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.cs">
@@ -201,10 +201,11 @@
     <Compile Include="Formularios\MDIs\UserMDI.Designer.cs">
       <DependentUpon>UserMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Rutas.cs" />
     <EmbeddedResource Include="CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formacion.resx">
+    <EmbeddedResource Include="Formularios\PerfilAspirantes\Formacion.resx">
       <DependentUpon>Formacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.resx">
@@ -382,6 +383,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fotos\" />
+    <Folder Include="Pdf\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
