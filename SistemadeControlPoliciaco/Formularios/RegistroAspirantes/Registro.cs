@@ -91,15 +91,40 @@ namespace SistemadeControlPoliciaco
                     string rAsp = txbRfcAut.Text + txbRfcHom.Text;
                     string ecAsp = cbxEdoCiv.Text;
                     Variables.DatosPersonales(aPat, aMat, nAsp, fNac, eFed, sAsp, dAsp, rAsp, ecAsp);
-                    Limpiar.txb(this);
-                    dtpFecNac.ResetText();
-                    Limpiar.cbx(this);
-                    this.Hide();
-                    Domicilio dom = null;
-                    dom = Domicilio.Instancia();
-                    dom.MdiParent = AdminMDI.ActiveForm;
-                    dom.MdiParent = UserMDI.ActiveForm;
-                    dom.Show();
+                    ManejoBD bd = new ManejoBD();
+                    
+                    if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
+                        "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
+                        "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
+                        "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "','" + Variables.efdAsp + "'"))
+                    {
+                        if (bd.insertar("aspirantes", "personales_id, estado", "(SELECT @@identity AS id),1"))
+                        {
+                            MessageBox.Show("El aspirante se ha registrado", "Correcto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Limpiar.txb(this);
+                            dtpFecNac.ResetText();
+                            Limpiar.cbx(this);
+                            this.Hide();
+                            Domicilio dom = null;
+                            dom = Domicilio.Instancia();
+                            dom.MdiParent = AdminMDI.ActiveForm;
+                            dom.MdiParent = UserMDI.ActiveForm;
+                            dom.Show();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se registro el Aspirante", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se registro el Aspirante", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

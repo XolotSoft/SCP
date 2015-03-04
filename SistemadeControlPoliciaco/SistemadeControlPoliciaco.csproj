@@ -85,10 +85,10 @@
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Cuestuinario_perfil_2.cs">
+    <Compile Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cuestuinario_perfil_2.Designer.cs">
+    <Compile Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.Designer.cs">
       <DependentUpon>Cuestuinario_perfil_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\PerfilAspirantes\Formacion.cs">
@@ -212,7 +212,7 @@
     <EmbeddedResource Include="CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cuestuinario_perfil_2.resx">
+    <EmbeddedResource Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.resx">
       <DependentUpon>Cuestuinario_perfil_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PerfilAspirantes\Formacion.resx">

@@ -61,6 +61,22 @@ namespace SistemadeControlPoliciaco
                 return false;
             }
         }
+
+        public bool insertarq(string query)
+        {
+            string sql = query;
+            cmd = new SqlCommand(sql, Conexion.conectar());
+            int i = cmd.ExecuteNonQuery();
+            Conexion.desconectar();
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool eliminar(string tabla, string columna, string valor)
         {
             string sql = "DELETE FROM " + tabla + " WHERE " + columna + " = " + valor;

@@ -387,6 +387,7 @@
             this.radioButton3.TabIndex = 21;
             this.radioButton3.Text = "NO";
             this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -398,6 +399,7 @@
             this.radioButton4.TabIndex = 20;
             this.radioButton4.Text = "SI";
             this.radioButton4.UseVisualStyleBackColor = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -410,6 +412,7 @@
             this.radioButton5.TabIndex = 21;
             this.radioButton5.Text = "NO";
             this.radioButton5.UseVisualStyleBackColor = false;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -421,6 +424,7 @@
             this.radioButton6.TabIndex = 20;
             this.radioButton6.Text = "SI";
             this.radioButton6.UseVisualStyleBackColor = false;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
             // radioButton7
             // 
@@ -433,6 +437,7 @@
             this.radioButton7.TabIndex = 21;
             this.radioButton7.Text = "NO";
             this.radioButton7.UseVisualStyleBackColor = false;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -444,6 +449,7 @@
             this.radioButton8.TabIndex = 20;
             this.radioButton8.Text = "SI";
             this.radioButton8.UseVisualStyleBackColor = false;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
             // 
             // radioButton10
             // 

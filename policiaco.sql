@@ -1,4 +1,4 @@
-CREATE DATABASE policiacoDB;
+﻿ CREATE DATABASE policiacoDB;
 go
 use policiacoDB;
 go
@@ -100,6 +100,17 @@ INSERT INTO estados(noEst,clEst) VALUES
 go
 CREATE TABLE aspirantes(
 idAsp int identity(100001,1) primary key not null,
+personales_id int,
+domicilio_id int,
+contacto_id int,
+identificador_id int,
+documentos_id int,
+etapa int);
+
+go 
+
+CREATE TABLE personales(
+personales_id identity primary key not null,
 appAsp varchar(20) not null,
 apmAsp varchar(20) not null,
 nomAsp varchar(30) not null,
@@ -108,27 +119,39 @@ sexAsp varchar(30) not null,
 enfAsp varchar(30) not null,
 curAsp varchar(30) not null,
 rfcAsp varchar(30) not null,
-edcAsp varchar(30) not null,
+edcAsp varchar(30) not null);
+
+go 
+CREATE TABLE domcilio(
+domicilio_id identity primary key not null,
 efdAsp varchar(30) not null,
 domAsp varchar(30) not null,
 colAsp varchar(30) not null,
 cdpAsp varchar(5) not null,
 cllAsp varchar(30) not null,
 nueAsp varchar(6) not null,
-nuiAsp varchar(6) not null,
-conAsp varchar(30) not null,
-pueAsp varchar(30) not null,
+nuiAsp varchar(6) not null);
+go 
+CREATE TABLE contacto(
+contacto_id identity primary key not null,
 telAsp varchar(10) not null,
 celAsp varchar(10) not null,
-emaAsp varchar(50) not null,
+emaAsp varchar(50) not null);
+go 
+CREATE TABLE identificadores(
+identificadores_id identity primary key not null,
 fotAsp varchar(MAX) null,
 gueAsp varchar(MAX) null);
+go 
+CREATE TABLE documentos(
+documentos_id int identity primary key not null, 
+estAsp varchar(MAX) null,
+pasAsp varchar(MAX) null,
+ptcAsp varchar(MAX) null,
+escAsp varchar(MAX) null,
+mafAsp varchar(MAX) null);
 
-CREATE TABLE cursos(
-idCur int identity (1000001,1) primary key not null, 
-nomCur varchar(30) not null,
-tipo varchar(25) not null);
-//CREATE TABLE estudios(
-idNivel int identity (1000001,1) primary key not null, //
+/*conAsp varchar(30) not null,
+pueAsp varchar(30) not null,*/
 
 

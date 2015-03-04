@@ -134,7 +134,37 @@ namespace SistemadeControlPoliciaco
 
         private void btnCer_Click(object sender, EventArgs e)
         {
+            this.Hide();
+        }
 
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            button3.Enabled = true;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            button3.Enabled = false;
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            button4.Enabled = true;
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            button4.Enabled = false;
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            button5.Enabled = true;
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            button5.Enabled = false;
         }
 
  
