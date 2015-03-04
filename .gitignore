@@ -195,4 +195,4 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
-SistemadeControlPoliciaco/Clases/Conexion.cs
+/SistemadeControlPoliciaco/Clases/Conexion.cs
