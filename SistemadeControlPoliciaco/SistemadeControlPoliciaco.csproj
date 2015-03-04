@@ -84,6 +84,12 @@
     <Compile Include="CatalogoAspirantes.Designer.cs">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuestuinario_perfil_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuestuinario_perfil_2.Designer.cs">
+      <DependentUpon>Cuestuinario_perfil_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\PerfilAspirantes\Formacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <Compile Include="Clases\Rutas.cs" />
     <EmbeddedResource Include="CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuestuinario_perfil_2.resx">
+      <DependentUpon>Cuestuinario_perfil_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PerfilAspirantes\Formacion.resx">
       <DependentUpon>Formacion.cs</DependentUpon>
@@ -384,6 +393,9 @@
   <ItemGroup>
     <Folder Include="Fotos\" />
     <Folder Include="Pdf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FORMULARIO.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

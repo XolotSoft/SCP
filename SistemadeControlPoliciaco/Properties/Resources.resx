@@ -151,29 +151,23 @@
   <data name="contacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logomdi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logomdi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DELUSER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DELUSER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="huella" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\huella1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="modaspirantes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modaspirantes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDIUSER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EDIUSER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Alpha Dista Icon 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alpha Dista Icon 31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1401843226_maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1401843226_maximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Camara" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Camara.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +199,11 @@
   <data name="Alpha Dista Icon 35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alpha Dista Icon 35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Alpha Dista Icon 20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Alpha Dista Icon 20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1401843024_refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1401843024_refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fotografia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fotografia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1401844351_plus-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1401844351_plus-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,11 +214,17 @@
   <data name="1412453987_new-24-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1412453987_new-24-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1401843024_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1401843024_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nueuserok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nueuserok.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alpha Dista Icon 20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alpha Dista Icon 20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="policia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\policia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,37 +232,37 @@
   <data name="Escaneo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Escaneo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loginbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="webcam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\webcam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nueuser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nueuser.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="captura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\captura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logomdi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logomdi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1401843024_refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1401843024_refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modaspirantes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modaspirantes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dependencia061113" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dependencia061113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Camara" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camara.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calculadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fotografia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fotografia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="captura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\captura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="note" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1401843024_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1401843024_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dependencia061113" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dependencia061113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EDIUSER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EDIUSER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FORMULARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FORMULARIO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
