@@ -274,3 +274,4 @@ C:\Users\Guillermo Carapia\Documents\Visual Studio 2013\Projects\SCP\SistemadeCo
 C:\Users\Guillermo Carapia\Documents\Visual Studio 2013\Projects\SCP\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
 C:\Users\Guillermo Carapia\Documents\Visual Studio 2013\Projects\SCP\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe.manifest
 C:\Users\Guillermo Carapia\Documents\Visual Studio 2013\Projects\SCP\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.application
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Cuestuinario_perfil_2.resources

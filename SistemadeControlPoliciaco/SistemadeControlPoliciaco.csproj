@@ -197,7 +197,7 @@
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Hash.cs" />
-    <Compile Include="Pdf.cs" />
+    <Compile Include="Clases\Pdf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Vacio.cs" />
     <Compile Include="Clases\Validar.cs" />

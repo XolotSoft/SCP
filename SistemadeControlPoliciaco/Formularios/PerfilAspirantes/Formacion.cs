@@ -132,6 +132,11 @@ namespace SistemadeControlPoliciaco
             button2.Enabled = false;
         }
 
+        private void btnCer_Click(object sender, EventArgs e)
+        {
+
+        }
+
  
 
     }

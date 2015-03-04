@@ -18,7 +18,7 @@ namespace SistemadeControlPoliciaco
         }
         public static SqlConnection desconectar()
         {
-            SqlConnection conectado = new SqlConnection(@"Data Source==DARTHVADER\SQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
+            SqlConnection conectado = new SqlConnection(@"Data Source=DARTHVADER\SQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
             conectado.Close();
             return conectado;
         }
