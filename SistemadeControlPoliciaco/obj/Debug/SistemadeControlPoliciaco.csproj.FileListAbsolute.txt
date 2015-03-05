@@ -214,3 +214,6 @@ C:\Users\Yasha\Desktop\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\D
 C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
 C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
 C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb

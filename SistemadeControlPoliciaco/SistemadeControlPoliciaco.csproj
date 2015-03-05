@@ -84,6 +84,18 @@
     <Compile Include="CatalogoAspirantes.Designer.cs">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formacion.Designer.cs">
+      <DependentUpon>Formacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.Designer.cs">
+      <DependentUpon>Cuestionario_Perfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extras\Calculadora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +203,12 @@
     </Compile>
     <EmbeddedResource Include="CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formacion.resx">
+      <DependentUpon>Formacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.resx">
+      <DependentUpon>Cuestionario_Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ElinarAspirantes\EliminarAspirantes.resx">
       <DependentUpon>EliminarAspirantes.cs</DependentUpon>
