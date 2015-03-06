@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemadeControlPoliciaco
 {
@@ -24,7 +25,18 @@ namespace SistemadeControlPoliciaco
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
+           
+            
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PDF File|*.pdf";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fsi = File.OpenRead(ofd.FileName);
+                FileStream fso = File.Create(Rutas.pdf()+"prueba2.pdf");
+                fsi.CopyTo(fso);
+                textBox1.Text = ofd.FileName;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -43,6 +55,11 @@ namespace SistemadeControlPoliciaco
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdi_Click(object sender, EventArgs e)
         {
 
         }

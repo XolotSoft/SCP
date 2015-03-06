@@ -217,3 +217,30 @@ C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoli
 C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.config
 C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe
 C:\Users\Yasha\Documents\Visual Studio 2013\Projects\POLECIAS\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe.manifest
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.application
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.exe
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\bin\Debug\SistemadeControlPoliciaco.pdb
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csprojResolveAssemblyReference.cache
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.CatalogoAspirantes.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Formacion.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Cuestionario_Perfil.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarAspirantes.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarDatPerAsp.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarAspirante.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.AdminMDI.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Contacto.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Domicilio.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Escaneo.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Foto.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Login.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Registro.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.SplashScreen.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EditarUsuario.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.EliminarUsuario.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.NuevoUsuario.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.Properties.Resources.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.UserMDI.resources
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.csproj.GenerateResource.Cache
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.exe.manifest
+C:\Users\Luis Alberto\Documents\Visual Studio 2013\Projects\SistemadeControlPoliciaco\SistemadeControlPoliciaco\obj\Debug\SistemadeControlPoliciaco.application
