@@ -96,9 +96,9 @@ namespace SistemadeControlPoliciaco
                     if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
                         "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
                         "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
-                        "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "','" + Variables.efdAsp + "'"))
+                        "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "'"))
                     {
-                        if (bd.insertar("aspirantes", "personales_id, estado", "(SELECT @@identity AS id),1"))
+                        if (bd.insertar("aspirantes", "personales_id, etapa", "(SELECT TOP 1 personales_id FROM personales ORDER BY personales_id DESC),1"))
                         {
                             MessageBox.Show("El aspirante se ha registrado", "Correcto",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);

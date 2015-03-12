@@ -69,19 +69,29 @@ namespace SistemadeControlPoliciaco
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string foto = Variables.idAsp;
             string ruta = Rutas.foto() + "IMG" + Variables.rfcAsp + ".jpg";
-            pcbCap.Image.Save(ruta);
-            Variables.Foto(ruta);
-            MessageBox.Show("Imagen guardada correctamente","Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
-            Escaneo gue = null;
-            gue = Escaneo.Instancia();
-            gue.MdiParent = AdminMDI.ActiveForm;
-            gue.MdiParent = UserMDI.ActiveForm;
-            gue.Show();
-        }
+            ManejoBD bd = new ManejoBD();
+            ob_id id = new ob_id();
+            string ida = id.obtener(Variables.rfcAsp);
+            if (bd.insertar("identificadores", "fotAsp", "'" + ruta + "'"))
+            {
 
+                if (bd.modificar("UPDATE aspirantes SET captura_id = (SELECT TOP 1 identificadores_id FROM identificadores d ORDER BY identificadores_id DESC),etapa=4 WHERE idAsp = '" + ida + "'"))
+                {
+                    pcbCap.Image.Save(ruta);
+                    Variables.Foto(ruta);
+                    MessageBox.Show("Imagen guardada correctamente y etapa 4 concluida satisfactoriamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Escaneo gue = null;
+                    gue = Escaneo.Instancia();
+                    gue.MdiParent = AdminMDI.ActiveForm;
+                    gue.MdiParent = UserMDI.ActiveForm;
+                    gue.Show();
+                }
+
+            }
+        }
+        
         private void btnIniCam_Click(object sender, EventArgs e)
         {
             if (ExistenDispositivos)

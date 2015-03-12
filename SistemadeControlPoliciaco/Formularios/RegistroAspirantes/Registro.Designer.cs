@@ -269,7 +269,7 @@
             this.btnLim.Location = new System.Drawing.Point(490, 416);
             this.btnLim.Name = "btnLim";
             this.btnLim.Size = new System.Drawing.Size(110, 35);
-            this.btnLim.TabIndex = 17;
+            this.btnLim.TabIndex = 18;
             this.btnLim.Text = "Limpiar  ";
             this.btnLim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLim.UseVisualStyleBackColor = true;
@@ -283,7 +283,7 @@
             this.btnCer.Location = new System.Drawing.Point(370, 416);
             this.btnCer.Name = "btnCer";
             this.btnCer.Size = new System.Drawing.Size(110, 35);
-            this.btnCer.TabIndex = 18;
+            this.btnCer.TabIndex = 19;
             this.btnCer.Text = "Cerrar   ";
             this.btnCer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCer.UseVisualStyleBackColor = true;
@@ -297,7 +297,7 @@
             this.btnCon.Location = new System.Drawing.Point(610, 416);
             this.btnCon.Name = "btnCon";
             this.btnCon.Size = new System.Drawing.Size(110, 35);
-            this.btnCon.TabIndex = 16;
+            this.btnCon.TabIndex = 17;
             this.btnCon.Text = "Continuar";
             this.btnCon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCon.UseVisualStyleBackColor = true;
@@ -326,7 +326,7 @@
             this.cbxEdoCiv.Location = new System.Drawing.Point(540, 335);
             this.cbxEdoCiv.Name = "cbxEdoCiv";
             this.cbxEdoCiv.Size = new System.Drawing.Size(170, 21);
-            this.cbxEdoCiv.TabIndex = 19;
+            this.cbxEdoCiv.TabIndex = 16;
             // 
             // Registro
             // 

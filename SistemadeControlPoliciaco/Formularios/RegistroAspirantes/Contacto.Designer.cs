@@ -158,7 +158,7 @@
             this.txbCon.Margin = new System.Windows.Forms.Padding(4);
             this.txbCon.Name = "txbCon";
             this.txbCon.Size = new System.Drawing.Size(170, 22);
-            this.txbCon.TabIndex = 9;
+            this.txbCon.TabIndex = 1;
             // 
             // label4
             // 
@@ -192,7 +192,7 @@
             this.cbxPue.Location = new System.Drawing.Point(157, 209);
             this.cbxPue.Name = "cbxPue";
             this.cbxPue.Size = new System.Drawing.Size(170, 24);
-            this.cbxPue.TabIndex = 14;
+            this.cbxPue.TabIndex = 2;
             // 
             // Contacto
             // 

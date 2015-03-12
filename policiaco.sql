@@ -103,12 +103,19 @@ idAsp int identity(100001,1) primary key not null,
 personales_id int,
 domicilio_id int,
 contacto_id int,
+postulado_id int,
+captura_id int,
 identificador_id int,
-documentos_id int,
 etapa int);
 
 go 
+CREATE table postulado(
+postulado_id int primary key identity not null,
+conAsp varchar (20),
+pueAsp varchar (25));
 
+
+go
 CREATE TABLE personales(
 personales_id identity primary key not null,
 appAsp varchar(20) not null,

@@ -10,7 +10,7 @@ namespace SistemadeControlPoliciaco
     {
         public static string appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp, rfcAsp, edcAsp,
             efdAsp, domAsp, colAsp, cdpAsp, cllAsp, nueAsp, nuiAsp,
-            conAsp, pueAsp, telAsp, celAsp, emaAsp, fotAsp, gueAsp, idAsp;
+            conAsp, pueAsp, telAsp, celAsp, emaAsp, fotAsp, gueAsp, idAsp,idass;
 
 
         public static void DatosPersonales(string aPat, string aMat, string nAsp, string fNac, string eFed, string sAsp, string cAsp, string rAsp, string ccAsp)
@@ -58,6 +58,10 @@ namespace SistemadeControlPoliciaco
         {
             fotAsp = ft;
 
+        }
+        public static void etapa(string id)
+        {
+            idass = id;
         }
     }
 }

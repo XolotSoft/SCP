@@ -16,7 +16,7 @@ namespace SistemadeControlPoliciaco
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formacion());
+            Application.Run(new AdminMDI());
         }
     }
 }

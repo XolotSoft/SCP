@@ -49,20 +49,40 @@ namespace SistemadeControlPoliciaco
                 {
                     if(Validar.mail(txbMail.Text))
                     {
+
+                       
                         string cn = txbCon.Text;
                         string pt = cbxPue.Text;
                         string tl = txbTel.Text;
                         string cl = txbCel.Text;
                         string em = txbMail.Text;
-                        Variables.Contacto(cn, pt, tl, cl, em);
-                        Limpiar.txb(this);
-                        Limpiar.cbx(this);
-                        this.Close();
-                        Foto fot = null;
-                        fot = Foto.Instancia();
-                        fot.MdiParent = AdminMDI.ActiveForm;
-                        fot.MdiParent = UserMDI.ActiveForm;
-                        fot.Show();
+                     
+                        ManejoBD bd = new ManejoBD();
+                        ob_id id = new ob_id();
+                        string ida = id.obtener(Variables.rfcAsp);
+                        if (bd.insertar("contacto", "telAsp,celAsp,emaAsp", "'"
+                       + tl + "','" + cl + "','" + em + "'"))
+
+                        {
+                            if(bd.insertar("postulado","conASp,pueASp","'"+ cn + "','"+ pt +"'"))
+                            {
+
+                                if (bd.modificar("UPDATE aspirantes SET contacto_id = (SELECT TOP 1 contacto_id FROM contacto d ORDER BY contacto_id DESC),etapa=3,postulado_id=(SELECT TOP 1 postulado_id FROM postulado d ORDER BY postulado_id DESC) WHERE idAsp = '" + ida + "'")) 
+                                {
+                                    MessageBox.Show("Se ha concluido satisfactoriamente la etapa 3 del registro", "Correcto",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Limpiar.txb(this);
+                                    Limpiar.cbx(this);
+                                    this.Close();
+                                    Foto fot = null;
+                                    fot = Foto.Instancia();
+                                    fot.MdiParent = AdminMDI.ActiveForm;
+                                    fot.MdiParent = UserMDI.ActiveForm;
+                                    fot.Show();
+                                }
+                            }
+                        }
+                       
                     }
                     else
                     {
@@ -86,6 +106,7 @@ namespace SistemadeControlPoliciaco
         private void Contacto_Load(object sender, EventArgs e)
         {
             ManejoBD bd = new ManejoBD();
+
             bd.buscarg("*", "puestos");
             cbxPue.DataSource = bd.ds.Tables[0].DefaultView;
             cbxPue.DisplayMember = "noPue";

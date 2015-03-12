@@ -31,23 +31,22 @@ namespace SistemadeControlPoliciaco
         private void button3_Click(object sender, EventArgs e)
         {
             ManejoBD bd = new ManejoBD();
-            if(bd.insertar("aspirantes","appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp,"+
-                "rfcAsp, edcAsp,efdAsp, domAsp, colAsp, cdpAsp, cllAsp, nueAsp, nuiAsp,conAsp, pueAsp,"+
-                "telAsp, celAsp, emaAsp, fotAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp + 
-                "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp + 
-                "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "','" + Variables.efdAsp + "','" + Variables.domAsp + 
-                "','" + Variables.colAsp + "','" + Variables.cdpAsp + "','" + Variables.cllAsp + "','" + Variables.nueAsp + 
-                "','" + Variables.nuiAsp + "','" + Variables.conAsp + "','" + Variables.pueAsp + "','" + Variables.telAsp +
-                "','" + Variables.celAsp + "','" + Variables.emaAsp + "','" + Variables.fotAsp + "'"))
+            ob_id id = new ob_id();
+            string ida = id.obtener(Variables.rfcAsp);
+            if (bd.insertar("identificadores", "guAsp", "'huellax'"))
             {
-                MessageBox.Show("El aspirante se ha registrado", "Correcto",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("No se registro el Aspirante", "Error",
-                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (bd.modificar("UPDATE aspirantes SET identificador_id = (SELECT TOP 1 identificadores_id FROM identificadores d ORDER BY identificadores_id DESC),etapa=5 WHERE idAsp = '" + ida + "'"))
+                {
+                    MessageBox.Show("El aspirante se ha registrado", "Correcto",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("No se registro el Aspirante", "Error",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

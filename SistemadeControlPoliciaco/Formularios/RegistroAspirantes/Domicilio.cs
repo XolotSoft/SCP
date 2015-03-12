@@ -32,6 +32,7 @@ namespace SistemadeControlPoliciaco
         {
             Limpiar.txb(this);
             Limpiar.cbx(this);
+            Variables.etapa("");
             this.Hide();
         }
 
@@ -67,6 +68,7 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
+                  
                     string ef = cbxEntFed.Text;
                     string dm = cbxDelMun.Text;
                     string cl = txbCol.Text;
@@ -74,15 +76,33 @@ namespace SistemadeControlPoliciaco
                     string cy = txbCalle.Text;
                     string ne = txbNumExt.Text;
                     string ni = txbNumInt.Text;
-                    Variables.Domicilio(ef, dm, cl, cp, cy, ne, ni);
-                    Limpiar.txb(this);
-                    Limpiar.cbx(this);
-                    this.Hide();
-                    Contacto con = null;
-                    con = Contacto.Instancia();
-                    con.MdiParent = AdminMDI.ActiveForm;
-                    con.MdiParent = UserMDI.ActiveForm;
-                    con.Show();
+              
+                    ManejoBD bd = new ManejoBD();
+                    ob_id id = new ob_id();
+                    string ida = id.obtener(Variables.rfcAsp);
+                    if (bd.insertar("domicilio", "efdAsp,domAsp,colAsp,cdpAsp,cllAsp,nueAsp,nuiAsp", "'"
+                       + ef+ "','" + dm + "','" + cl + "','" +
+                       cp + "','" + cy + "','" + ne + "','" + ni + "'"))
+                    {
+                        
+                        if (bd.modificar("UPDATE aspirantes SET domicilio_id = (SELECT TOP 1 domicilio_id FROM domicilio d ORDER BY domicilio_id DESC),etapa=2 WHERE idAsp = '"+ida+"'"))
+                          
+                        {
+                            MessageBox.Show("Se ha concluido satisfactoriamente la etapa 2 del registro", "Correcto",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar.txb(this);
+                            Limpiar.cbx(this);
+                            this.Hide();
+                            Contacto con = null;
+                            con = Contacto.Instancia();
+                            con.MdiParent = AdminMDI.ActiveForm;
+                            con.MdiParent = UserMDI.ActiveForm;
+                            con.Show();
+
+                        }
+                    }
+                    
+                  
                 }
                 else
                 {
