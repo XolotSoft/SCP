@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnCer = new System.Windows.Forms.Button();
-            this.btnEdi = new System.Windows.Forms.Button();
+            this.CBafuego = new System.Windows.Forms.ComboBox();
+            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btncontinuar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CBdpersonal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.CBpauxilios = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.CBlextranjeras = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.CBsadverzas = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.CBrinterpersonales = new System.Windows.Forms.ComboBox();
+            this.BTNborrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,64 +57,85 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manejo de Armas de Fuego";
             // 
-            // comboBox1
+            // CBafuego
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox1.Location = new System.Drawing.Point(397, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 5;
+            this.CBafuego.FormattingEnabled = true;
+            this.CBafuego.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBafuego.Location = new System.Drawing.Point(397, 183);
+            this.CBafuego.Name = "CBafuego";
+            this.CBafuego.Size = new System.Drawing.Size(121, 23);
+            this.CBafuego.TabIndex = 5;
             // 
-            // btnCer
+            // btnlimpiar
             // 
-            this.btnCer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCer.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401842826_cross_24;
-            this.btnCer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCer.Location = new System.Drawing.Point(455, 399);
-            this.btnCer.Name = "btnCer";
-            this.btnCer.Size = new System.Drawing.Size(110, 35);
-            this.btnCer.TabIndex = 24;
-            this.btnCer.Text = "Borrar";
-            this.btnCer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCer.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401843024_refresh1;
+            this.btnlimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlimpiar.Location = new System.Drawing.Point(490, 399);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(110, 35);
+            this.btnlimpiar.TabIndex = 24;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnlimpiar.UseVisualStyleBackColor = true;
             // 
-            // btnEdi
+            // btncontinuar
             // 
-            this.btnEdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdi.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401844327_checkmark_24;
-            this.btnEdi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdi.Location = new System.Drawing.Point(618, 399);
-            this.btnEdi.Name = "btnEdi";
-            this.btnEdi.Size = new System.Drawing.Size(110, 35);
-            this.btnEdi.TabIndex = 22;
-            this.btnEdi.Text = "Continuar";
-            this.btnEdi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdi.UseVisualStyleBackColor = true;
+            this.btncontinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncontinuar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401844327_checkmark_24;
+            this.btncontinuar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncontinuar.Location = new System.Drawing.Point(618, 399);
+            this.btncontinuar.Name = "btncontinuar";
+            this.btncontinuar.Size = new System.Drawing.Size(110, 35);
+            this.btncontinuar.TabIndex = 22;
+            this.btncontinuar.Text = "Continuar";
+            this.btncontinuar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncontinuar.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(124, 100);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(45, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(557, 62);
+            this.label6.Size = new System.Drawing.Size(683, 31);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Selecione las habilidades que posee y\r\nel nivel de conocimiento de cada una de el" +
-    "las";
+            this.label6.Text = "Selecione el nivel de conocimiento de cada una de ellas";
             // 
-            // comboBox2
+            // CBdpersonal
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox2.Location = new System.Drawing.Point(397, 218);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 29;
+            this.CBdpersonal.FormattingEnabled = true;
+            this.CBdpersonal.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBdpersonal.Location = new System.Drawing.Point(397, 218);
+            this.CBdpersonal.Name = "CBdpersonal";
+            this.CBdpersonal.Size = new System.Drawing.Size(121, 23);
+            this.CBdpersonal.TabIndex = 29;
             // 
             // label2
             // 
@@ -126,15 +148,26 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Defensa Personal";
             // 
-            // comboBox3
+            // CBpauxilios
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox3.Location = new System.Drawing.Point(397, 288);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 37;
+            this.CBpauxilios.FormattingEnabled = true;
+            this.CBpauxilios.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBpauxilios.Location = new System.Drawing.Point(397, 288);
+            this.CBpauxilios.Name = "CBpauxilios";
+            this.CBpauxilios.Size = new System.Drawing.Size(121, 23);
+            this.CBpauxilios.TabIndex = 37;
             // 
             // label3
             // 
@@ -147,15 +180,26 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "Primeros Auxilios";
             // 
-            // comboBox4
+            // CBlextranjeras
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox4.Location = new System.Drawing.Point(397, 253);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 33;
+            this.CBlextranjeras.FormattingEnabled = true;
+            this.CBlextranjeras.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBlextranjeras.Location = new System.Drawing.Point(397, 253);
+            this.CBlextranjeras.Name = "CBlextranjeras";
+            this.CBlextranjeras.Size = new System.Drawing.Size(121, 23);
+            this.CBlextranjeras.TabIndex = 33;
             // 
             // label4
             // 
@@ -168,15 +212,26 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Conocimeinto de Leungusas Extranjeras";
             // 
-            // comboBox5
+            // CBsadverzas
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox5.Location = new System.Drawing.Point(397, 319);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 23);
-            this.comboBox5.TabIndex = 41;
+            this.CBsadverzas.FormattingEnabled = true;
+            this.CBsadverzas.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBsadverzas.Location = new System.Drawing.Point(397, 319);
+            this.CBsadverzas.Name = "CBsadverzas";
+            this.CBsadverzas.Size = new System.Drawing.Size(121, 23);
+            this.CBsadverzas.TabIndex = 41;
             // 
             // label5
             // 
@@ -200,15 +255,39 @@
             this.label7.TabIndex = 44;
             this.label7.Text = "Relaciones Interpersonales";
             // 
-            // comboBox6
+            // CBrinterpersonales
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "0"});
-            this.comboBox6.Location = new System.Drawing.Point(397, 352);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 23);
-            this.comboBox6.TabIndex = 45;
+            this.CBrinterpersonales.FormattingEnabled = true;
+            this.CBrinterpersonales.Items.AddRange(new object[] {
+            "",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100"});
+            this.CBrinterpersonales.Location = new System.Drawing.Point(397, 352);
+            this.CBrinterpersonales.Name = "CBrinterpersonales";
+            this.CBrinterpersonales.Size = new System.Drawing.Size(121, 23);
+            this.CBrinterpersonales.TabIndex = 45;
+            // 
+            // BTNborrar
+            // 
+            this.BTNborrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNborrar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401842826_cross_24;
+            this.BTNborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNborrar.Location = new System.Drawing.Point(358, 399);
+            this.BTNborrar.Name = "BTNborrar";
+            this.BTNborrar.Size = new System.Drawing.Size(110, 35);
+            this.BTNborrar.TabIndex = 46;
+            this.BTNborrar.Text = "Borrar";
+            this.BTNborrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTNborrar.UseVisualStyleBackColor = true;
             // 
             // Cuestionario_Perfil
             // 
@@ -216,20 +295,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.FORMULARIO;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.BTNborrar);
+            this.Controls.Add(this.CBrinterpersonales);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.CBsadverzas);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.CBpauxilios);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.CBlextranjeras);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.CBdpersonal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnCer);
-            this.Controls.Add(this.btnEdi);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnlimpiar);
+            this.Controls.Add(this.btncontinuar);
+            this.Controls.Add(this.CBafuego);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -243,19 +323,20 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnCer;
-        private System.Windows.Forms.Button btnEdi;
+        private System.Windows.Forms.ComboBox CBafuego;
+        private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btncontinuar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CBdpersonal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox CBpauxilios;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CBlextranjeras;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox CBsadverzas;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox CBrinterpersonales;
+        private System.Windows.Forms.Button BTNborrar;
     }
 }
