@@ -203,6 +203,7 @@
             this.pcbFoto.Location = new System.Drawing.Point(668, 149);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(120, 133);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 46;
             this.pcbFoto.TabStop = false;
             // 

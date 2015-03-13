@@ -92,27 +92,116 @@ namespace SistemadeControlPoliciaco
                     string ecAsp = cbxEdoCiv.Text;
                     Variables.DatosPersonales(aPat, aMat, nAsp, fNac, eFed, sAsp, dAsp, rAsp, ecAsp);
                     ManejoBD bd = new ManejoBD();
-                    
-                    if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
-                        "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
-                        "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
-                        "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "'"))
+                    bd.buscar("SELECT a.personales_id,a.etapa FROM personales p INNER JOIN aspirantes a ON p.personales_id = a.personales_id WHERE p.rfcAsp = '"+rAsp+"'");
+                    if (bd.dt.Rows.Count > 0)
                     {
-                        if (bd.insertar("aspirantes", "personales_id, etapa", "(SELECT TOP 1 personales_id FROM personales ORDER BY personales_id DESC),1"))
+                        MessageBox.Show("Ya se encuentra un aspirante registrado con el RFC "+rAsp+"", "Correcto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DataRow u = bd.dt.Rows[0];
+                        string pid = Convert.ToString(u[0]);                    
+                        string etapa = Convert.ToString(u[1]);
+                        if (etapa != "5")
                         {
-                            MessageBox.Show("El aspirante se ha registrado", "Correcto",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            DialogResult dialogo = MessageBox.Show("El aspirante ya cuenta con un registro previo desea concluirlo o eliminarlo", "Atención",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            if (dialogo == DialogResult.Yes)
+                            {
+                                Limpiar.txb(this);
+                                dtpFecNac.ResetText();
+                                Limpiar.cbx(this);
+                                aPat = "";
+                                aMat = "";
+                                nAsp = "";
+                                fNac = "";
+                                eFed = "";
+                                sAsp = "";
 
-                            Limpiar.txb(this);
-                            dtpFecNac.ResetText();
-                            Limpiar.cbx(this);
-                            this.Hide();
-                            Domicilio dom = null;
-                            dom = Domicilio.Instancia();
-                            dom.MdiParent = AdminMDI.ActiveForm;
-                            dom.MdiParent = UserMDI.ActiveForm;
-                            dom.Show();
+                                switch (etapa)
+                                {
+                                    case "1":
+                                        this.Hide();
+                                        Domicilio dom = null;
+                                        dom = Domicilio.Instancia();
+                                        dom.MdiParent = AdminMDI.ActiveForm;
+                                        dom.MdiParent = UserMDI.ActiveForm;
+                                        dom.Show();
+                                        break;
+                                    case "2":
+                                        this.Hide();
+                                        Contacto con = null;
+                                        con = Contacto.Instancia();
+                                        con.MdiParent = AdminMDI.ActiveForm;
+                                        con.MdiParent = UserMDI.ActiveForm;
+                                        con.Show();
+                                        break;
+                                    case "3":
+                                        this.Close();
+                                        Foto fot = null;
+                                        fot = Foto.Instancia();
+                                        fot.MdiParent = AdminMDI.ActiveForm;
+                                        fot.MdiParent = UserMDI.ActiveForm;
+                                        fot.Show();
+                                        break;
+                                    case "4":
+                                        this.Hide();
+                                        Escaneo esc = null;
+                                        esc = Escaneo.Instancia();
+                                        esc.MdiParent = AdminMDI.ActiveForm;
+                                        esc.MdiParent = UserMDI.ActiveForm;
+                                        esc.Show();
+                                        break;
+                                    default:
+                                        break;
+                                }
 
+                            }
+                            if (dialogo == DialogResult.No)
+                            {
+                                this.Hide();
+                            }
+
+                        }
+                        else
+                        {
+                            DialogResult dialogo = MessageBox.Show("El aspirante ya ha concluido con su proceso de registro", "Atención",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        
+
+                    }
+                    else
+                    {
+                        if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
+                       "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
+                       "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
+                       "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "'"))
+                        {
+                            if (bd.insertar("aspirantes", "personales_id, etapa", "(SELECT TOP 1 personales_id FROM personales ORDER BY personales_id DESC),1"))
+                            {
+                                MessageBox.Show("El aspirante se ha registrado", "Correcto",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                aPat = "";
+                                aMat = "";
+                                nAsp = "";
+                                fNac = "";
+                                eFed = "";
+                                sAsp = "";
+                                Limpiar.txb(this);
+                                dtpFecNac.ResetText();
+                                Limpiar.cbx(this);
+                                this.Hide();
+                                Domicilio dom = null;
+                                dom = Domicilio.Instancia();
+                                dom.MdiParent = AdminMDI.ActiveForm;
+                                dom.MdiParent = UserMDI.ActiveForm;
+                                dom.Show();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se registro el Aspirante", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
@@ -120,11 +209,7 @@ namespace SistemadeControlPoliciaco
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("No se registro el Aspirante", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                   
                 }
                 else
                 {

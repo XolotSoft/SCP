@@ -180,6 +180,7 @@
             // 
             // cbxEntFed
             // 
+            this.cbxEntFed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEntFed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEntFed.FormattingEnabled = true;
             this.cbxEntFed.Location = new System.Drawing.Point(540, 199);
@@ -191,6 +192,7 @@
             // 
             // cbxSex
             // 
+            this.cbxSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSex.FormattingEnabled = true;
             this.cbxSex.Items.AddRange(new object[] {
@@ -318,6 +320,7 @@
             // 
             // cbxEdoCiv
             // 
+            this.cbxEdoCiv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEdoCiv.FormattingEnabled = true;
             this.cbxEdoCiv.Items.AddRange(new object[] {
             "",

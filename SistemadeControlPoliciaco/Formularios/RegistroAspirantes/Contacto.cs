@@ -16,6 +16,8 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
+            string cn,pt,tl,cl,em;          
+           
         private static Contacto frmInst = null;
 
         public static Contacto Instancia()
@@ -28,19 +30,6 @@ namespace SistemadeControlPoliciaco
             return frmInst;
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Limpiar.txb(this);
-            Limpiar.cbx(this);
-            this.Close();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            Limpiar.txb(this);
-            Limpiar.cbx(this);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (Vacio.txb(this))
@@ -51,11 +40,11 @@ namespace SistemadeControlPoliciaco
                     {
 
                        
-                        string cn = txbCon.Text;
-                        string pt = cbxPue.Text;
-                        string tl = txbTel.Text;
-                        string cl = txbCel.Text;
-                        string em = txbMail.Text;
+                        cn = txbCon.Text;
+                        pt = cbxPue.Text;
+                        tl = txbTel.Text;
+                        cl = txbCel.Text;
+                        em = txbMail.Text;
                      
                         ManejoBD bd = new ManejoBD();
                         ob_id id = new ob_id();
@@ -71,6 +60,11 @@ namespace SistemadeControlPoliciaco
                                 {
                                     MessageBox.Show("Se ha concluido satisfactoriamente la etapa 3 del registro", "Correcto",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    cn = "";
+                                    pt = "";
+                                    tl = "";
+                                    cl = "";
+                                    em = "";
                                     Limpiar.txb(this);
                                     Limpiar.cbx(this);
                                     this.Close();
@@ -120,6 +114,29 @@ namespace SistemadeControlPoliciaco
         private void txbCel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.num(e);
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            cn = "";
+            pt = "";
+            tl = "";
+            cl = "";
+            em = "";
+            Limpiar.txb(this);
+            Limpiar.cbx(this);
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cn = "";
+            pt = "";
+            tl = "";
+            cl = "";
+            em = "";
+            Limpiar.txb(this);
+            Limpiar.cbx(this);
         }
     }
 }

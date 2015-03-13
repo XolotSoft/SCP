@@ -138,6 +138,7 @@
             this.button2.Text = "Limpiar  ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCerrar
             // 
@@ -150,6 +151,7 @@
             this.btnCerrar.Text = "Cerrar   ";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // txbCon
             // 
@@ -188,6 +190,7 @@
             // 
             // cbxPue
             // 
+            this.cbxPue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPue.FormattingEnabled = true;
             this.cbxPue.Location = new System.Drawing.Point(157, 209);
             this.cbxPue.Name = "cbxPue";

@@ -34,12 +34,12 @@
             this.btnCapturar = new System.Windows.Forms.Button();
             this.btnRepetir = new System.Windows.Forms.Button();
             this.btnSig = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.pcbCap = new System.Windows.Forms.PictureBox();
             this.pcbCamara = new System.Windows.Forms.PictureBox();
-            this.cmbDis = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDisp = new System.Windows.Forms.Label();
+            this.cmbDis = new System.Windows.Forms.ComboBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCamara)).BeginInit();
             this.SuspendLayout();
@@ -113,20 +113,6 @@
             this.btnSig.UseVisualStyleBackColor = true;
             this.btnSig.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnAtras
-            // 
-            this.btnAtras.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401843024_refresh1;
-            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(490, 416);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(110, 35);
-            this.btnAtras.TabIndex = 5;
-            this.btnAtras.Text = "Atras    ";
-            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
             // pcbCap
             // 
             this.pcbCap.Location = new System.Drawing.Point(574, 171);
@@ -145,14 +131,6 @@
             this.pcbCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCamara.TabIndex = 6;
             this.pcbCamara.TabStop = false;
-            // 
-            // cmbDis
-            // 
-            this.cmbDis.FormattingEnabled = true;
-            this.cmbDis.Location = new System.Drawing.Point(139, 416);
-            this.cmbDis.Name = "cmbDis";
-            this.cmbDis.Size = new System.Drawing.Size(159, 24);
-            this.cmbDis.TabIndex = 8;
             // 
             // lblEstado
             // 
@@ -174,18 +152,40 @@
             this.lblDisp.TabIndex = 10;
             this.lblDisp.Text = "Dispositivos";
             // 
+            // cmbDis
+            // 
+            this.cmbDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDis.FormattingEnabled = true;
+            this.cmbDis.Location = new System.Drawing.Point(139, 416);
+            this.cmbDis.Name = "cmbDis";
+            this.cmbDis.Size = new System.Drawing.Size(159, 24);
+            this.cmbDis.TabIndex = 8;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401842826_cross_24;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.Location = new System.Drawing.Point(490, 416);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(110, 35);
+            this.btnCerrar.TabIndex = 12;
+            this.btnCerrar.Text = "Cerrar   ";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // Foto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.fotografia;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblDisp);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.cmbDis);
             this.Controls.Add(this.pcbCap);
             this.Controls.Add(this.pcbCamara);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnSig);
             this.Controls.Add(this.btnRepetir);
             this.Controls.Add(this.btnCapturar);
@@ -213,11 +213,11 @@
         private System.Windows.Forms.Button btnCapturar;
         private System.Windows.Forms.Button btnRepetir;
         private System.Windows.Forms.Button btnSig;
-        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.PictureBox pcbCap;
         private System.Windows.Forms.PictureBox pcbCamara;
-        private System.Windows.Forms.ComboBox cmbDis;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblDisp;
+        private System.Windows.Forms.ComboBox cmbDis;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

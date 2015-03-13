@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemadeControlPoliciaco
 {
@@ -32,15 +33,14 @@ namespace SistemadeControlPoliciaco
 
         private void EditarAspirante_Load(object sender, EventArgs e)
         {
-            bd.buscarg("idAsp as ID,appAsp as Paterno,apmAsp as Materno,"+
-                "nomAsp as Nombre,rfcAsp as RFC,conAsp as Convocatoria,fotAsp", "aspirantes");
+            bd.buscar("SELECT a.idAsp as ID,p.appAsp as Paterno,p.apmAsp as Materno,p.nomAsp as Nombre,p.rfcAsp as RFC,c.fotAsp FROM aspirantes a INNER JOIN personales p ON a.personales_id = p.personales_id INNER JOIN captura c ON a.captura_id = c.captura_id");
             dgvAsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAsp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAsp.RowHeadersVisible = false;
             dgvAsp.DataSource = bd.ds.Tables[0];
-            dgvAsp.Columns[6].Visible = false;
+            dgvAsp.Columns[5].Visible = false;
             dgvAsp.Columns[0].Width = 55;
-            dgvAsp.Columns[4].Width = 120;
+            dgvAsp.Columns[4].Width = 150;
             lblSelec.Text = string.Empty;
             pcbFoto.Image = null;
         }
@@ -51,7 +51,10 @@ namespace SistemadeControlPoliciaco
             id = Convert.ToString(dgvAsp.Rows[e.RowIndex].Cells[0].Value);
             Variables.Editar(id);
             lblSelec.Text = Variables.idAsp;
-            pcbFoto.ImageLocation = Convert.ToString(dgvAsp.Rows[e.RowIndex].Cells[6].Value);
+            Byte[] data = new Byte[0];
+            data = (Byte[])(bd.ds.Tables[0].Rows[e.RowIndex]["fotAsp"]);
+            MemoryStream mem = new MemoryStream(data);
+            pcbFoto.Image = Image.FromStream(mem);
         }
 
         private void dgvAsp_KeyUp(object sender, KeyEventArgs e)

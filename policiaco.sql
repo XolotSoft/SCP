@@ -145,10 +145,13 @@ telAsp varchar(10) not null,
 celAsp varchar(10) not null,
 emaAsp varchar(50) not null);
 go 
-CREATE TABLE identificadores(
-identificadores_id identity primary key not null,
-fotAsp varchar(MAX) null,
-gueAsp varchar(MAX) null);
+CREATE TABLE captura(
+captura_id identity primary key not null,
+fotAsp varchar(MAX) null);
+go 
+CREATE TABLE huella(
+huella_id identity primary key not null,
+hueAsp varchar(MAX) null);
 go 
 CREATE TABLE documentos(
 documentos_id int identity primary key not null, 

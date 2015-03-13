@@ -16,6 +16,13 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
+           string ef = "";
+           string dm = "";
+           string cl = "";
+           string cp = "";
+           string cy = "";
+           string ne = "";
+           string ni = "";
         private static Domicilio frmInst = null;
 
         public static Domicilio Instancia()
@@ -30,9 +37,15 @@ namespace SistemadeControlPoliciaco
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            ef = "";
+            dm = "";
+            cl = "";
+            cp = "";
+            cy = "";
+            ne = "";
+            ni = "";
             Limpiar.txb(this);
             Limpiar.cbx(this);
-            Variables.etapa("");
             this.Hide();
         }
 
@@ -40,6 +53,13 @@ namespace SistemadeControlPoliciaco
         {
             Limpiar.txb(this);
             Limpiar.cbx(this);
+            ef = "";
+            dm = "";
+            cl = "";
+            cp = "";
+            cy = "";
+            ne = "";
+            ni = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,13 +89,13 @@ namespace SistemadeControlPoliciaco
                 if (Vacio.cbx(this))
                 {
                   
-                    string ef = cbxEntFed.Text;
-                    string dm = cbxDelMun.Text;
-                    string cl = txbCol.Text;
-                    string cp = txbCP.Text;
-                    string cy = txbCalle.Text;
-                    string ne = txbNumExt.Text;
-                    string ni = txbNumInt.Text;
+                     ef = cbxEntFed.Text;
+                     dm = cbxDelMun.Text;
+                     cl = txbCol.Text;
+                     cp = txbCP.Text;
+                     cy = txbCalle.Text;
+                     ne = txbNumExt.Text;
+                     ni = txbNumInt.Text;
               
                     ManejoBD bd = new ManejoBD();
                     ob_id id = new ob_id();
@@ -90,6 +110,13 @@ namespace SistemadeControlPoliciaco
                         {
                             MessageBox.Show("Se ha concluido satisfactoriamente la etapa 2 del registro", "Correcto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ef = "";
+                            dm = "";
+                            cl = "";
+                            cp = "";
+                            cy = "";
+                            ne = "";
+                            ni = "";
                             Limpiar.txb(this);
                             Limpiar.cbx(this);
                             this.Hide();

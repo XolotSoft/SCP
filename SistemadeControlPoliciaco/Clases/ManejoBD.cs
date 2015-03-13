@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 
 namespace SistemadeControlPoliciaco
 {
+
      public class ManejoBD
     {
+        
         public SqlCommand cmd;
         public SqlDataAdapter da;
         public DataTable dt = new DataTable();
@@ -62,6 +65,27 @@ namespace SistemadeControlPoliciaco
             }
         }
 
+        public bool insertarimg( MemoryStream ms)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Conexion.conectar();
+            cmd.CommandText = "INSERT INTO captura(fotAsp)VALUES(@fotAsp)";
+            cmd.Parameters.Add("@fotAsp", SqlDbType.Image);
+            cmd.Parameters["@fotAsp"].Value = ms.GetBuffer();
+            int i = cmd.ExecuteNonQuery();
+            Conexion.desconectar();
+
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         public bool insertarq(string query)
         {
             string sql = query;

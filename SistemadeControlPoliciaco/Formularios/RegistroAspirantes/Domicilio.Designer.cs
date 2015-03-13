@@ -138,6 +138,7 @@
             // 
             // cbxEntFed
             // 
+            this.cbxEntFed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEntFed.FormattingEnabled = true;
             this.cbxEntFed.Items.AddRange(new object[] {
             "",
@@ -152,6 +153,7 @@
             // 
             // cbxDelMun
             // 
+            this.cbxDelMun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDelMun.FormattingEnabled = true;
             this.cbxDelMun.Location = new System.Drawing.Point(200, 212);
             this.cbxDelMun.Margin = new System.Windows.Forms.Padding(4);

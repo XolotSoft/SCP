@@ -75,6 +75,7 @@
             this.pcbFoto.Location = new System.Drawing.Point(668, 149);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(120, 133);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 63;
             this.pcbFoto.TabStop = false;
             // 
@@ -177,6 +178,7 @@
             this.btnFil.Text = "Filtrar    ";
             this.btnFil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFil.UseVisualStyleBackColor = true;
+            this.btnFil.Click += new System.EventHandler(this.btnFil_Click_1);
             // 
             // btnCer
             // 
@@ -190,6 +192,7 @@
             this.btnCer.Text = "Cerrar   ";
             this.btnCer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCer.UseVisualStyleBackColor = true;
+            this.btnCer.Click += new System.EventHandler(this.btnCer_Click_1);
             // 
             // btnEdi
             // 
@@ -200,9 +203,10 @@
             this.btnEdi.Name = "btnEdi";
             this.btnEdi.Size = new System.Drawing.Size(110, 35);
             this.btnEdi.TabIndex = 50;
-            this.btnEdi.Text = "Editar    ";
+            this.btnEdi.Text = "Eliminar";
             this.btnEdi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdi.UseVisualStyleBackColor = true;
+            this.btnEdi.Click += new System.EventHandler(this.btnEdi_Click);
             // 
             // dgvAsp
             // 
@@ -217,6 +221,7 @@
             this.dgvAsp.ReadOnly = true;
             this.dgvAsp.Size = new System.Drawing.Size(639, 200);
             this.dgvAsp.TabIndex = 49;
+            this.dgvAsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsp_CellClick_1);
             // 
             // EliminarAspirantes
             // 

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace SistemadeControlPoliciaco
 {
@@ -69,27 +71,31 @@ namespace SistemadeControlPoliciaco
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string ruta = Rutas.foto() + "IMG" + Variables.rfcAsp + ".jpg";
+
+            MemoryStream ms = new MemoryStream();
+            pcbCap.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ManejoBD bd = new ManejoBD();
             ob_id id = new ob_id();
             string ida = id.obtener(Variables.rfcAsp);
-            if (bd.insertar("identificadores", "fotAsp", "'" + ruta + "'"))
+            if (bd.insertarimg(ms))
             {
-
-                if (bd.modificar("UPDATE aspirantes SET captura_id = (SELECT TOP 1 identificadores_id FROM identificadores d ORDER BY identificadores_id DESC),etapa=4 WHERE idAsp = '" + ida + "'"))
+                if (bd.modificar("UPDATE aspirantes SET captura_id = (SELECT TOP 1 captura_id FROM captura d ORDER BY captura_id DESC),etapa=4 WHERE idAsp = '"+ida+"'"))
                 {
-                    pcbCap.Image.Save(ruta);
-                    Variables.Foto(ruta);
-                    MessageBox.Show("Imagen guardada correctamente y etapa 4 concluida satisfactoriamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha concluido satisfactoriamente la etapa 4 del registro", "Correcto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TerminarFuenteDeVideo();
+                    pcbCap.Image = null;
                     this.Hide();
-                    Escaneo gue = null;
-                    gue = Escaneo.Instancia();
-                    gue.MdiParent = AdminMDI.ActiveForm;
-                    gue.MdiParent = UserMDI.ActiveForm;
-                    gue.Show();
-                }
+                    Escaneo con = null;
+                    con = Escaneo.Instancia();
+                    con.MdiParent = AdminMDI.ActiveForm;
+                    con.MdiParent = UserMDI.ActiveForm;
+                    con.Show();
 
+
+                }
             }
+       
         }
         
         private void btnIniCam_Click(object sender, EventArgs e)
@@ -148,6 +154,11 @@ namespace SistemadeControlPoliciaco
         {
             TerminarFuenteDeVideo();
             this.Close();
+        }
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            pcbCap.Image = null;
+            this.Hide();
         }
     }
 }
