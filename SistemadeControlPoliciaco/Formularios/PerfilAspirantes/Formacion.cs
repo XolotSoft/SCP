@@ -21,7 +21,7 @@ namespace SistemadeControlPoliciaco
         private void Formacion_Load(object sender, EventArgs e)
         {
             pictureBox1.Visible = false;
-            button1.Enabled = false;
+            btnLim.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = false;
@@ -40,13 +40,13 @@ namespace SistemadeControlPoliciaco
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (CBestudios.SelectedIndex == 0)
             {
-                button1.Enabled = false;
+                btnLim.Enabled = false;
             }
             else
             {
-                button1.Enabled = true;
+                btnLim.Enabled = true;
             }
         }
 
