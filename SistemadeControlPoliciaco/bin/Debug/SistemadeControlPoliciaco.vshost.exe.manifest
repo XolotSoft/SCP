@@ -106,14 +106,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemadeControlPoliciaco.exe" size="1711528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemadeControlPoliciaco.exe" size="1712552">
       <assemblyIdentity name="SistemadeControlPoliciaco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>maOWH1jpEu8EzVjJzzW6LuEQOUqSkbNSuriz8NZ3GHs=</dsig:DigestValue>
+        <dsig:DigestValue>scxJ0OEfqqsj5xAnsfhbBMhx0GAEEjQCZfVJrN+xkgk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

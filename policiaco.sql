@@ -1,4 +1,4 @@
-Ôªø CREATE DATABASE policiacoDB;
+ CREATE DATABASE policiacoDB;
 go
 use policiacoDB;
 go
@@ -18,9 +18,9 @@ noPue varchar(30) not null);
 go
 INSERT INTO puestos(noPue) VALUES
 ('Cuerpos de vigilancia'),
-('Polic√≠a Preventiva'),
-('Polic√≠a montada'),
-('Polic√≠a tur√≠stica'),
+('PolicÌa Preventiva'),
+('PolicÌa montada'),
+('PolicÌa turÌstica'),
 ('Cuerpo de granaderos');
 go
 CREATE TABLE municipios(
@@ -41,19 +41,19 @@ idMun int identity primary key not null,
 noMun varchar(30) not null);
 go
 INSERT INTO delegaciones(noMun) VALUES
-('√Ålvaro Obreg√≥n'),
+('¡lvaro ObregÛn'),
 ('Azcapotzalco'),
-('Benito Ju√°rez'),
-('Coyoac√°n'),
+('Benito Ju·rez'),
+('Coyoac·n'),
 ('Cuajimalpa de Morelos'),
-('Cuauht√©moc'),
+('CuauhtÈmoc'),
 ('Gustavo A. Madero'),
 ('Iztacalco'),
 ('Iztapalapa'),
 ('La Magdalena Contreras'),
 ('Miguel Hidalgo'),
 ('Milpa Alta'),
-('Tl√°huac'),
+('Tl·huac'),
 ('Tlalpan'),
 ('Venustiano Carranza'),
 ('Xochimilco');
@@ -99,7 +99,7 @@ INSERT INTO estados(noEst,clEst) VALUES
 ('Nacido Extranjero','NE');
 go
 CREATE TABLE aspirantes(
-idAsp int identity(100001,1) primary key not null,
+idAsp int identity(100001,1) PRIMARY KEY NOT NULL,
 personales_id int,
 domicilio_id int,
 contacto_id int,
@@ -126,7 +126,8 @@ sexAsp varchar(30) not null,
 enfAsp varchar(30) not null,
 curAsp varchar(30) not null,
 rfcAsp varchar(30) not null,
-edcAsp varchar(30) not null);
+edcAsp varchar(30) not null,
+CONSTRAINT FK_personales_aspirantes FOREIGN KEY (personales_id) REFERENCES aspirantes(personales_id) ON DELETE CASCADE);
 
 go 
 CREATE TABLE domcilio(
@@ -147,11 +148,11 @@ emaAsp varchar(50) not null);
 go 
 CREATE TABLE captura(
 captura_id identity primary key not null,
-fotAsp varchar(MAX) null);
+fotAsp image null);
 go 
 CREATE TABLE huella(
 huella_id identity primary key not null,
-hueAsp varchar(MAX) null);
+hueAsp image null);
 go 
 CREATE TABLE documentos(
 documentos_id int identity primary key not null, 
