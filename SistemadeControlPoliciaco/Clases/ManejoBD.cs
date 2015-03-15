@@ -86,6 +86,29 @@ namespace SistemadeControlPoliciaco
             }
 
         }
+
+        public bool insertarhue(MemoryStream ms)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Conexion.conectar();
+            cmd.CommandText = "INSERT INTO captura(fotAsp)VALUES(@fotAsp)";
+            cmd.Parameters.Add("@fotAsp", SqlDbType.Image);
+            cmd.Parameters["@fotAsp"].Value = ms.GetBuffer();
+            int i = cmd.ExecuteNonQuery();
+            Conexion.desconectar();
+
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         public bool insertarq(string query)
         {
             string sql = query;
