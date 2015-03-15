@@ -16,12 +16,8 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
-        string aPat = "";
-        string aMat = "";
-        string nAsp = "";
-        string fNac = "";
-        string eFed = "";
-        string sAsp = "";
+        string aPat, aMat, nAsp ,fNac, eFed, sAsp, dAsp, rAsp, ecAsp;
+        ManejoBD bd = new ManejoBD();
         private static Registro frmInst = null;
 
         public static Registro Instancia()
@@ -36,7 +32,6 @@ namespace SistemadeControlPoliciaco
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            ManejoBD bd = new ManejoBD();
             bd.buscarg("*", "estados");
             cbxEntFed.DataSource = bd.ds.Tables[0].DefaultView;
             cbxEntFed.DisplayMember = "noEst";
@@ -53,12 +48,6 @@ namespace SistemadeControlPoliciaco
             Limpiar.txb(this);
             dtpFecNac.ResetText();
             Limpiar.cbx(this);
-            aPat = "";
-            aMat = "";
-            nAsp = "";
-            fNac = "";
-            eFed = "";
-            sAsp = "";
             this.Hide();
         }
 
@@ -67,12 +56,6 @@ namespace SistemadeControlPoliciaco
             Limpiar.txb(this);
             dtpFecNac.ResetText();
             Limpiar.cbx(this);
-            aPat = "";
-            aMat = "";
-            nAsp = "";
-            fNac = "";
-            eFed = "";
-            sAsp = "";
         }
 
         private void btnCon_Click(object sender, EventArgs e)
@@ -81,18 +64,19 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                    string aPat = txbApePat.Text;
-                    string aMat = txbApeMat.Text;
-                    string nAsp = txbNom.Text;
-                    string fNac = dtpFecNac.Text;
-                    string eFed = cbxEntFed.Text;
-                    string sAsp = cbxSex.Text;
-                    string dAsp = txbCurAut.Text + txbCurHom.Text;
-                    string rAsp = txbRfcAut.Text + txbRfcHom.Text;
-                    string ecAsp = cbxEdoCiv.Text;
-                    Variables.DatosPersonales(aPat, aMat, nAsp, fNac, eFed, sAsp, dAsp, rAsp, ecAsp);
-                    ManejoBD bd = new ManejoBD();
+                    aPat = txbApePat.Text;
+                    aMat = txbApeMat.Text;
+                    nAsp = txbNom.Text;
+                    fNac = dtpFecNac.Text;
+                    eFed = cbxEntFed.Text;
+                    sAsp = cbxSex.Text;
+                    dAsp = txbCurAut.Text + txbCurHom.Text;
+                    rAsp = txbRfcAut.Text + txbRfcHom.Text;
+                    ecAsp = cbxEdoCiv.Text;
+                    
+                    Variables.DatosPersonales(rAsp);
                     bd.buscar("SELECT a.personales_id,a.etapa FROM personales p INNER JOIN aspirantes a ON p.personales_id = a.personales_id WHERE p.rfcAsp = '"+rAsp+"'");
+                    
                     if (bd.dt.Rows.Count > 0)
                     {
                         MessageBox.Show("Ya se encuentra un aspirante registrado con el RFC "+rAsp+"", "Correcto",
@@ -102,19 +86,13 @@ namespace SistemadeControlPoliciaco
                         string etapa = Convert.ToString(u[1]);
                         if (etapa != "5")
                         {
-                            DialogResult dialogo = MessageBox.Show("El aspirante ya cuenta con un registro previo desea concluirlo o eliminarlo", "Atención",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            DialogResult dialogo = MessageBox.Show("El aspirante ya cuenta con un registro previo desea concluirlo", "Atención",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                             if (dialogo == DialogResult.Yes)
                             {
                                 Limpiar.txb(this);
                                 dtpFecNac.ResetText();
                                 Limpiar.cbx(this);
-                                aPat = "";
-                                aMat = "";
-                                nAsp = "";
-                                fNac = "";
-                                eFed = "";
-                                sAsp = "";
 
                                 switch (etapa)
                                 {
@@ -153,39 +131,29 @@ namespace SistemadeControlPoliciaco
                                     default:
                                         break;
                                 }
-
                             }
                             if (dialogo == DialogResult.No)
                             {
                                 this.Hide();
                             }
-
                         }
                         else
                         {
                             DialogResult dialogo = MessageBox.Show("El aspirante ya ha concluido con su proceso de registro", "Atención",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        
-
                     }
                     else
                     {
                         if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
-                       "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
-                       "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
-                       "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "'"))
+                       "rfcAsp, edcAsp", "'" + aPat + "','" + aMat + "','" + nAsp +"','" + fNac + "','" + sAsp +
+                       "','" + eFed + "','" + dAsp + "','" + rAsp + "','" + ecAsp + "'"))
                         {
                             if (bd.insertar("aspirantes", "personales_id, etapa", "(SELECT TOP 1 personales_id FROM personales ORDER BY personales_id DESC),1"))
                             {
                                 MessageBox.Show("El aspirante se ha registrado", "Correcto",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                aPat = "";
-                                aMat = "";
-                                nAsp = "";
-                                fNac = "";
-                                eFed = "";
-                                sAsp = "";
+
                                 Limpiar.txb(this);
                                 dtpFecNac.ResetText();
                                 Limpiar.cbx(this);

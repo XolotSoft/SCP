@@ -145,6 +145,7 @@ namespace SistemadeControlPoliciaco
                     MessageBox.Show("El aspirante no se ha eliminado", "Error",
                           MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
         }     
     }
 }

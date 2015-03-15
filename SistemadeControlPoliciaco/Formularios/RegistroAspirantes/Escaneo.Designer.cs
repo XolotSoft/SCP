@@ -35,10 +35,10 @@
             this.BTNatras = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcbHuella = new System.Windows.Forms.PictureBox();
             this.BTNcerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNescanear
@@ -53,6 +53,7 @@
             this.BTNescanear.Text = "Escanear";
             this.BTNescanear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTNescanear.UseVisualStyleBackColor = true;
+            this.BTNescanear.Click += new System.EventHandler(this.BTNescanear_Click);
             // 
             // BTNrepetir
             // 
@@ -98,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(97, 334);
+            this.label1.Location = new System.Drawing.Point(112, 365);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 16);
@@ -109,22 +110,22 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SistemadeControlPoliciaco.Properties.Resources.mano002;
-            this.pictureBox1.Location = new System.Drawing.Point(497, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(470, 118);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 282);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // pcbHuella
             // 
-            this.pictureBox2.Image = global::SistemadeControlPoliciaco.Properties.Resources.huella;
-            this.pictureBox2.Location = new System.Drawing.Point(95, 187);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.pcbHuella.Image = global::SistemadeControlPoliciaco.Properties.Resources.huella;
+            this.pcbHuella.Location = new System.Drawing.Point(85, 158);
+            this.pcbHuella.Name = "pcbHuella";
+            this.pcbHuella.Size = new System.Drawing.Size(149, 192);
+            this.pcbHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbHuella.TabIndex = 6;
+            this.pcbHuella.TabStop = false;
             // 
             // BTNcerrar
             // 
@@ -146,7 +147,7 @@
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.Escaneo;
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.BTNcerrar);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pcbHuella);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTNatras);
             this.Controls.Add(this.BTNregistrar);
@@ -160,8 +161,9 @@
             this.Name = "Escaneo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escaneo";
+            this.Load += new System.EventHandler(this.Escaneo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +177,7 @@
         private System.Windows.Forms.Button BTNatras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pcbHuella;
         private System.Windows.Forms.Button BTNcerrar;
     }
 }
