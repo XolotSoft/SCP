@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemadeControlPoliciaco
 {
@@ -66,12 +67,12 @@ namespace SistemadeControlPoliciaco
                         case DPFP.Processing.Enrollment.Status.Ready:
                             MessageBox.Show("Se ha generado corrctamente el templete de la huella", "Correcto",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MemoryStream ms = new MemoryStream();
                             huella.Stop(Capturador);
+                            Enroller.Template.Serialize(ms);
                             break;
 
                         case DPFP.Processing.Enrollment.Status.Failed:
-                            MessageBox.Show("El templete es de mala calidad intentelo de nuevo", "Correcto",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                             Enroller.Clear();
                             huella.Stop(Capturador);
                             huella.Start(Capturador);

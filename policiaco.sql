@@ -1,4 +1,4 @@
- CREATE DATABASE policiacoDB;
+CREATE DATABASE policiacoDB;
 go
 use policiacoDB;
 go
@@ -127,7 +127,10 @@ enfAsp varchar(30) not null,
 curAsp varchar(30) not null,
 rfcAsp varchar(30) not null,
 edcAsp varchar(30) not null,
-CONSTRAINT FK_personales_aspirantes FOREIGN KEY (personales_id) REFERENCES aspirantes(personales_id) ON DELETE CASCADE);
+CONSTRAINT FK_personales_aspirantes
+FOREIGN KEY (personales_id)
+REFERENCES aspirantes(personales_id)
+ON DELETE CASCADE);
 
 go 
 CREATE TABLE domcilio(
@@ -138,7 +141,11 @@ colAsp varchar(30) not null,
 cdpAsp varchar(5) not null,
 cllAsp varchar(30) not null,
 nueAsp varchar(6) not null,
-nuiAsp varchar(6) not null);
+nuiAsp varchar(6) not null
+CONSTRAINT FK_domicilio_aspirantes
+FOREIGN KEY (domicilio_id)
+REFERENCES aspirantes(domicilio_id)
+ON DELETE CASCADE);
 go 
 CREATE TABLE contacto(
 contacto_id identity primary key not null,

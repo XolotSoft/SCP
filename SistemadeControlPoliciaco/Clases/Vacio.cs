@@ -25,14 +25,7 @@ namespace SistemadeControlPoliciaco
                     bo = 1;
                 }
             }
-            if (bo > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (bo > 0) return true; else return false;
         }
 
         public static bool cbx(Form frm)
@@ -50,14 +43,7 @@ namespace SistemadeControlPoliciaco
                     bo = 1;
                 }
             }
-            if (bo > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (bo > 0) return true; else return false;
         }
     }
 }

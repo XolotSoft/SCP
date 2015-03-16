@@ -25,34 +25,32 @@ namespace SistemadeControlPoliciaco
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string userR;
-            string passR;
-            string tipo;
-            string user = txbUser.Text;
-            string pass = txbPass.Text;
+            string rol;
+            string userStored;
+            string passStored;
+            string userInput = txbUser.Text;
+            string passInput = txbPass.Text;
             string salt = "hbxOlOt23";
-            pass= Hash.sha1(Hash.md5(pass + salt));
-
-            string sql = "SELECT * FROM Usuarios WHERE noUsu ='" + user + "' AND pwUsu ='" + pass + "'";
+            passInput= Hash.sha1(Hash.md5(passInput + salt));
+            string sql = "SELECT * FROM Usuarios WHERE username ='" + userInput + "' AND password ='" + passInput + "'";
 
             if (Vacio.txb(this))
             {
                 db.buscar(sql);
-                if (db.dt.Rows.Count > 0)
+                if (db.ds.Tables[0].Rows.Count > 0)
                 {
-                    DataRow u = db.dt.Rows[0];
-                    userR = Convert.ToString(u[1]);
-                    passR = Convert.ToString(u[2]);
-                    tipo = Convert.ToString(u[3]);
+                    userStored = Convert.ToString(db.ds.Tables[0].Rows[0]["username"]);
+                    passStored = Convert.ToString(db.ds.Tables[0].Rows[0]["password"]);
+                    rol = Convert.ToString(db.ds.Tables[0].Rows[0]["rol"]);
 
-                    if (user == userR && pass == passR && tipo == "Administrador")
+                    if (userInput == userStored && passInput == passStored && rol == "Administrador")
                     {
                         this.Hide();
                         AdminMDI mdiA = new AdminMDI();
                         mdiA.Show();
                     }
 
-                    if (user == userR && pass == passR && tipo == "Usuario")
+                    if (userInput == userStored && passInput == passStored && rol == "Usuario")
                     {
                         this.Hide();
                         UserMDI mdiU = new UserMDI();

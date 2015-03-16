@@ -32,7 +32,7 @@ namespace SistemadeControlPoliciaco
             { 
                 if (peso[i] != 0)
                 {
-                    fso[i] = File.Create(Rutas.pdf() + i + Variables.rfcAsp + ".pdf");
+                    fso[i] = File.Create(Rutas.pdf() + i + Variables.aspiranteId + ".pdf");
                     fsi[i].CopyTo(fso[i]);
                     fsi[i] = null;
                     fso[i] = null;

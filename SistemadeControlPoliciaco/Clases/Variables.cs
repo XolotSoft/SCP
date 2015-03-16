@@ -8,13 +8,13 @@ namespace SistemadeControlPoliciaco
 {
     public static class Variables
     {
-        public static string rfcAsp, fotAsp, gueAsp, idAsp, idass;
+        public static string aspiranteId,gueAsp, idAsp, idass;
 
 
-        public static void DatosPersonales(string rAsp)
+        public static void AspiranteID(string id)
 
         {
-            rfcAsp = rAsp;
+            aspiranteId = id;
         }
 
         public static void Editar(string id)
@@ -22,10 +22,6 @@ namespace SistemadeControlPoliciaco
             idAsp = id;    
         }
 
-        public static void Foto(string ft)
-        {
-            fotAsp = ft;
-        }
         public static void etapa(string id)
         {
             idass = id;

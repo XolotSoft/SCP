@@ -16,7 +16,7 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
-            string cn,pt,tl,cl,em;          
+            string telefono,celular,email;          
            
         private static Contacto frmInst = null;
 
@@ -38,45 +38,28 @@ namespace SistemadeControlPoliciaco
                 {
                     if(Validar.mail(txbMail.Text))
                     {
-
-                       
-                        cn = txbCon.Text;
-                        pt = cbxPue.Text;
-                        tl = txbTel.Text;
-                        cl = txbCel.Text;
-                        em = txbMail.Text;
+                        telefono = txbTel.Text;
+                        celular = txbCel.Text;
+                        email = txbMail.Text;
                      
                         ManejoBD bd = new ManejoBD();
-                        ob_id id = new ob_id();
-                        string ida = id.obtener(Variables.rfcAsp);
-                        if (bd.insertar("contacto", "telAsp,celAsp,emaAsp", "'"
-                       + tl + "','" + cl + "','" + em + "'"))
+                        if (bd.insertar("contacto", "telefono,celular,email,aspirante_id", "'" + telefono + "','" + celular + "','" + email + "','" + Variables.aspiranteId + "'"))
 
                         {
-                            if(bd.insertar("postulado","conASp,pueASp","'"+ cn + "','"+ pt +"'"))
+                            if (bd.modificar("UPDATE aspirantes SET etapa = 3 WHERE id = '" + Variables.aspiranteId + "'")) 
                             {
-
-                                if (bd.modificar("UPDATE aspirantes SET contacto_id = (SELECT TOP 1 contacto_id FROM contacto d ORDER BY contacto_id DESC),etapa=3,postulado_id=(SELECT TOP 1 postulado_id FROM postulado d ORDER BY postulado_id DESC) WHERE idAsp = '" + ida + "'")) 
-                                {
-                                    MessageBox.Show("Se ha concluido satisfactoriamente la etapa 3 del registro", "Correcto",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    cn = "";
-                                    pt = "";
-                                    tl = "";
-                                    cl = "";
-                                    em = "";
-                                    Limpiar.txb(this);
-                                    Limpiar.cbx(this);
-                                    this.Close();
-                                    Foto fot = null;
-                                    fot = Foto.Instancia();
-                                    fot.MdiParent = AdminMDI.ActiveForm;
-                                    fot.MdiParent = UserMDI.ActiveForm;
-                                    fot.Show();
-                                }
-                            }
-                        }
-                       
+                                MessageBox.Show("Se ha concluido satisfactoriamente la etapa 3 del registro", "Correcto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Limpiar.txb(this);
+                                Limpiar.cbx(this);
+                                this.Close();
+                                Foto fot = null;
+                                fot = Foto.Instancia();
+                                fot.MdiParent = AdminMDI.ActiveForm;
+                                fot.MdiParent = UserMDI.ActiveForm;
+                                fot.Show();
+                            }  
+                        } 
                     }
                     else
                     {
@@ -100,10 +83,22 @@ namespace SistemadeControlPoliciaco
         private void Contacto_Load(object sender, EventArgs e)
         {
             ManejoBD bd = new ManejoBD();
-
             bd.buscarg("*", "puestos");
             cbxPue.DataSource = bd.ds.Tables[0].DefaultView;
-            cbxPue.DisplayMember = "noPue";
+            cbxPue.DisplayMember = "nombre";
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Limpiar.txb(this);
+            Limpiar.cbx(this);
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Limpiar.txb(this);
+            Limpiar.cbx(this);
         }
 
         private void txbTel_KeyPress(object sender, KeyPressEventArgs e)
@@ -114,29 +109,6 @@ namespace SistemadeControlPoliciaco
         private void txbCel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.num(e);
-        }
-
-        private void btnCerrar_Click_1(object sender, EventArgs e)
-        {
-            cn = "";
-            pt = "";
-            tl = "";
-            cl = "";
-            em = "";
-            Limpiar.txb(this);
-            Limpiar.cbx(this);
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            cn = "";
-            pt = "";
-            tl = "";
-            cl = "";
-            em = "";
-            Limpiar.txb(this);
-            Limpiar.cbx(this);
         }
     }
 }
