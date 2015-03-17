@@ -26,6 +26,7 @@ namespace SistemadeControlPoliciaco
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             Registro reg = null;
             reg = Registro.Instancia();
             reg.MdiParent = this;

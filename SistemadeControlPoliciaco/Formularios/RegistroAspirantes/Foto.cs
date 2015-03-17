@@ -24,16 +24,16 @@ namespace SistemadeControlPoliciaco
             InitializeComponent();
             BuscarDispositivos();
         }
-        private static Foto frmInst = null;
+        private static Foto foto = null;
 
         public static Foto Instancia()
         {
-            if (((frmInst == null) || (frmInst.IsDisposed == true)))
+            if (((foto == null) || (foto.IsDisposed == true)))
             {
-                frmInst = new Foto();
+                foto = new Foto();
             }
-            frmInst.BringToFront();
-            return frmInst;
+            foto.BringToFront();
+            return foto;
         }
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
         {
@@ -71,15 +71,12 @@ namespace SistemadeControlPoliciaco
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             MemoryStream ms = new MemoryStream();
             pcbCap.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ManejoBD bd = new ManejoBD();
-            ob_id id = new ob_id();
-            string ida = id.obtener(Variables.rfcAsp);
-            if (bd.insertarimg(ms))
+            if (bd.insertarFoto(ms))
             {
-                if (bd.modificar("UPDATE aspirantes SET captura_id = (SELECT TOP 1 captura_id FROM captura d ORDER BY captura_id DESC),etapa=4 WHERE idAsp = '"+ida+"'"))
+                if (bd.modificar("UPDATE aspirantes SET etapa = 4 WHERE id = '"+ Variables.aspiranteId +"'"))
                 {
                     MessageBox.Show("Se ha concluido satisfactoriamente la etapa 4 del registro", "Correcto",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,11 +88,8 @@ namespace SistemadeControlPoliciaco
                     con.MdiParent = AdminMDI.ActiveForm;
                     con.MdiParent = UserMDI.ActiveForm;
                     con.Show();
-
-
                 }
             }
-       
         }
         
         private void btnIniCam_Click(object sender, EventArgs e)
@@ -117,6 +111,8 @@ namespace SistemadeControlPoliciaco
         private void Foto_Load(object sender, EventArgs e)
         {
             btnCapturar.Enabled = false;
+            btnRepetir.Enabled = false;
+            btnSig.Enabled = false; 
         }
 
         private void btnCapturar_Click(object sender, EventArgs e)
@@ -125,8 +121,10 @@ namespace SistemadeControlPoliciaco
             {
                 TerminarFuenteDeVideo();
                 lblEstado.Text = " Dispositivo detenido";
-                cmbDis.Enabled = true;
+                cmbDis.Enabled = false;
                 btnIniCam.Enabled = false;
+                btnCapturar.Enabled = false;
+                btnRepetir.Enabled = true;
                 pcbCap.Image = pcbCamara.Image;
                 pcbCamara.Image = null;
             }
@@ -142,11 +140,15 @@ namespace SistemadeControlPoliciaco
                 lblEstado.Text = " Ejecutando dispositivo";
                 cmbDis.Enabled = false;
                 btnCapturar.Enabled = true;
+                btnRepetir.Enabled = false;
                 btnIniCam.Enabled = false;
                 pcbCap.Image = null;
             }
             else
+            {
                 lblEstado.Text = "Error: No se encuentra dispositivo.";
+            }
+                
             pcbCap.Image = null;
         }
 

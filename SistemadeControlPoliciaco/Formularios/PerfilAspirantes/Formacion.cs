@@ -20,12 +20,7 @@ namespace SistemadeControlPoliciaco
 
         private void Formacion_Load(object sender, EventArgs e)
         {
-            pictureBox1.Visible = false;
-            btnLim.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = false;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -68,7 +63,7 @@ namespace SistemadeControlPoliciaco
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Pdf.cargar(0, File.OpenRead(ofd.FileName));
-                pictureBox1.Visible = true;
+                
 
             }
         }
@@ -81,7 +76,7 @@ namespace SistemadeControlPoliciaco
             {
 
                 Pdf.cargar(1, File.OpenRead(ofd.FileName));
-                pictureBox2.Visible = true;
+                
 
             }
         }
@@ -93,7 +88,7 @@ namespace SistemadeControlPoliciaco
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Pdf.cargar(2, File.OpenRead(ofd.FileName));
-                pictureBox3.Visible = true;
+                
 
             }
         }
@@ -105,7 +100,7 @@ namespace SistemadeControlPoliciaco
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Pdf.cargar(3, File.OpenRead(ofd.FileName));
-                pictureBox4.Visible = true;
+                
 
             }
         }
@@ -117,19 +112,19 @@ namespace SistemadeControlPoliciaco
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Pdf.cargar(4, File.OpenRead(ofd.FileName));
-                pictureBox5.Visible = true;
+               
 
             }
         }
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
-            button2.Enabled = true;
+            
         }
 
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
-            button2.Enabled = false;
+           
         }
 
         private void btnCer_Click(object sender, EventArgs e)
@@ -139,32 +134,32 @@ namespace SistemadeControlPoliciaco
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            button3.Enabled = true;
+            
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            button3.Enabled = false;
+            
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            button4.Enabled = true;
+            
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            button4.Enabled = false;
+            
         }
 
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
-            button5.Enabled = true;
+            
         }
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
-            button5.Enabled = false;
+            
         }
 
  

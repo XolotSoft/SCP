@@ -16,34 +16,23 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
-           string ef = "";
-           string dm = "";
-           string cl = "";
-           string cp = "";
-           string cy = "";
-           string ne = "";
-           string ni = "";
-        private static Domicilio frmInst = null;
+
+        private string entidadFederativa, delegacionMunicipio, colonia, codigoPostal, calle, numeroExterior, numeroInterior;
+        Texto texto = new Texto();
+        private static Domicilio domicilio = null;
 
         public static Domicilio Instancia()
         {
-            if (((frmInst == null) || (frmInst.IsDisposed == true)))
+            if (((domicilio == null) || (domicilio.IsDisposed == true)))
             {
-                frmInst = new Domicilio();
+                domicilio = new Domicilio();
             }
-            frmInst.BringToFront();
-            return frmInst;
+            domicilio.BringToFront();
+            return domicilio;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            ef = "";
-            dm = "";
-            cl = "";
-            cp = "";
-            cy = "";
-            ne = "";
-            ni = "";
             Limpiar.txb(this);
             Limpiar.cbx(this);
             this.Hide();
@@ -53,13 +42,6 @@ namespace SistemadeControlPoliciaco
         {
             Limpiar.txb(this);
             Limpiar.cbx(this);
-            ef = "";
-            dm = "";
-            cl = "";
-            cp = "";
-            cy = "";
-            ne = "";
-            ni = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,14 +51,14 @@ namespace SistemadeControlPoliciaco
                 ManejoBD bd = new ManejoBD();
                 bd.buscarg("*", "municipios");
                 cbxDelMun.DataSource = bd.ds.Tables[0].DefaultView;
-                cbxDelMun.DisplayMember = "noMun";
+                cbxDelMun.DisplayMember = "nombre";
             }
             if (cbxEntFed.SelectedIndex == 2)
             {
                 ManejoBD bd = new ManejoBD();
                 bd.buscarg("*", "delegaciones");
                 cbxDelMun.DataSource = bd.ds.Tables[0].DefaultView;
-                cbxDelMun.DisplayMember = "noMun";
+                cbxDelMun.DisplayMember = "nombre";
             }
         }
 
@@ -88,48 +70,34 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                  
-                     ef = cbxEntFed.Text;
-                     dm = cbxDelMun.Text;
-                     cl = txbCol.Text;
-                     cp = txbCP.Text;
-                     cy = txbCalle.Text;
-                     ne = txbNumExt.Text;
-                     ni = txbNumInt.Text;
+                    entidadFederativa = cbxEntFed.Text;
+                    delegacionMunicipio = cbxDelMun.Text;
+                    colonia = texto.Capital(txbCol.Text);
+                    codigoPostal = txbCP.Text;
+                    calle = texto.Capital(txbCalle.Text);
+                    numeroExterior = txbNumExt.Text;
+                    numeroInterior = txbNumInt.Text;
               
                     ManejoBD bd = new ManejoBD();
-                    ob_id id = new ob_id();
-                    string ida = id.obtener(Variables.rfcAsp);
-                    if (bd.insertar("domicilio", "efdAsp,domAsp,colAsp,cdpAsp,cllAsp,nueAsp,nuiAsp", "'"
-                       + ef+ "','" + dm + "','" + cl + "','" +
-                       cp + "','" + cy + "','" + ne + "','" + ni + "'"))
+
+                    if (bd.insertar("domicilio", "entidad_federativa,delegacion_municipio,colonia,codigo_postal,calle,numero_exterior,numero_interior,aspirante_id", "'"
+                       + entidadFederativa+ "','" + delegacionMunicipio + "','" + colonia + "','" +
+                       codigoPostal + "','" + calle + "','" + numeroExterior + "','" + numeroInterior + "','" + Variables.aspiranteId + "'"))
                     {
-                        
-                        if (bd.modificar("UPDATE aspirantes SET domicilio_id = (SELECT TOP 1 domicilio_id FROM domicilio d ORDER BY domicilio_id DESC),etapa=2 WHERE idAsp = '"+ida+"'"))
-                          
+                        if (bd.modificar("UPDATE aspirantes SET etapa = 2 WHERE id = '" + Variables.aspiranteId + "'"))
                         {
                             MessageBox.Show("Se ha concluido satisfactoriamente la etapa 2 del registro", "Correcto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ef = "";
-                            dm = "";
-                            cl = "";
-                            cp = "";
-                            cy = "";
-                            ne = "";
-                            ni = "";
                             Limpiar.txb(this);
                             Limpiar.cbx(this);
                             this.Hide();
-                            Contacto con = null;
-                            con = Contacto.Instancia();
-                            con.MdiParent = AdminMDI.ActiveForm;
-                            con.MdiParent = UserMDI.ActiveForm;
-                            con.Show();
-
-                        }
+                            Contacto contacto = null;
+                            contacto = Contacto.Instancia();
+                            contacto.MdiParent = AdminMDI.ActiveForm;
+                            contacto.MdiParent = UserMDI.ActiveForm;
+                            contacto.Show();
+                        } 
                     }
-                    
-                  
                 }
                 else
                 {
@@ -143,7 +111,7 @@ namespace SistemadeControlPoliciaco
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        #region Validaciones
         private void txbNumExt_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.num(e);
@@ -193,5 +161,6 @@ namespace SistemadeControlPoliciaco
         {
             Validar.letynumesp(e);
         }
+        #endregion
     }
 }

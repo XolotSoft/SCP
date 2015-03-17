@@ -16,34 +16,33 @@ namespace SistemadeControlPoliciaco
         {
             InitializeComponent();
         }
-        string aPat = "";
-        string aMat = "";
-        string nAsp = "";
-        string fNac = "";
-        string eFed = "";
-        string sAsp = "";
-        private static Registro frmInst = null;
+
+        string apellidoPat, apellidoMat, nombre ,fechaNac, entidadFed, sexo, curp, rfc, estadoCivil;
+        private static Registro registro = null;
+        ManejoBD estados = new ManejoBD();
+        ManejoBD aspirante = new ManejoBD();
+        ManejoBD bd = new ManejoBD();
+        Texto texto = new Texto();
 
         public static Registro Instancia()
         {
-            if (((frmInst == null) || (frmInst.IsDisposed == true)))
+            if (((registro == null) || (registro.IsDisposed == true)))
             {
-                frmInst = new Registro();
+                registro = new Registro();
             }
-            frmInst.BringToFront();
-            return frmInst;
+            registro.BringToFront();
+            return registro;
         }
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            ManejoBD bd = new ManejoBD();
-            bd.buscarg("*", "estados");
-            cbxEntFed.DataSource = bd.ds.Tables[0].DefaultView;
-            cbxEntFed.DisplayMember = "noEst";
-            cbxEntFed.ValueMember = "clEst";
+            estados.buscarg("*", "estados");
+            cbxEntFed.DataSource = estados.ds.Tables[0].DefaultView;
+            cbxEntFed.DisplayMember = "nombre";
+            cbxEntFed.ValueMember = "clave";
             Limpiar.txb(this);
-            dtpFecNac.ResetText();
             Limpiar.cbx(this);
+            dtpFecNac.ResetText();
             dtpFecNac.Format = DateTimePickerFormat.Custom;
             dtpFecNac.CustomFormat = "yyyy-MM-dd";
         }
@@ -51,28 +50,16 @@ namespace SistemadeControlPoliciaco
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Limpiar.txb(this);
-            dtpFecNac.ResetText();
             Limpiar.cbx(this);
-            aPat = "";
-            aMat = "";
-            nAsp = "";
-            fNac = "";
-            eFed = "";
-            sAsp = "";
+            dtpFecNac.ResetText();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Limpiar.txb(this);
-            dtpFecNac.ResetText();
             Limpiar.cbx(this);
-            aPat = "";
-            aMat = "";
-            nAsp = "";
-            fNac = "";
-            eFed = "";
-            sAsp = "";
+            dtpFecNac.ResetText();
         }
 
         private void btnCon_Click(object sender, EventArgs e)
@@ -81,111 +68,97 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                    string aPat = txbApePat.Text;
-                    string aMat = txbApeMat.Text;
-                    string nAsp = txbNom.Text;
-                    string fNac = dtpFecNac.Text;
-                    string eFed = cbxEntFed.Text;
-                    string sAsp = cbxSex.Text;
-                    string dAsp = txbCurAut.Text + txbCurHom.Text;
-                    string rAsp = txbRfcAut.Text + txbRfcHom.Text;
-                    string ecAsp = cbxEdoCiv.Text;
-                    Variables.DatosPersonales(aPat, aMat, nAsp, fNac, eFed, sAsp, dAsp, rAsp, ecAsp);
-                    ManejoBD bd = new ManejoBD();
-                    bd.buscar("SELECT a.personales_id,a.etapa FROM personales p INNER JOIN aspirantes a ON p.personales_id = a.personales_id WHERE p.rfcAsp = '"+rAsp+"'");
-                    if (bd.dt.Rows.Count > 0)
+                    apellidoPat = texto.Capital(txbApePat.Text);
+                    apellidoMat = texto.Capital(txbApeMat.Text);
+                    nombre = texto.Capital(txbNom.Text);
+                    fechaNac = dtpFecNac.Text;
+                    entidadFed = cbxEntFed.Text;
+                    sexo = cbxSex.Text;
+                    curp = txbCurAut.Text + txbCurHom.Text;
+                    rfc = txbRfcAut.Text + txbRfcHom.Text;
+                    estadoCivil = cbxEdoCiv.Text;
+                    
+                    aspirante.buscar("SELECT a.id,p.rfc,a.etapa FROM personal p INNER JOIN aspirantes a ON a.id = p.aspirante_id WHERE p.rfc = '" + rfc + "'");
+
+                    if (aspirante.ds.Tables[0].Rows.Count > 0)
                     {
-                        MessageBox.Show("Ya se encuentra un aspirante registrado con el RFC "+rAsp+"", "Correcto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataRow u = bd.dt.Rows[0];
-                        string pid = Convert.ToString(u[0]);                    
-                        string etapa = Convert.ToString(u[1]);
+                        MessageBox.Show("Ya se encuentra un aspirante registrado con el RFC "+ rfc +"", "Correcto",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string pid = Convert.ToString(aspirante.ds.Tables[0].Rows[0]["id"]);
+                        string etapa = Convert.ToString(aspirante.ds.Tables[0].Rows[0]["etapa"]);
                         if (etapa != "5")
                         {
-                            DialogResult dialogo = MessageBox.Show("El aspirante ya cuenta con un registro previo desea concluirlo o eliminarlo", "Atención",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            DialogResult dialogo = MessageBox.Show("El aspirante ya cuenta con un registro previo desea concluirlo", "Atención",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                             if (dialogo == DialogResult.Yes)
                             {
+                                Variables.AspiranteID(pid);
                                 Limpiar.txb(this);
                                 dtpFecNac.ResetText();
                                 Limpiar.cbx(this);
-                                aPat = "";
-                                aMat = "";
-                                nAsp = "";
-                                fNac = "";
-                                eFed = "";
-                                sAsp = "";
 
                                 switch (etapa)
                                 {
                                     case "1":
                                         this.Hide();
-                                        Domicilio dom = null;
-                                        dom = Domicilio.Instancia();
-                                        dom.MdiParent = AdminMDI.ActiveForm;
-                                        dom.MdiParent = UserMDI.ActiveForm;
-                                        dom.Show();
+                                        Domicilio domicilio = null;
+                                        domicilio = Domicilio.Instancia();
+                                        domicilio.MdiParent = AdminMDI.ActiveForm;
+                                        domicilio.MdiParent = UserMDI.ActiveForm;
+                                        domicilio.Show();
                                         break;
                                     case "2":
                                         this.Hide();
-                                        Contacto con = null;
-                                        con = Contacto.Instancia();
-                                        con.MdiParent = AdminMDI.ActiveForm;
-                                        con.MdiParent = UserMDI.ActiveForm;
-                                        con.Show();
+                                        Contacto contacto = null;
+                                        contacto = Contacto.Instancia();
+                                        contacto.MdiParent = AdminMDI.ActiveForm;
+                                        contacto.MdiParent = UserMDI.ActiveForm;
+                                        contacto.Show();
                                         break;
                                     case "3":
                                         this.Close();
-                                        Foto fot = null;
-                                        fot = Foto.Instancia();
-                                        fot.MdiParent = AdminMDI.ActiveForm;
-                                        fot.MdiParent = UserMDI.ActiveForm;
-                                        fot.Show();
+                                        Foto foto = null;
+                                        foto = Foto.Instancia();
+                                        foto.MdiParent = AdminMDI.ActiveForm;
+                                        foto.MdiParent = UserMDI.ActiveForm;
+                                        foto.Show();
                                         break;
                                     case "4":
                                         this.Hide();
-                                        Escaneo esc = null;
-                                        esc = Escaneo.Instancia();
-                                        esc.MdiParent = AdminMDI.ActiveForm;
-                                        esc.MdiParent = UserMDI.ActiveForm;
-                                        esc.Show();
+                                        Escaneo escaneo = null;
+                                        escaneo = Escaneo.Instancia();
+                                        escaneo.MdiParent = AdminMDI.ActiveForm;
+                                        escaneo.MdiParent = UserMDI.ActiveForm;
+                                        escaneo.Show();
                                         break;
                                     default:
                                         break;
                                 }
-
                             }
                             if (dialogo == DialogResult.No)
                             {
                                 this.Hide();
                             }
-
                         }
                         else
                         {
                             DialogResult dialogo = MessageBox.Show("El aspirante ya ha concluido con su proceso de registro", "Atención",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        
-
                     }
                     else
                     {
-                        if (bd.insertar("personales", "appAsp, apmAsp, nomAsp, fncAsp, sexAsp, enfAsp, curAsp," +
-                       "rfcAsp, edcAsp", "'" + Variables.appAsp + "','" + Variables.apmAsp + "','" + Variables.nomAsp +
-                       "','" + Variables.fncAsp + "','" + Variables.sexAsp + "','" + Variables.enfAsp + "','" + Variables.curAsp +
-                       "','" + Variables.rfcAsp + "','" + Variables.edcAsp + "'"))
+                        if (bd.insertar("aspirantes", "etapa", "1"))  
                         {
-                            if (bd.insertar("aspirantes", "personales_id, etapa", "(SELECT TOP 1 personales_id FROM personales ORDER BY personales_id DESC),1"))
+                            if (bd.insertar("personal", "apellido_paterno,apellido_materno,nombre,fecha_nacimiento,sexo,entidad_federativa,curp,rfc,estado_civil,aspirante_id", "'"
+                            + apellidoPat + "','" + apellidoMat + "','" + nombre + "','" + fechaNac + "','" + sexo + "','" + entidadFed + "','" + curp + "','" + rfc + "','" + estadoCivil +
+                            "', (SELECT IDENT_CURRENT('aspirantes'))"))
                             {
+                                bd.buscar("SELECT IDENT_CURRENT('aspirantes')");
+                                Variables.AspiranteID(Convert.ToString(bd.ds.Tables[0].Rows[0][0]));
                                 MessageBox.Show("El aspirante se ha registrado", "Correcto",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                aPat = "";
-                                aMat = "";
-                                nAsp = "";
-                                fNac = "";
-                                eFed = "";
-                                sAsp = "";
+
                                 Limpiar.txb(this);
                                 dtpFecNac.ResetText();
                                 Limpiar.cbx(this);
@@ -195,7 +168,6 @@ namespace SistemadeControlPoliciaco
                                 dom.MdiParent = AdminMDI.ActiveForm;
                                 dom.MdiParent = UserMDI.ActiveForm;
                                 dom.Show();
-
                             }
                             else
                             {
@@ -214,34 +186,41 @@ namespace SistemadeControlPoliciaco
                 else
                 {
                     MessageBox.Show("Debes de Seleccionar una opcion", "Error",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 MessageBox.Show("Debes de llenar todos los campos", "Error",
-                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-
+        #region Genera RFC CURP
         private void txbApePat_Leave(object sender, EventArgs e)
         {
-            if (txbApePat.Text != "")
+   
+            if (txbApePat.Text.Length > 1)
             {
-                aPat = txbApePat.Text.Substring(0, 2).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp;
+                apellidoPat = txbApePat.Text.Substring(0, 2).ToUpper();
+                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
+                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
+            }
+            else
+            {
+                MessageBox.Show("El apellido es demasiado corto", "Atencion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txbApePat.Focus();
             }
         }
 
         private void txbApeMat_Leave(object sender, EventArgs e)
         {
-            if (txbApeMat.Text != "")
-            {
-                aMat = txbApeMat.Text.Substring(0, 1).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp;
+            if (txbApeMat.Text == "") apellidoMat = "X"; else apellidoMat = txbApeMat.Text.Substring(0, 1).ToUpper();
+            if (txbApePat.Text.Length > 1)
+            {  
+                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
+                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
             }
         }
 
@@ -249,9 +228,9 @@ namespace SistemadeControlPoliciaco
         {
             if (txbNom.Text != "")
             {
-                nAsp = txbNom.Text.Substring(0, 1).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp;
+                nombre = txbNom.Text.Substring(0, 1).ToUpper();
+                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
+                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
             }
         }
 
@@ -262,17 +241,17 @@ namespace SistemadeControlPoliciaco
             string anio = dtpFecNac.Text.Substring(2, 2);
             string mes = dtpFecNac.Text.Substring(5, 2);
             string dia = dtpFecNac.Text.Substring(8, 2);
-            fNac = anio+mes+dia;
-            txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-            txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp;
+            fechaNac = anio+mes+dia;
+            txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
+            txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
         }
 
         private void cbxSex_Leave(object sender, EventArgs e)
         {
             if (cbxSex.SelectedIndex != 0)
             {
-                sAsp = cbxSex.Text.Substring(0, 1).ToUpper();
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp;
+                sexo = cbxSex.Text.Substring(0, 1).ToUpper();
+                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
             }
         }
 
@@ -280,8 +259,8 @@ namespace SistemadeControlPoliciaco
         {
             if (cbxSex.SelectedIndex != 0)
             {
-                eFed = cbxEntFed.SelectedValue.ToString();
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
+                entidadFed = cbxEntFed.SelectedValue.ToString();
+                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo + entidadFed;
             }
         }
 
@@ -294,7 +273,9 @@ namespace SistemadeControlPoliciaco
         {
             txbRfcHom.Text = txbRfcHom.Text.ToUpper();
         }
+        #endregion
 
+        #region Validaciones
         private void txbApePat_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.letrasyesp(e);
@@ -319,5 +300,6 @@ namespace SistemadeControlPoliciaco
         {
             Validar.letynum(e);
         }
+        #endregion
     }
 }
