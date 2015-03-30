@@ -105,7 +105,7 @@
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Clases\CURP.cs" />
+    <Compile Include="Clases\Claves.cs" />
     <Compile Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.cs">
       <SubType>Form</SubType>
     </Compile>

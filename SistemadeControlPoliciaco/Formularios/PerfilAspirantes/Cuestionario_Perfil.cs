@@ -17,6 +17,11 @@ namespace SistemadeControlPoliciaco
             InitializeComponent();
         }
 
+        private void btncontinuar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }

@@ -71,6 +71,7 @@ namespace SistemadeControlPoliciaco
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             MemoryStream ms = new MemoryStream();
             pcbCap.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ManejoBD bd = new ManejoBD();

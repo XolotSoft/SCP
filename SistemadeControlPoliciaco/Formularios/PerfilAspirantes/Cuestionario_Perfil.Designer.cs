@@ -103,6 +103,7 @@
             this.btncontinuar.Text = "Continuar";
             this.btncontinuar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncontinuar.UseVisualStyleBackColor = true;
+            this.btncontinuar.Click += new System.EventHandler(this.btncontinuar_Click);
             // 
             // label6
             // 

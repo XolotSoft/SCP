@@ -3,20 +3,20 @@ go
 use policiacoDB;
 go
 CREATE TABLE usuarios(
-idUsu int identity(101,1) primary key not null,
-noUsu varchar(20) not null,
-pwUsu varchar(20) not null,
-tpUsu varchar(20) not null);
+id int identity(101,1) PRIMARY KEY NOT NULL,
+username varchar(20) NULL,
+password varchar(20) NULL,
+rol varchar(20) NULL);
 go
-INSERT INTO usuarios(noUsu,pwUsu,tpUsu) VALUES
-('admin','admin','Administrador'),
-('user','user','Usuario');
+INSERT INTO usuarios(username,password,rol) VALUES
+('admin','e1a965abd6a8ca67b5cb780c83b533c9eb49b967','Administrador'),
+('user','b4d894113178942de203ff5f783edc9e593818be','Usuario');
 go
 CREATE TABLE puestos(
-idPue int identity(201,1) primary key not null,
-noPue varchar(30) not null);
+id int identity(201,1) PRIMARY KEY NOT NULL,
+nombre varchar(30) NULL);
 go
-INSERT INTO puestos(noPue) VALUES
+INSERT INTO puestos(nombre) VALUES
 ('Cuerpos de vigilancia'),
 ('Policía Preventiva'),
 ('Policía montada'),
@@ -24,10 +24,10 @@ INSERT INTO puestos(noPue) VALUES
 ('Cuerpo de granaderos');
 go
 CREATE TABLE municipios(
-idMun int identity primary key not null,
-noMun varchar(30) not null);
+id int identity PRIMARY KEY NOT NULL,
+nombre varchar(30) NULL);
 go
-INSERT INTO municipios(noMun) VALUES
+INSERT INTO municipios(nombre) VALUES
 ('Ecatepec'),
 ('Coacalco'),
 ('Cuautitlan'),
@@ -37,10 +37,10 @@ INSERT INTO municipios(noMun) VALUES
 ('Tlanepantla');
 go
 CREATE TABLE delegaciones(
-idMun int identity primary key not null,
-noMun varchar(30) not null);
+id int identity PRIMARY KEY NOT NULL,
+nombre varchar(30) NULL);
 go
-INSERT INTO delegaciones(noMun) VALUES
+INSERT INTO delegaciones(nombre) VALUES
 ('Álvaro Obregón'),
 ('Azcapotzalco'),
 ('Benito Juárez'),
@@ -59,11 +59,11 @@ INSERT INTO delegaciones(noMun) VALUES
 ('Xochimilco');
 go
 CREATE TABLE estados(
-idEst int identity primary key not null,
-noEst varchar(30) not null,
-clEst varchar(2) not null);
+id int identity PRIMARY KEY NOT NULL,
+nombre varchar(30) NOT NULL,
+clave varchar(2) NOT NULL);
 go
-INSERT INTO estados(noEst,clEst) VALUES
+INSERT INTO estados(nombre,clave) VALUES
 ('Aguascalientes','AS'),
 ('Baja California','BC'),
 ('Baja California Sur','BS'),
@@ -99,77 +99,81 @@ INSERT INTO estados(noEst,clEst) VALUES
 ('Nacido Extranjero','NE');
 go
 CREATE TABLE aspirantes(
-idAsp int identity(100001,1) PRIMARY KEY NOT NULL,
-personales_id int,
-domicilio_id int,
-contacto_id int,
-postulado_id int,
-captura_id int,
-identificador_id int,
-etapa int);
-
-go 
-CREATE table postulado(
-postulado_id int primary key identity not null,
-conAsp varchar (20),
-pueAsp varchar (25));
-
-
+id int identity(100001,1) PRIMARY KEY NOT NULL,
+etapa int NULL);
 go
-CREATE TABLE personales(
-personales_id identity primary key not null,
-appAsp varchar(20) not null,
-apmAsp varchar(20) not null,
-nomAsp varchar(30) not null,
-fncAsp date not null,
-sexAsp varchar(30) not null,
-enfAsp varchar(30) not null,
-curAsp varchar(30) not null,
-rfcAsp varchar(30) not null,
-edcAsp varchar(30) not null,
-CONSTRAINT FK_personales_aspirantes
-FOREIGN KEY (personales_id)
-REFERENCES aspirantes(personales_id)
+CREATE TABLE personal(
+id int identity PRIMARY KEY NOT NULL,
+aspirante_id int NOT NULL,
+apellido_paterno varchar(20) NULL,
+apellido_materno varchar(20) NULL,
+nombre varchar(30) NULL,
+fecha_nacimiento date NULL,
+sexo varchar(30) NULL,
+entidad_federativa varchar(30) NULL,
+curp varchar(30) NULL,
+rfc varchar(30) NULL,
+estado_civil varchar(30) NULL,
+CONSTRAINT FK_personal_aspirantes_cascade
+FOREIGN KEY (aspirante_id)
+REFERENCES aspirantes(id)
 ON DELETE CASCADE);
-
 go 
-CREATE TABLE domcilio(
-domicilio_id identity primary key not null,
-efdAsp varchar(30) not null,
-domAsp varchar(30) not null,
-colAsp varchar(30) not null,
-cdpAsp varchar(5) not null,
-cllAsp varchar(30) not null,
-nueAsp varchar(6) not null,
-nuiAsp varchar(6) not null
-CONSTRAINT FK_domicilio_aspirantes
-FOREIGN KEY (domicilio_id)
-REFERENCES aspirantes(domicilio_id)
+CREATE TABLE domicilio(
+id int identity PRIMARY KEY NOT NULL,
+aspirante_id int NOT NULL,
+entidad_federativa varchar(30) NULL,
+delegacion_municipio varchar(30) NULL,
+colonia varchar(30) NULL,
+codigo_postal varchar(5) NULL,
+calle varchar(30) NULL,
+numero_exterior varchar(6) NULL,
+numero_interior varchar(6) NULL
+CONSTRAINT FK_domicilio_aspirantes_cascade
+FOREIGN KEY (aspirante_id)
+REFERENCES aspirantes(id)
 ON DELETE CASCADE);
 go 
 CREATE TABLE contacto(
-contacto_id identity primary key not null,
-telAsp varchar(10) not null,
-celAsp varchar(10) not null,
-emaAsp varchar(50) not null);
+id int identity PRIMARY KEY NOT NULL,
+aspirante_id int NOT NULL,
+telefono varchar(10) NULL,
+celular varchar(10) NULL,
+email varchar(50) NULL
+CONSTRAINT FK_contacto_aspirantes_cascade
+FOREIGN KEY (aspirante_id)
+REFERENCES aspirantes(id)
+ON DELETE CASCADE);
 go 
-CREATE TABLE captura(
-captura_id identity primary key not null,
-fotAsp image null);
+CREATE TABLE foto(
+id int identity PRIMARY KEY NOT NULL,
+aspirante_id int NOT NULL,
+foto image NULL,
+CONSTRAINT FK_foto_aspirantes_cascade
+FOREIGN KEY (aspirante_id)
+REFERENCES aspirantes(id)
+ON DELETE CASCADE);
 go 
 CREATE TABLE huella(
-huella_id identity primary key not null,
-hueAsp image null);
+id int identity PRIMARY KEY NOT NULL,
+aspirante_id int NOT NULL,
+huella_01 image NULL,
+huella_02 image NULL,
+huella_03 image NULL,
+huella_04 image NULL,
+huella_05 image NULL,
+CONSTRAINT FK_huella_aspirantes_cascade
+FOREIGN KEY (aspirante_id)
+REFERENCES aspirantes(id)
+ON DELETE CASCADE);
 go 
 CREATE TABLE documentos(
-documentos_id int identity primary key not null, 
-estAsp varchar(MAX) null,
-pasAsp varchar(MAX) null,
-ptcAsp varchar(MAX) null,
-escAsp varchar(MAX) null,
-mafAsp varchar(MAX) null);
+id int identity PRIMARY KEY NOT NULL, 
+estAsp varchar(MAX) NULL,
+pasAsp varchar(MAX) NULL,
+ptcAsp varchar(MAX) NULL,
+escAsp varchar(MAX) NULL,
+mafAsp varchar(MAX) NULL);
 
-/*conAsp varchar(30) not null,
-pueAsp varchar(30) not null,*/
 
 

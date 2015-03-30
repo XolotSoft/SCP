@@ -23,6 +23,7 @@ namespace SistemadeControlPoliciaco
         ManejoBD aspirante = new ManejoBD();
         ManejoBD bd = new ManejoBD();
         Texto texto = new Texto();
+        Claves cup = new Claves();
 
         public static Registro Instancia()
         {
@@ -134,9 +135,9 @@ namespace SistemadeControlPoliciaco
                                     default:
                                         break;
                                 }
-                            }
-                            if (dialogo == DialogResult.No)
-                            {
+                                        }
+                                        if (dialogo == DialogResult.No)
+                                        {
                                 this.Hide();
                             }
                         }
@@ -202,11 +203,11 @@ namespace SistemadeControlPoliciaco
    
             if (txbApePat.Text.Length > 1)
             {
-                apellidoPat = txbApePat.Text.Substring(0, 2).ToUpper();
-                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
-                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
+               
+                txbCurAut.Text = cup.Curp(txbApePat.Text,txbApeMat.Text,txbNom.Text,dtpFecNac,cbxEntFed,cbxSex);
             }
             else
+
             {
                 MessageBox.Show("El apellido es demasiado corto", "Atencion",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,52 +217,35 @@ namespace SistemadeControlPoliciaco
 
         private void txbApeMat_Leave(object sender, EventArgs e)
         {
-            if (txbApeMat.Text == "") apellidoMat = "X"; else apellidoMat = txbApeMat.Text.Substring(0, 1).ToUpper();
-            if (txbApePat.Text.Length > 1)
-            {  
-                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
-                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
-            }
+           
+                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+            
         }
 
         private void txbNom_Leave(object sender, EventArgs e)
         {
-            if (txbNom.Text != "")
+            if (txbNom.Text.Length > 0)
             {
-                nombre = txbNom.Text.Substring(0, 1).ToUpper();
-                txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
-                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
+                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
             }
         }
 
         private void dtpFecNac_Leave(object sender, EventArgs e)
         {
-            dtpFecNac.Format = DateTimePickerFormat.Custom;
-            dtpFecNac.CustomFormat = "yyyy-MM-dd";
-            string anio = dtpFecNac.Text.Substring(2, 2);
-            string mes = dtpFecNac.Text.Substring(5, 2);
-            string dia = dtpFecNac.Text.Substring(8, 2);
-            fechaNac = anio+mes+dia;
-            txbRfcAut.Text = apellidoPat + apellidoMat + nombre + fechaNac;
-            txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
+            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
         }
-
+         
         private void cbxSex_Leave(object sender, EventArgs e)
         {
             if (cbxSex.SelectedIndex != 0)
             {
-                sexo = cbxSex.Text.Substring(0, 1).ToUpper();
-                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo;
+              txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
             }
         }
 
         private void cbxEntFed_Leave(object sender, EventArgs e)
         {
-            if (cbxSex.SelectedIndex != 0)
-            {
-                entidadFed = cbxEntFed.SelectedValue.ToString();
-                txbCurAut.Text = apellidoPat + apellidoMat + nombre + fechaNac + sexo + entidadFed;
-            }
+            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
         }
 
         private void txbCurHom_Leave(object sender, EventArgs e)
@@ -300,6 +284,7 @@ namespace SistemadeControlPoliciaco
         {
             Validar.letynum(e);
         }
-        #endregion
+        #endregion    
+
     }
 }
