@@ -9,7 +9,7 @@ namespace SistemadeControlPoliciaco
 {
     class Claves
     {
-        string curp, plPaterno, slPaterno,fecha,sexo,entidad,pcinterna,scPaterno,slNombre,scMaterno,plMaterno;
+        string curp, plPaterno, slPaterno,fecha,sexo,entidad,pcinterna,scPaterno,slNombre,scMaterno,plMaterno,rfc,daPaterno,daMaterno,sNombre,fec;
         public string Curp(string app, string apellidoMat, string plNombre,DateTimePicker fecna,ComboBox enf, ComboBox sex)
         {
            
@@ -62,11 +62,16 @@ namespace SistemadeControlPoliciaco
                 string letra = plNombre.Substring(i, 1).ToUpper();
                 if (letra == " ")
                 {
-                    if (plNombre.Length == 5)
+                    string largo = plNombre.Substring(0, i).ToUpper();
+                    
+                   
+                    if (largo.Length == 5)
+
                     {
                         if (plNombre.Substring(0, 5).ToUpper() == "MARIA")
                         {
-                           slNombre = plNombre.Substring(5, 1).ToUpper();
+                           slNombre = plNombre.Substring(5, plNombre.Length - 5).ToUpper();
+                           slNombre = slNombre.Substring(1, 1).ToUpper();
                         }
                         else 
                         {
@@ -74,11 +79,13 @@ namespace SistemadeControlPoliciaco
                         }
 
                     }
-                    if (plNombre.Length == 4)
+
+                    if (largo.Length == 4)
                     {
                         if (plNombre.Substring(0, 4).ToUpper() == "JOSE")
                         {
-                            slNombre = plNombre.Substring(4, 1).ToUpper();
+                            slNombre = plNombre.Substring(4, plNombre.Length - 4).ToUpper();
+                            slNombre = slNombre.Substring(1, 1).ToUpper();
                         }
                         else
                         {
@@ -86,7 +93,11 @@ namespace SistemadeControlPoliciaco
                         }
 
                     }
-
+                    break;
+                }
+                else
+                {
+                    slNombre = plNombre.Substring(0, 1).ToUpper();
                 }
 
             }
@@ -107,8 +118,28 @@ namespace SistemadeControlPoliciaco
             }
                 
 
-            curp = plPaterno + slPaterno + plMaterno + fecha + sexo + entidad + pcinterna + scMaterno;
+            curp = plPaterno + slPaterno + plMaterno + slNombre + fecha + sexo + entidad + pcinterna + scMaterno;
             return curp;
-        } 
+        }
+        public string Rfc(string apellidoPatr, string apellidoMatr,string nombrer, DateTimePicker fechan)
+        {
+            daPaterno = apellidoPatr.Substring(0, 2).ToUpper();
+            if (apellidoMatr != string.Empty)
+            {
+                daMaterno = apellidoMatr.Substring(0, 1).ToUpper();
+            }
+            if (nombrer != string.Empty)
+            {
+                sNombre = nombrer.Substring(0, 1).ToUpper();
+            }
+
+            fechan.CustomFormat = "yyyy-MM-dd";
+            string anio = fechan.Text.Substring(2, 2);
+            string mes = fechan.Text.Substring(5, 2);
+            string dia = fechan.Text.Substring(8, 2);
+            fec = anio + mes + dia;
+
+            return rfc = daPaterno + daMaterno + sNombre + fec; 
+        }
      }
 }

@@ -41,7 +41,16 @@ namespace SistemadeControlPoliciaco
             }
             else
             {
-                btnLim.Enabled = true;
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "PDF File|*.pdf";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    Pdf.cargar(0, File.OpenRead(ofd.FileName));
+                    pictureBox1.Visible = true;
+                    label2.Visible = true;
+
+                }
+                //btnLim.Enabled = true;
             }
         }
 
@@ -158,6 +167,11 @@ namespace SistemadeControlPoliciaco
         }
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLim_Click(object sender, EventArgs e)
         {
             
         }

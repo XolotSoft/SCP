@@ -205,6 +205,7 @@ namespace SistemadeControlPoliciaco
             {
                
                 txbCurAut.Text = cup.Curp(txbApePat.Text,txbApeMat.Text,txbNom.Text,dtpFecNac,cbxEntFed,cbxSex);
+                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
             }
             else
 
@@ -219,6 +220,7 @@ namespace SistemadeControlPoliciaco
         {
            
                 txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
             
         }
 
@@ -227,12 +229,14 @@ namespace SistemadeControlPoliciaco
             if (txbNom.Text.Length > 0)
             {
                 txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
             }
         }
 
         private void dtpFecNac_Leave(object sender, EventArgs e)
         {
             txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+             txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
         }
          
         private void cbxSex_Leave(object sender, EventArgs e)
