@@ -49,7 +49,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(396, 164);
+            this.label1.Location = new System.Drawing.Point(397, 163);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
@@ -62,7 +62,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(408, 212);
+            this.label2.Location = new System.Drawing.Point(409, 211);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
@@ -75,7 +75,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(420, 259);
+            this.label3.Location = new System.Drawing.Point(421, 258);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
@@ -85,7 +85,7 @@
             // txbTel
             // 
             this.txbTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTel.Location = new System.Drawing.Point(469, 161);
+            this.txbTel.Location = new System.Drawing.Point(470, 160);
             this.txbTel.Margin = new System.Windows.Forms.Padding(4);
             this.txbTel.MaxLength = 10;
             this.txbTel.Name = "txbTel";
@@ -96,7 +96,7 @@
             // txbCel
             // 
             this.txbCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCel.Location = new System.Drawing.Point(469, 209);
+            this.txbCel.Location = new System.Drawing.Point(470, 208);
             this.txbCel.Margin = new System.Windows.Forms.Padding(4);
             this.txbCel.MaxLength = 10;
             this.txbCel.Name = "txbCel";
@@ -107,7 +107,7 @@
             // txbMail
             // 
             this.txbMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMail.Location = new System.Drawing.Point(469, 256);
+            this.txbMail.Location = new System.Drawing.Point(470, 255);
             this.txbMail.Margin = new System.Windows.Forms.Padding(4);
             this.txbMail.MaxLength = 50;
             this.txbMail.Name = "txbMail";
@@ -118,7 +118,7 @@
             // 
             this.btnContinuar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401844327_checkmark_24;
             this.btnContinuar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContinuar.Location = new System.Drawing.Point(610, 416);
+            this.btnContinuar.Location = new System.Drawing.Point(611, 415);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(110, 35);
             this.btnContinuar.TabIndex = 6;
@@ -131,7 +131,7 @@
             // 
             this.button2.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401843024_refresh1;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(490, 416);
+            this.button2.Location = new System.Drawing.Point(491, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 35);
             this.button2.TabIndex = 7;
@@ -144,7 +144,7 @@
             // 
             this.btnCerrar.Image = global::SistemadeControlPoliciaco.Properties.Resources._1401842826_cross_24;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(370, 416);
+            this.btnCerrar.Location = new System.Drawing.Point(371, 415);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(110, 35);
             this.btnCerrar.TabIndex = 8;
@@ -156,7 +156,7 @@
             // txbCon
             // 
             this.txbCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCon.Location = new System.Drawing.Point(158, 161);
+            this.txbCon.Location = new System.Drawing.Point(159, 160);
             this.txbCon.Margin = new System.Windows.Forms.Padding(4);
             this.txbCon.Name = "txbCon";
             this.txbCon.Size = new System.Drawing.Size(170, 22);
@@ -168,7 +168,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(59, 164);
+            this.label4.Location = new System.Drawing.Point(60, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 16);
@@ -181,7 +181,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(97, 212);
+            this.label5.Location = new System.Drawing.Point(98, 211);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
@@ -192,7 +192,7 @@
             // 
             this.cbxPue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPue.FormattingEnabled = true;
-            this.cbxPue.Location = new System.Drawing.Point(157, 209);
+            this.cbxPue.Location = new System.Drawing.Point(158, 208);
             this.cbxPue.Name = "cbxPue";
             this.cbxPue.Size = new System.Drawing.Size(170, 24);
             this.cbxPue.TabIndex = 2;

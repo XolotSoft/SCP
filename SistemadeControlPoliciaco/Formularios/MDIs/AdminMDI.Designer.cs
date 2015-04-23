@@ -42,6 +42,7 @@
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.continuarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.continuarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -183,6 +183,15 @@
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
+            // continuarToolStripMenuItem
+            // 
+            this.continuarToolStripMenuItem.Image = global::SistemadeControlPoliciaco.Properties.Resources.editar;
+            this.continuarToolStripMenuItem.Name = "continuarToolStripMenuItem";
+            this.continuarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
+            this.continuarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.continuarToolStripMenuItem.Text = "Continuar";
+            this.continuarToolStripMenuItem.Click += new System.EventHandler(this.continuarToolStripMenuItem_Click);
+            // 
             // activosToolStripMenuItem
             // 
             this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
@@ -242,14 +251,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // continuarToolStripMenuItem
-            // 
-            this.continuarToolStripMenuItem.Image = global::SistemadeControlPoliciaco.Properties.Resources.editar;
-            this.continuarToolStripMenuItem.Name = "continuarToolStripMenuItem";
-            this.continuarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.continuarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.continuarToolStripMenuItem.Text = "Continuar";
             // 
             // AdminMDI
             // 

@@ -54,7 +54,9 @@ namespace SistemadeControlPoliciaco
             {
                 if (txbPass.Text == txbPass2.Text)
                 {
-                    if (db.insertar("usuarios", "noUsu,pwUsu,tpUsu","'" +txbUser.Text + "','" + txbPass.Text + "','" + tipo +"'"))
+                    string salt = "hbxOlOt23";
+                    string passInput = Hash.sha1(Hash.md5(txbPass.Text + salt));
+                    if (db.insertar("usuarios", "username,password,rol", "'" + txbUser.Text + "','" + passInput + "','" + tipo + "'"))
                     {
                         MessageBox.Show("Se ha registrado el Usuario " + txbUser.Text, "Correctamente",
                             MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

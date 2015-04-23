@@ -44,8 +44,8 @@
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tssTiempo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +107,7 @@
             this.nuevoToolStripMenuItem.Image = global::SistemadeControlPoliciaco.Properties.Resources.agregar;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -117,7 +117,7 @@
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.A)));
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -150,7 +150,7 @@
             // 
             this.calculadoraToolStripMenuItem.Image = global::SistemadeControlPoliciaco.Properties.Resources.Calculadora;
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
@@ -158,7 +158,7 @@
             // 
             this.notasToolStripMenuItem.Image = global::SistemadeControlPoliciaco.Properties.Resources.note;
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.notasToolStripMenuItem.Text = "Notas";
             this.notasToolStripMenuItem.Click += new System.EventHandler(this.notasToolStripMenuItem_Click);
             // 
@@ -179,17 +179,17 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // tssTiempo
             // 
             this.tssTiempo.Name = "tssTiempo";
             this.tssTiempo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tssTiempo.Size = new System.Drawing.Size(118, 17);
             this.tssTiempo.Text = "toolStripStatusLabel1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UserMDI
             // 
@@ -209,6 +209,7 @@
             this.Name = "UserMDI";
             this.Text = "Sistema de Control de Recursos Humanos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMDI_FormClosed);
+            this.Load += new System.EventHandler(this.UserMDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

@@ -162,5 +162,10 @@ namespace SistemadeControlPoliciaco
             Validar.letynumesp(e);
         }
         #endregion
+
+        private void Domicilio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

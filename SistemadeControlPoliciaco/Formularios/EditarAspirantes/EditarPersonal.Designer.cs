@@ -1,6 +1,6 @@
 ﻿namespace SistemadeControlPoliciaco
 {
-    partial class EditarDatPerAsp
+    partial class EditarPersonal
     {
         /// <summary>
         /// Required designer variable.
@@ -328,41 +328,45 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(64, 384);
+            this.button1.Location = new System.Drawing.Point(515, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 35);
             this.button1.TabIndex = 44;
             this.button1.Text = "Domicilio";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(64, 425);
+            this.button2.Location = new System.Drawing.Point(515, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 35);
             this.button2.TabIndex = 45;
             this.button2.Text = "Contacto";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(180, 425);
+            this.button3.Location = new System.Drawing.Point(631, 49);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 35);
             this.button3.TabIndex = 46;
             this.button3.Text = "Huella Dig";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(180, 384);
+            this.button4.Location = new System.Drawing.Point(631, 8);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 35);
             this.button4.TabIndex = 47;
             this.button4.Text = "Fotografia";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // EditarDatPerAsp
+            // EditarPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -398,7 +402,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "EditarDatPerAsp";
+            this.Name = "EditarPersonal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarDatPerAsp";
             this.Load += new System.EventHandler(this.EditarDatPerAsp_Load);

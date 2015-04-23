@@ -210,8 +210,6 @@ namespace SistemadeControlPoliciaco
             else
 
             {
-                MessageBox.Show("El apellido es demasiado corto", "Atencion",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txbApePat.Focus();
             }
         }

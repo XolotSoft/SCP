@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace SistemadeControlPoliciaco
 {
-    public partial class EditarDatPerAsp : Form
+    public partial class EditarPersonal : Form
     {
-        public EditarDatPerAsp()
+        public EditarPersonal()
         {
             InitializeComponent();
         }
-        private static EditarDatPerAsp frmInst = null;
+        private static EditarPersonal frmInst = null;
         ManejoBD bd = new ManejoBD();
-        string aPat = "";
-        string aMat = "";
-        string nAsp = "";
-        string fNac = "";
-        string eFed = "";
-        string sAsp = "";
 
-        public static EditarDatPerAsp Instancia()
+        public static EditarPersonal Instancia()
         {
             if (((frmInst == null) || (frmInst.IsDisposed == true)))
             {
-                frmInst = new EditarDatPerAsp();
+                frmInst = new EditarPersonal();
             }
             frmInst.BringToFront();
             return frmInst;
@@ -37,36 +31,30 @@ namespace SistemadeControlPoliciaco
 
         private void EditarDatPerAsp_Load(object sender, EventArgs e)
         {
+            ManejoBD bd = new ManejoBD();
             bd.buscarg("*", "estados");
             cbxEntFed.DataSource = bd.ds.Tables[0].DefaultView;
-            cbxEntFed.DisplayMember = "noEst";
-            cbxEntFed.ValueMember = "clEst";
-            bd.dt.Reset();
-            bd.buscare("appAsp,apmAsp,nomAsp,fncAsp,sexAsp,enfAsp,curAsp,rfcAsp,edcAsp",
-                "aspirantes", "idAsp", ""+Variables.idAsp+"");
-            DataRow drb = bd.dt.Rows[0];
-            txbApePat.Text = Convert.ToString(drb[0]);
-            txbApeMat.Text = Convert.ToString(drb[1]);
-            txbNom.Text = Convert.ToString(drb[2]);
-            dtpFecNac.Value = Convert.ToDateTime(drb[3]);
-            cbxSex.Text = Convert.ToString(drb[4]);
-            cbxEntFed.Text = Convert.ToString(drb[5]);
-            txbCurAut.Text = Convert.ToString(drb[6]).Substring(0,13);
-            txbCurHom.Text = Convert.ToString(drb[6]).Substring(13,3);
-            txbRfcAut.Text = Convert.ToString(drb[7]).Substring(0,10);
-            txbRfcHom.Text = Convert.ToString(drb[7]).Substring(10,3);
-            cbxEdoCiv.Text = Convert.ToString(drb[8]);
+            cbxEntFed.DisplayMember = "nombre";
+            cbxEntFed.ValueMember = "id";
+            ManejoBD db = new ManejoBD();
+            db.buscare("*",
+                "personal", "aspirante_id", ""+ Variables.idAsp +"");
+            txbApePat.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["apellido_paterno"]);
+            txbApeMat.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["apellido_materno"]);
+            txbNom.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["nombre"]);
+            dtpFecNac.Value = Convert.ToDateTime(db.ds.Tables[0].Rows[0]["fecha_nacimiento"]);
+            cbxSex.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["sexo"]);
+            cbxEntFed.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["entidad_federativa"]);
+            txbCurAut.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["curp"]).Substring(0,15);
+            txbCurHom.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["curp"]).Substring(15,3);
+            txbRfcAut.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["rfc"]).Substring(0,10);
+            txbRfcHom.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["rfc"]).Substring(10,3);
+            cbxEdoCiv.Text = Convert.ToString(db.ds.Tables[0].Rows[0]["estado_civil"]);
             dtpFecNac.Format = DateTimePickerFormat.Custom;
             dtpFecNac.CustomFormat = "yyyy-MM-dd";
             string anio = dtpFecNac.Text.Substring(2, 2);
             string mes = dtpFecNac.Text.Substring(5, 2);
-            string dia = dtpFecNac.Text.Substring(8, 2);
-            aPat = txbApePat.Text.Substring(0, 2).ToUpper();
-            aMat = txbApeMat.Text.Substring(0, 1).ToUpper();
-            nAsp = txbNom.Text.Substring(0, 1).ToUpper();
-            fNac = anio + mes + dia;
-            sAsp = cbxSex.Text.Substring(0, 1).ToUpper();
-            eFed = Convert.ToString(drb[6]).Substring(11, 2);
+            string dia = dtpFecNac.Text.Substring(8, 2);        
         }
 
         private void btnCer_Click(object sender, EventArgs e)
@@ -90,10 +78,10 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                    string sql = "UPDATE aspirantes SET appAsp = '" + txbApePat.Text + "'," + "apmAsp ='"+ txbApeMat.Text +"'," + 
-                        "nomAsp ='" + txbNom.Text + "'," + "fncAsp ='"+ dtpFecNac.Text + "'," + "sexAsp ='" + cbxSex.Text + "'," +
-                        "enfAsp ='" + cbxEntFed.Text + "'," + "curAsp ='" + txbCurAut.Text+txbCurHom.Text + "'," +
-                        "rfcAsp ='" + txbRfcAut.Text+txbRfcHom.Text + "'," +"edcAsp ='" + cbxEdoCiv.Text + "' WHERE idAsp = '" + Variables.idAsp + "'";
+                    string sql = "UPDATE personal SET apellido_paterno = '" + txbApePat.Text + "'," + "apellido_materno ='"+ txbApeMat.Text +"'," + 
+                        "nombre ='" + txbNom.Text + "'," + "fecha_nacimiento ='"+ dtpFecNac.Text + "'," + "sexo ='" + cbxSex.Text + "'," +
+                        "entidad_federativa ='" + cbxEntFed.Text + "'," + "curp ='" + txbCurAut.Text+txbCurHom.Text + "'," +
+                        "rfc ='" + txbRfcAut.Text+txbRfcHom.Text + "'," +"estado_civil ='" + cbxEdoCiv.Text + "' WHERE aspirante_id = '" + Variables.idAsp + "'";
                     if (bd.modificar(sql))
                     {             
                         MessageBox.Show("Se ha modificado el Usuario", "Correcto",
@@ -126,72 +114,42 @@ namespace SistemadeControlPoliciaco
 
         private void txbApePat_Leave(object sender, EventArgs e)
         {
-            if (txbApePat.Text != "")
-            {
-                aPat = txbApePat.Text.Substring(0, 2).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
-            }
+            
         }
 
         private void txbApeMat_Leave(object sender, EventArgs e)
         {
-            if (txbApeMat.Text != "")
-            {
-                aMat = txbApeMat.Text.Substring(0, 1).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
-            }
+            
         }
 
         private void txbNom_Leave(object sender, EventArgs e)
         {
-            if (txbNom.Text != "")
-            {
-                nAsp = txbNom.Text.Substring(0, 1).ToUpper();
-                txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
-            }
+           
         }
 
         private void dtpFecNac_Leave(object sender, EventArgs e)
         {
-            dtpFecNac.Format = DateTimePickerFormat.Custom;
-            dtpFecNac.CustomFormat = "yyyy-MM-dd";
-            string anio = dtpFecNac.Text.Substring(2, 2);
-            string mes = dtpFecNac.Text.Substring(5, 2);
-            string dia = dtpFecNac.Text.Substring(8, 2);
-            fNac = anio + mes + dia;
-            txbRfcAut.Text = aPat + aMat + nAsp + fNac;
-            txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
+            
         }
 
         private void cbxSex_Leave(object sender, EventArgs e)
         {
-            if (cbxSex.SelectedIndex != 0)
-            {
-                sAsp = cbxSex.Text.Substring(0, 1).ToUpper();
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
-            }
+           
         }
 
         private void cbxEntFed_Leave(object sender, EventArgs e)
         {
-            if (cbxSex.SelectedIndex != 0)
-            {
-                eFed = cbxEntFed.SelectedValue.ToString();
-                txbCurAut.Text = aPat + aMat + nAsp + fNac + sAsp + eFed;
-            }
+
         }
 
         private void txbCurHom_Leave(object sender, EventArgs e)
         {
-            txbCurHom.Text = txbCurHom.Text.ToUpper();
+            
         }
 
         private void txbRfcHom_Leave(object sender, EventArgs e)
         {
-            txbRfcHom.Text = txbRfcHom.Text.ToUpper();
+            
         }
 
         private void txbApePat_KeyPress(object sender, KeyPressEventArgs e)
@@ -217,6 +175,43 @@ namespace SistemadeControlPoliciaco
         private void txbRfcHom_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.letynum(e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditarDomicilio ed = null;
+            ed = EditarDomicilio.Instancia();
+            ed.MdiParent = AdminMDI.ActiveForm;
+            ed.Show();
+            this.Close();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditarContacto ec = null;
+            ec = EditarContacto.Instancia();
+            ec.MdiParent = AdminMDI.ActiveForm;
+            ec.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EditarFoto ft = null;
+            ft = EditarFoto.Instancia();
+            ft.MdiParent = AdminMDI.ActiveForm;
+            ft.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EditarHuella ft = null;
+            ft = EditarHuella.Instancia();
+            ft.MdiParent = AdminMDI.ActiveForm;
+            ft.Show();
+            this.Close();
         }
     }
 }

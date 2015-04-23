@@ -283,6 +283,7 @@
             this.Name = "Domicilio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Domicilio";
+            this.Load += new System.EventHandler(this.Domicilio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

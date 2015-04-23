@@ -32,8 +32,8 @@ namespace SistemadeControlPoliciaco
 
         private void EliminarUsuario_Load(object sender, EventArgs e)
         {
-            bd.buscarg("idUsu as ID,noUsu as Usuario," +
-              "tpUsu as Tipo", "usuarios");
+            bd.buscarg("id as ID,username as Usuario," +
+              "rol as Tipo", "usuarios");
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvUsers.RowHeadersVisible = false;
@@ -68,19 +68,19 @@ namespace SistemadeControlPoliciaco
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             bd.ds.Clear();
-            bd.buscarg("idUsu as ID,noUsu as Usuario," +
-              "tpUsu as Tipo", "usuarios");
+            bd.buscarg("id as ID,username as Usuario," +
+              "rol as Tipo", "usuarios");
             dgvUsers.Refresh();
             dgvUsers.Focus();
             lblSelec.Text = "";
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (bd.eliminar("usuarios", "idUsu", id))
+            if (bd.eliminar("usuarios", "id", id))
             {
                 bd.ds.Clear();
-                bd.buscarg("idUsu as ID,noUsu as Usuario," +
-                  "tpUsu as Tipo", "usuarios");
+                bd.buscarg("id as ID,username as Usuario," +
+                  "rol as Tipo", "usuarios");
                 dgvUsers.Refresh();
                 dgvUsers.Focus();
                 lblSelec.Text = "";

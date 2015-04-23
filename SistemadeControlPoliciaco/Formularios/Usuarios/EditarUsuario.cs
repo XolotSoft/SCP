@@ -31,8 +31,8 @@ namespace SistemadeControlPoliciaco
 
         private void EditarUsuario_Load(object sender, EventArgs e)
         {
-            bd.buscarg("idUsu as ID,noUsu as Usuario,pwUsu as Password," +
-               "tpUsu as Tipo", "usuarios");
+            bd.buscarg("id as ID,username as Usuario," +
+               "rol as Tipo", "usuarios");
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvUsers.RowHeadersVisible = false;
@@ -44,8 +44,7 @@ namespace SistemadeControlPoliciaco
             if (e.RowIndex < 0) return;
             txbId.Text = Convert.ToString(dgvUsers.Rows[e.RowIndex].Cells[0].Value);
             txbUser.Text = Convert.ToString(dgvUsers.Rows[e.RowIndex].Cells[1].Value);
-            txbPass.Text = Convert.ToString(dgvUsers.Rows[e.RowIndex].Cells[2].Value);
-            txbTipo.Text = Convert.ToString(dgvUsers.Rows[e.RowIndex].Cells[3].Value);
+            txbTipo.Text = Convert.ToString(dgvUsers.Rows[e.RowIndex].Cells[2].Value);
         }
 
         private void dgvUsers_KeyUp(object sender, KeyEventArgs e)
@@ -54,8 +53,7 @@ namespace SistemadeControlPoliciaco
             {
                 txbId.Text = Convert.ToString(dgvUsers.Rows[dgvUsers.CurrentRow.Index].Cells[0].Value);
                 txbUser.Text = Convert.ToString(dgvUsers.Rows[dgvUsers.CurrentRow.Index].Cells[1].Value);
-                txbPass.Text = Convert.ToString(dgvUsers.Rows[dgvUsers.CurrentRow.Index].Cells[2].Value);
-                txbTipo.Text = Convert.ToString(dgvUsers.Rows[dgvUsers.CurrentRow.Index].Cells[3].Value);
+                txbTipo.Text = Convert.ToString(dgvUsers.Rows[dgvUsers.CurrentRow.Index].Cells[2].Value);
             }
             if (e.KeyCode == Keys.Tab)
             {
@@ -71,8 +69,8 @@ namespace SistemadeControlPoliciaco
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             bd.ds.Clear();
-            bd.buscarg("idUsu as ID,noUsu as Usuario,pwUsu as Password," +
-              "tpUsu as Tipo", "usuarios");
+            bd.buscarg("id as ID,username as Usuario," +
+              "rol as Tipo", "usuarios");
             dgvUsers.Refresh();
             dgvUsers.Focus();
         }
@@ -83,15 +81,18 @@ namespace SistemadeControlPoliciaco
             {
                 if (txbPass.Text == txbPass2.Text)
                 {
-                    string sql = "UPDATE usuarios SET noUsu = '" + txbUser.Text + "'," +
-                    "pwUsu ='" + txbPass.Text + "' WHERE idUser = '" + txbId.Text + "'";
+                    string salt = "hbxOlOt23";
+                    string passInput = Hash.sha1(Hash.md5(txbPass.Text + salt));
+                    string sql = "UPDATE usuarios SET username = '" + txbUser.Text + "'," +
+                    "password ='" + passInput + "' WHERE id = '" + txbId.Text + "'";
                     if (bd.modificar(sql))
                     {
                         bd.ds.Clear();
-                        bd.buscarg("idUsu as ID,noUsu as Usuario,pwUsu as Password," +
-                          "tpUsu as Tipo", "usuarios");
+                        bd.buscarg("id as ID,username as Usuario," +
+                          "rol as Tipo", "usuarios");
                         dgvUsers.Refresh();
                         dgvUsers.Focus();
+                        Limpiar.txb(this);
                         MessageBox.Show("Se ha modificado el Usuario", "Correcto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

@@ -66,12 +66,23 @@ namespace SistemadeControlPoliciaco
             cmd.Parameters.Add("@aspirante_id", SqlDbType.Int);
             cmd.Parameters.Add("@foto", SqlDbType.Image);
             cmd.Parameters["@aspirante_id"].Value = Variables.aspiranteId;
-            cmd.Parameters["@fotAsp"].Value = ms.GetBuffer();
+            cmd.Parameters["@foto"].Value = ms.GetBuffer();
             int i = cmd.ExecuteNonQuery();
             Conexion.desconectar();
             if (i > 0) return true; else return false;
         }
 
+        public bool editarFoto(MemoryStream ms)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Conexion.conectar();
+            cmd.CommandText = "UPDATE foto SET foto = @foto WHERE aspirante_id = '"+Variables.idAsp +"'";
+            cmd.Parameters.Add("@foto", SqlDbType.Image);
+            cmd.Parameters["@foto"].Value = ms.GetBuffer();
+            int i = cmd.ExecuteNonQuery();
+            Conexion.desconectar();
+            if (i > 0) return true; else return false;
+        }
         public bool insertarHue(MemoryStream ms)
         {
             SqlCommand cmd = new SqlCommand();
@@ -80,6 +91,18 @@ namespace SistemadeControlPoliciaco
             cmd.Parameters.Add("@aspirante_id", SqlDbType.Int);
             cmd.Parameters.Add("@huella", SqlDbType.Image);
             cmd.Parameters["@aspirante_id"].Value = Variables.aspiranteId;
+            cmd.Parameters["@huella"].Value = ms.GetBuffer();
+            int i = cmd.ExecuteNonQuery();
+            Conexion.desconectar();
+            if (i > 0) return true; else return false;
+        }
+
+        public bool editarHuella(MemoryStream ms)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Conexion.conectar();
+            cmd.CommandText = "UPDATE huella SET huella_01 = @huella WHERE aspirante_id = '" + Variables.idAsp + "'";
+            cmd.Parameters.Add("@huella", SqlDbType.Image);
             cmd.Parameters["@huella"].Value = ms.GetBuffer();
             int i = cmd.ExecuteNonQuery();
             Conexion.desconectar();

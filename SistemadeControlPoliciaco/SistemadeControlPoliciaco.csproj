@@ -106,6 +106,36 @@
     </Compile>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Claves.cs" />
+    <Compile Include="Formularios\RegistroAspirantes\ContinuarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroAspirantes\ContinuarRegistro.Designer.cs">
+      <DependentUpon>ContinuarRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarHuella.Designer.cs">
+      <DependentUpon>EditarHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarFoto.Designer.cs">
+      <DependentUpon>EditarFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarContacto.Designer.cs">
+      <DependentUpon>EditarContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\EditarDomicilio.Designer.cs">
+      <DependentUpon>EditarDomicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +166,11 @@
     <Compile Include="Formularios\ElinarAspirantes\EliminarAspirantes.Designer.cs">
       <DependentUpon>EliminarAspirantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\EditarAspirantes\EditarDatPerAsp.cs">
+    <Compile Include="Formularios\EditarAspirantes\EditarPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\EditarAspirantes\EditarDatPerAsp.Designer.cs">
-      <DependentUpon>EditarDatPerAsp.cs</DependentUpon>
+    <Compile Include="Formularios\EditarAspirantes\EditarPersonal.Designer.cs">
+      <DependentUpon>EditarPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EditarAspirantes\EditarAspirante.cs">
       <SubType>Form</SubType>
@@ -220,6 +250,12 @@
     <Compile Include="Clases\Hash.cs" />
     <Compile Include="Clases\Pdf.cs" />
     <Compile Include="Clases\Huella.cs" />
+    <Compile Include="Formularios\EditarAspirantes\HuellaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarAspirantes\HuellaEspera.Designer.cs">
+      <DependentUpon>HuellaEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Vacio.cs" />
     <Compile Include="Clases\Validar.cs" />
@@ -235,6 +271,18 @@
     <EmbeddedResource Include="CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarHuella.resx">
+      <DependentUpon>EditarHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarFoto.resx">
+      <DependentUpon>EditarFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarContacto.resx">
+      <DependentUpon>EditarContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarDomicilio.resx">
+      <DependentUpon>EditarDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PerfilAspirantes\Cuestuinario_perfil_2.resx">
       <DependentUpon>Cuestuinario_perfil_2.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +295,8 @@
     <EmbeddedResource Include="Formularios\ElinarAspirantes\EliminarAspirantes.resx">
       <DependentUpon>EliminarAspirantes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarDatPerAsp.resx">
-      <DependentUpon>EditarDatPerAsp.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\EditarPersonal.resx">
+      <DependentUpon>EditarPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarAspirantes\EditarAspirante.resx">
       <DependentUpon>EditarAspirante.cs</DependentUpon>
@@ -258,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegistroAspirantes\Contacto.resx">
       <DependentUpon>Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroAspirantes\ContinuarRegistro.resx">
+      <DependentUpon>ContinuarRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegistroAspirantes\Domicilio.resx">
       <DependentUpon>Domicilio.cs</DependentUpon>
@@ -285,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarAspirantes\HuellaEspera.resx">
+      <DependentUpon>HuellaEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

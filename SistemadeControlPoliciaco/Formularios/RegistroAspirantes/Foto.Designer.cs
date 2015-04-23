@@ -160,6 +160,7 @@
             this.cmbDis.Name = "cmbDis";
             this.cmbDis.Size = new System.Drawing.Size(159, 24);
             this.cmbDis.TabIndex = 8;
+            this.cmbDis.SelectedIndexChanged += new System.EventHandler(this.cmbDis_SelectedIndexChanged);
             // 
             // btnCerrar
             // 

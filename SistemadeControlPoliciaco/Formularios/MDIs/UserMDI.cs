@@ -75,5 +75,10 @@ namespace SistemadeControlPoliciaco
         {
             tssTiempo.Text = DateTime.Now.ToString("f");
         }
+
+        private void UserMDI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,26 +14,45 @@ using System.Data.SqlClient;
 
 namespace SistemadeControlPoliciaco
 {
-    public partial class Foto : Form
+    public partial class EditarFoto : Form
     {
         private bool ExistenDispositivos = false;
         private FilterInfoCollection DispositivosDeVideo;
         private VideoCaptureDevice FuenteDeVideo = null;
-        public Foto()
+        public EditarFoto()
         {
             InitializeComponent();
             BuscarDispositivos();
         }
-        private static Foto foto = null;
-
-        public static Foto Instancia()
+        private static EditarFoto frmInst = null;
+        public static EditarFoto Instancia()
         {
-            if (((foto == null) || (foto.IsDisposed == true)))
+            if (((frmInst == null) || (frmInst.IsDisposed == true)))
             {
-                foto = new Foto();
+                frmInst = new EditarFoto();
             }
-            foto.BringToFront();
-            return foto;
+            frmInst.BringToFront();
+            return frmInst;
+        }
+        private void btnHuella_Click(object sender, EventArgs e)
+        {
+            EditarHuella ft = null;
+            ft = EditarHuella.Instancia();
+            ft.MdiParent = AdminMDI.ActiveForm;
+            ft.Show();
+            this.Close();
+        }
+
+        private void EditarFoto_Load(object sender, EventArgs e)
+        {
+            ManejoBD bd = new ManejoBD();
+            bd.buscare("*",
+               "foto", "aspirante_id", "" + Variables.idAsp + "");
+            Byte[] data = new Byte[0];
+            data = (Byte[])(bd.ds.Tables[0].Rows[0]["foto"]);
+            MemoryStream mem = new MemoryStream(data);
+            pcbCap.Image = Image.FromStream(mem);
+
         }
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
         {
@@ -63,36 +82,20 @@ namespace SistemadeControlPoliciaco
                 }
         }
 
+        private void btnContacto_Click(object sender, EventArgs e)
+        {
+            EditarContacto ec = null;
+            ec = EditarContacto.Instancia();
+            ec.MdiParent = AdminMDI.ActiveForm;
+            ec.Show();
+            this.Hide();
+        }
+
         private void video_NuevoFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
             pcbCamara.Image = Imagen;
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-            MemoryStream ms = new MemoryStream();
-            pcbCap.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            ManejoBD bd = new ManejoBD();
-            if (bd.insertarFoto(ms))
-            {
-                if (bd.modificar("UPDATE aspirantes SET etapa = 4 WHERE id = '"+ Variables.aspiranteId +"'"))
-                {
-                    MessageBox.Show("Se ha concluido satisfactoriamente la etapa 4 del registro", "Correcto",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TerminarFuenteDeVideo();
-                    pcbCap.Image = null;
-                    this.Hide();
-                    Escaneo con = null;
-                    con = Escaneo.Instancia();
-                    con.MdiParent = AdminMDI.ActiveForm;
-                    con.MdiParent = UserMDI.ActiveForm;
-                    con.Show();
-                }
-            }
-        }
-        
         private void btnIniCam_Click(object sender, EventArgs e)
         {
             if (ExistenDispositivos)
@@ -107,13 +110,6 @@ namespace SistemadeControlPoliciaco
             }
             else
                 lblEstado.Text = "Error: No se encuentra dispositivo.";
-        }
-
-        private void Foto_Load(object sender, EventArgs e)
-        {
-            btnCapturar.Enabled = false;
-            btnRepetir.Enabled = false;
-            btnSig.Enabled = false; 
         }
 
         private void btnCapturar_Click(object sender, EventArgs e)
@@ -139,7 +135,7 @@ namespace SistemadeControlPoliciaco
                 FuenteDeVideo = new VideoCaptureDevice(DispositivosDeVideo[cmbDis.SelectedIndex].MonikerString);
                 FuenteDeVideo.NewFrame += new NewFrameEventHandler(video_NuevoFrame);
                 FuenteDeVideo.Start();
-                lblEstado.Text = " Ejecutando dispositivo";
+                lblEstado.Text = "Ejecutando dispositivo";
                 cmbDis.Enabled = false;
                 btnCapturar.Enabled = true;
                 btnRepetir.Enabled = false;
@@ -150,24 +146,61 @@ namespace SistemadeControlPoliciaco
             {
                 lblEstado.Text = "Error: No se encuentra dispositivo.";
             }
-                
+
             pcbCap.Image = null;
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void btnSig_Click(object sender, EventArgs e)
         {
-            TerminarFuenteDeVideo();
-            this.Close();
+            MemoryStream ms = new MemoryStream();
+            pcbCap.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ManejoBD bd = new ManejoBD();
+            if (bd.editarFoto(ms))
+            {  
+                    MessageBox.Show("Se ha editado correctamente la foto", "Correcto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TerminarFuenteDeVideo();
+                    pcbCap.Image = null;
+                    this.Close();
+                    EditarAspirante con = null;
+                    con = EditarAspirante.Instancia();
+                    con.MdiParent = AdminMDI.ActiveForm;
+                    con.MdiParent = UserMDI.ActiveForm;
+                    con.Show();
+            }
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            EditarAspirante con = null;
+            con = EditarAspirante.Instancia();
+            con.MdiParent = AdminMDI.ActiveForm;
+            con.MdiParent = UserMDI.ActiveForm;
+            con.Show();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            pcbCap.Image = null;
-            this.Hide();
+            this.Close();
         }
 
-        private void cmbDis_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnDomicilio_Click(object sender, EventArgs e)
         {
-
+            EditarDomicilio ed = null;
+            ed = EditarDomicilio.Instancia();
+            ed.MdiParent = AdminMDI.ActiveForm;
+            ed.Show();
+            this.Close();
         }
+
+        private void btnPersonales_Click(object sender, EventArgs e)
+        {
+            EditarPersonal ec = null;
+            ec = EditarPersonal.Instancia();
+            ec.MdiParent = AdminMDI.ActiveForm;
+            ec.Show();
+            this.Close();
+        }  
     }
 }

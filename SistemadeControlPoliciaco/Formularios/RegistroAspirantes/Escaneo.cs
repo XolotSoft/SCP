@@ -33,9 +33,19 @@ namespace SistemadeControlPoliciaco
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se ha concluido satisfactoriamente el proceso de registro", "Correcto",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            MemoryStream ms = new MemoryStream();
+            pcbHuella.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ManejoBD bd = new ManejoBD();
+            if (bd.insertarHue(ms))
+            {
+                if (bd.modificar("UPDATE aspirantes SET etapa = 5 WHERE id = '" + Variables.aspiranteId + "'"))
+                {
+                    MessageBox.Show("Se ha concluido satisfactoriamente el proceso de registro", "Correcto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                }
+            }
+            
         }
 
 
@@ -65,8 +75,8 @@ namespace SistemadeControlPoliciaco
                     switch (Enroller.TemplateStatus)
                     {
                         case DPFP.Processing.Enrollment.Status.Ready:
-                            MessageBox.Show("Se ha generado corrctamente el templete de la huella", "Correcto",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Se ha generado correctamente el templete de la huella", "Correcto",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                             MemoryStream ms = new MemoryStream();
                             huella.Stop(Capturador);
                             Enroller.Template.Serialize(ms);
@@ -97,7 +107,9 @@ namespace SistemadeControlPoliciaco
 
         public void OnReaderConnect(object Capture, string ReaderSerialNumber)
         {
-
+            HuellaEspera he = null;
+            he = HuellaEspera.Instancia();
+            he.Show();
         }
 
         public void OnReaderDisconnect(object Capture, string ReaderSerialNumber)

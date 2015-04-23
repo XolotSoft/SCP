@@ -41,6 +41,8 @@ namespace SistemadeControlPoliciaco
             }
             else
             {
+                MessageBox.Show("Selecciona un archivo PDF para validar tu nivel de estudios", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OpenFileDialog ofd = new OpenFileDialog();
                 ofd.Filter = "PDF File|*.pdf";
                 if (ofd.ShowDialog() == DialogResult.OK)
