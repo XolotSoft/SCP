@@ -18,7 +18,7 @@ namespace SistemadeControlPoliciaco
         }
         public static SqlConnection desconectar()
         {
-            SqlConnection conectado = new SqlConnection(@"Data Source=GUILLERMO\MSSQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
+            SqlConnection conectado = new SqlConnection(@"Data Source=GUILERMO\MSSQLEXPRESS;Initial Catalog=policiacoDB;Integrated Security=True");
             conectado.Close();
             return conectado;
         }

@@ -42,6 +42,46 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPCtlXTypeLibNET" version="1.6.1.0" publicKeyToken="C0C98F712D5392A7" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPCtlXWrapperNET" version="1.6.1.0" publicKeyToken="C0C98F712D5392A7" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPDevNET" version="1.6.1.0" publicKeyToken="696774C42EE28C57" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPEngNET" version="1.6.1.0" publicKeyToken="7FE76E7ADF19964B" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPGuiNET" version="1.6.1.0" publicKeyToken="D4F4A0BD9C559145" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPShrNET" version="1.6.1.0" publicKeyToken="D902FE275A8D6CF2" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPShrXTypeLibNET" version="1.6.1.0" publicKeyToken="C0C98F712D5392A7" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DPFPVerNET" version="1.6.1.0" publicKeyToken="4DE0A9C4DCC83984" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AForge.Video.dll" size="13824">
       <assemblyIdentity name="AForge.Video" version="2.1.0.0" publicKeyToken="CBFB6E07D173C401" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -66,14 +106,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemadeControlPoliciaco.exe" size="1597352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemadeControlPoliciaco.exe" size="1759144">
       <assemblyIdentity name="SistemadeControlPoliciaco" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OUCTVSV0TxgDju6tm6QMRQSc31YcnuOWtkIjRQaqCEU=</dsig:DigestValue>
+        <dsig:DigestValue>D9qrgs7ZitV6JLQc51ujzXRAcUltAE/cCOtem8B4tfQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
