@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHuella = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pcbHuella = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,19 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnHuella
-            // 
-            this.btnHuella.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuella.Image = global::SistemadeControlPoliciaco.Properties.Resources._1412453866_search_16;
-            this.btnHuella.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuella.Location = new System.Drawing.Point(294, 442);
-            this.btnHuella.Name = "btnHuella";
-            this.btnHuella.Size = new System.Drawing.Size(110, 35);
-            this.btnHuella.TabIndex = 65;
-            this.btnHuella.Text = "Huella     ";
-            this.btnHuella.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuella.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -136,7 +122,7 @@
             // 
             this.lblApe.AutoSize = true;
             this.lblApe.BackColor = System.Drawing.Color.Transparent;
-            this.lblApe.Location = new System.Drawing.Point(10, 451);
+            this.lblApe.Location = new System.Drawing.Point(139, 451);
             this.lblApe.Name = "lblApe";
             this.lblApe.Size = new System.Drawing.Size(73, 16);
             this.lblApe.TabIndex = 57;
@@ -144,7 +130,7 @@
             // 
             // txbApe
             // 
-            this.txbApe.Location = new System.Drawing.Point(84, 448);
+            this.txbApe.Location = new System.Drawing.Point(213, 448);
             this.txbApe.Name = "txbApe";
             this.txbApe.Size = new System.Drawing.Size(185, 22);
             this.txbApe.TabIndex = 56;
@@ -161,6 +147,7 @@
             this.btnFil.Text = "Filtrar    ";
             this.btnFil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFil.UseVisualStyleBackColor = true;
+            this.btnFil.Click += new System.EventHandler(this.btnFil_Click);
             // 
             // btnCer
             // 
@@ -174,6 +161,7 @@
             this.btnCer.Text = "Cerrar   ";
             this.btnCer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCer.UseVisualStyleBackColor = true;
+            this.btnCer.Click += new System.EventHandler(this.btnCer_Click);
             // 
             // btnEdi
             // 
@@ -184,20 +172,26 @@
             this.btnEdi.Name = "btnEdi";
             this.btnEdi.Size = new System.Drawing.Size(110, 35);
             this.btnEdi.TabIndex = 53;
-            this.btnEdi.Text = "Editar    ";
+            this.btnEdi.Text = "Eliminar";
             this.btnEdi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdi.UseVisualStyleBackColor = true;
+            this.btnEdi.Click += new System.EventHandler(this.btnEdi_Click_1);
             // 
             // dgvAsp
             // 
+            this.dgvAsp.AllowUserToAddRows = false;
+            this.dgvAsp.AllowUserToDeleteRows = false;
+            this.dgvAsp.AllowUserToResizeColumns = false;
+            this.dgvAsp.AllowUserToResizeRows = false;
             this.dgvAsp.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvAsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsp.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvAsp.Location = new System.Drawing.Point(12, 121);
             this.dgvAsp.Name = "dgvAsp";
+            this.dgvAsp.ReadOnly = true;
             this.dgvAsp.Size = new System.Drawing.Size(651, 283);
             this.dgvAsp.TabIndex = 66;
-            this.dgvAsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsp_CellContentClick);
+            this.dgvAsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsp_CellClick);
             // 
             // EliminarAspirantes
             // 
@@ -206,7 +200,6 @@
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.delaspirantes;
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.dgvAsp);
-            this.Controls.Add(this.btnHuella);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pcbHuella);
             this.Controls.Add(this.label2);
@@ -237,7 +230,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnHuella;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pcbHuella;
         private System.Windows.Forms.Label label2;

@@ -32,16 +32,15 @@
             this.btnFil = new System.Windows.Forms.Button();
             this.btnCer = new System.Windows.Forms.Button();
             this.btnEdi = new System.Windows.Forms.Button();
-            this.txbApe = new System.Windows.Forms.TextBox();
-            this.lblApe = new System.Windows.Forms.Label();
             this.lblMen = new System.Windows.Forms.Label();
             this.lblSelec = new System.Windows.Forms.Label();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pcbHuella = new System.Windows.Forms.PictureBox();
+            this.txbApe = new System.Windows.Forms.TextBox();
+            this.lblApe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnHuella = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).BeginInit();
@@ -108,25 +107,6 @@
             this.btnEdi.UseVisualStyleBackColor = true;
             this.btnEdi.Click += new System.EventHandler(this.btnCon_Click);
             // 
-            // txbApe
-            // 
-            this.txbApe.Location = new System.Drawing.Point(82, 438);
-            this.txbApe.Name = "txbApe";
-            this.txbApe.Size = new System.Drawing.Size(185, 22);
-            this.txbApe.TabIndex = 23;
-            this.txbApe.TextChanged += new System.EventHandler(this.txbApe_TextChanged);
-            this.txbApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbApe_KeyPress);
-            // 
-            // lblApe
-            // 
-            this.lblApe.AutoSize = true;
-            this.lblApe.BackColor = System.Drawing.Color.Transparent;
-            this.lblApe.Location = new System.Drawing.Point(8, 441);
-            this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(73, 16);
-            this.lblApe.TabIndex = 26;
-            this.lblApe.Text = "Busqueda:";
-            // 
             // lblMen
             // 
             this.lblMen.AutoSize = true;
@@ -189,30 +169,35 @@
             this.pcbHuella.TabIndex = 49;
             this.pcbHuella.TabStop = false;
             // 
+            // txbApe
+            // 
+            this.txbApe.Location = new System.Drawing.Point(212, 438);
+            this.txbApe.Name = "txbApe";
+            this.txbApe.Size = new System.Drawing.Size(185, 22);
+            this.txbApe.TabIndex = 23;
+            this.txbApe.TextChanged += new System.EventHandler(this.txbApe_TextChanged);
+            this.txbApe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbApe_KeyPress);
+            // 
+            // lblApe
+            // 
+            this.lblApe.AutoSize = true;
+            this.lblApe.BackColor = System.Drawing.Color.Transparent;
+            this.lblApe.Location = new System.Drawing.Point(138, 441);
+            this.lblApe.Name = "lblApe";
+            this.lblApe.Size = new System.Drawing.Size(73, 16);
+            this.lblApe.TabIndex = 26;
+            this.lblApe.Text = "Busqueda:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(689, 102);
+            this.label3.Location = new System.Drawing.Point(691, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 50;
             this.label3.Text = "Fotografía";
-            // 
-            // btnHuella
-            // 
-            this.btnHuella.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuella.Image = global::SistemadeControlPoliciaco.Properties.Resources._1412453866_search_16;
-            this.btnHuella.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuella.Location = new System.Drawing.Point(292, 432);
-            this.btnHuella.Name = "btnHuella";
-            this.btnHuella.Size = new System.Drawing.Size(110, 35);
-            this.btnHuella.TabIndex = 51;
-            this.btnHuella.Text = "Huella     ";
-            this.btnHuella.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuella.UseVisualStyleBackColor = true;
-            this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
             // 
             // EditarAspirante
             // 
@@ -220,7 +205,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.modaspirantes;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.btnHuella);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pcbHuella);
             this.Controls.Add(this.label2);
@@ -256,15 +240,14 @@
         private System.Windows.Forms.Button btnFil;
         private System.Windows.Forms.Button btnCer;
         private System.Windows.Forms.Button btnEdi;
-        private System.Windows.Forms.TextBox txbApe;
-        private System.Windows.Forms.Label lblApe;
         private System.Windows.Forms.Label lblMen;
         private System.Windows.Forms.Label lblSelec;
         private System.Windows.Forms.PictureBox pcbFoto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pcbHuella;
+        private System.Windows.Forms.TextBox txbApe;
+        private System.Windows.Forms.Label lblApe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnHuella;
     }
 }

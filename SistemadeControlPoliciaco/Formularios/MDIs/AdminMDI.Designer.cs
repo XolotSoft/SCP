@@ -51,6 +51,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.recursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,8 @@
             this.aspirantesToolStripMenuItem,
             this.activosToolStripMenuItem,
             this.calculadoraToolStripMenuItem,
-            this.ventanasToolStripMenuItem});
+            this.ventanasToolStripMenuItem,
+            this.recursosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
             this.menuStrip1.Name = "menuStrip1";
@@ -252,6 +254,13 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // recursosToolStripMenuItem
+            // 
+            this.recursosToolStripMenuItem.Name = "recursosToolStripMenuItem";
+            this.recursosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.recursosToolStripMenuItem.Text = "Recursos";
+            this.recursosToolStripMenuItem.Click += new System.EventHandler(this.recursosToolStripMenuItem_Click);
+            // 
             // AdminMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +313,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tslHora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem continuarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recursosToolStripMenuItem;
     }
 }

@@ -26,7 +26,7 @@ namespace SistemadeControlPoliciaco
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = this.MdiChildren.FirstOrDefault(x => x is Domicilio || x is Contacto || x is Foto || x is Escaneo);
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is Domicilio || x is Contacto || x is Foto || x is Escaneo || x is ContinuarRegistro);
             if (frm != null) frm.Close();
             Registro reg = null;
             reg = Registro.Instancia();
@@ -36,7 +36,7 @@ namespace SistemadeControlPoliciaco
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = this.MdiChildren.FirstOrDefault(x => x is EditarDomicilio || x is EditarContacto || x is EditarPersonal || x is EditarAspirante || x is EditarFoto || x is EditarHuella );
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is EditarDomicilio || x is EditarContacto || x is EditarPersonal || x is EditarAspirante || x is EditarFoto || x is EditarHuella || x is ContinuarRegistro);
             if (frm != null) frm.Close();
             EditarAspirante reg = null;
             reg = EditarAspirante.Instancia();
@@ -123,6 +123,13 @@ namespace SistemadeControlPoliciaco
             cr = ContinuarRegistro.Instancia();
             cr.MdiParent = this;
             cr.Show();
+        }
+
+        private void recursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recursos re = new Recursos();
+            re.MdiParent = this;
+            re.Show();
         }
     }
 }
