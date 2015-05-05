@@ -127,7 +127,21 @@ namespace SistemadeControlPoliciaco
 
         private void recursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Recursos re = new Recursos();
+            
+        }
+
+        private void asignarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Asignar re = null;
+            re = Asignar.Instancia();
+            re.MdiParent = this;
+            re.Show();
+        }
+
+        private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Actividades re = null;
+            re = Actividades.Instancia();
             re.MdiParent = this;
             re.Show();
         }

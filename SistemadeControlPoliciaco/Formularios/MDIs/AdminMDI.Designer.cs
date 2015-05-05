@@ -48,10 +48,12 @@
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.recursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -231,6 +233,16 @@
             this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.ventanasToolStripMenuItem.Text = "Ventanas";
             // 
+            // recursosToolStripMenuItem
+            // 
+            this.recursosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignarToolStripMenuItem,
+            this.actividadesToolStripMenuItem});
+            this.recursosToolStripMenuItem.Name = "recursosToolStripMenuItem";
+            this.recursosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.recursosToolStripMenuItem.Text = "Recursos";
+            this.recursosToolStripMenuItem.Click += new System.EventHandler(this.recursosToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -254,12 +266,19 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // recursosToolStripMenuItem
+            // asignarToolStripMenuItem
             // 
-            this.recursosToolStripMenuItem.Name = "recursosToolStripMenuItem";
-            this.recursosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.recursosToolStripMenuItem.Text = "Recursos";
-            this.recursosToolStripMenuItem.Click += new System.EventHandler(this.recursosToolStripMenuItem_Click);
+            this.asignarToolStripMenuItem.Name = "asignarToolStripMenuItem";
+            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asignarToolStripMenuItem.Text = "Asignar";
+            this.asignarToolStripMenuItem.Click += new System.EventHandler(this.asignarToolStripMenuItem_Click);
+            // 
+            // actividadesToolStripMenuItem
+            // 
+            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.actividadesToolStripMenuItem.Text = "Actividades";
+            this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
             // AdminMDI
             // 
@@ -314,5 +333,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem continuarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recursosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
     }
 }

@@ -98,10 +98,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogoAspirantes.cs">
+    <Compile Include="Formularios\Recursos\Asignar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CatalogoAspirantes.Designer.cs">
+    <Compile Include="Formularios\Recursos\Asignar.Designer.cs">
+      <DependentUpon>Asignar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CatalogoAspirantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CatalogoAspirantes.Designer.cs">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Conexion.cs" />
@@ -160,10 +166,10 @@
     <Compile Include="Extras\Calculadora.Designer.cs">
       <DependentUpon>Calculadora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\ElinarAspirantes\EliminarAspirantes.cs">
+    <Compile Include="Formularios\EliminarAspirantes\EliminarAspirantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\ElinarAspirantes\EliminarAspirantes.Designer.cs">
+    <Compile Include="Formularios\EliminarAspirantes\EliminarAspirantes.Designer.cs">
       <DependentUpon>EliminarAspirantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EditarAspirantes\EditarPersonal.cs">
@@ -268,13 +274,16 @@
     </Compile>
     <Compile Include="Clases\Rutas.cs" />
     <Compile Include="Clases\Texto.cs" />
-    <Compile Include="Recursos.cs">
+    <Compile Include="Formularios\Recursos\Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recursos.Designer.cs">
-      <DependentUpon>Recursos.cs</DependentUpon>
+    <Compile Include="Formularios\Recursos\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CatalogoAspirantes.resx">
+    <EmbeddedResource Include="Formularios\Recursos\Asignar.resx">
+      <DependentUpon>Asignar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CatalogoAspirantes.resx">
       <DependentUpon>CatalogoAspirantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarAspirantes\EditarHuella.resx">
@@ -298,7 +307,7 @@
     <EmbeddedResource Include="Formularios\PerfilAspirantes\Cuestionario_Perfil.resx">
       <DependentUpon>Cuestionario_Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ElinarAspirantes\EliminarAspirantes.resx">
+    <EmbeddedResource Include="Formularios\EliminarAspirantes\EliminarAspirantes.resx">
       <DependentUpon>EliminarAspirantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarAspirantes\EditarPersonal.resx">
@@ -359,8 +368,8 @@
     <EmbeddedResource Include="Formularios\MDIs\UserMDI.resx">
       <DependentUpon>UserMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recursos.resx">
-      <DependentUpon>Recursos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Recursos\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -174,6 +174,33 @@ pasAsp varchar(MAX) NULL,
 ptcAsp varchar(MAX) NULL,
 escAsp varchar(MAX) NULL,
 mafAsp varchar(MAX) NULL);
-
-
-
+go
+CREATE TABLE departamentos(
+id int identity PRIMARY KEY NOT NULL,
+nombre varchar(50));
+go
+INSERT INTO departamentos(nombre)VALUES
+('Recursos Humanos'),
+('Finanzas'),
+('Sistemas'),
+('Marketing'),
+('Operaciones');
+go
+CREATE TABLE recursos(
+id int identity PRIMARY KEY NOT NULL,
+departamento_id int,
+monto decimal(9,2),
+CONSTRAINT FK_recursos_departamentos_cascade
+FOREIGN KEY (departamento_id)
+REFERENCES departamentos(id)
+ON DELETE CASCADE);
+go
+CREATE TABLE actividades(
+id int identity PRIMARY KEY NOT NULL,
+departamento_id int,
+monto decimal(9,2),
+fecha date,
+CONSTRAINT FK_actividades_departamentos_cascade
+FOREIGN KEY (departamento_id)
+REFERENCES departamentos(id)
+ON DELETE CASCADE);
