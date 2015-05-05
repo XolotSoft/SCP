@@ -189,7 +189,8 @@ go
 CREATE TABLE recursos(
 id int identity PRIMARY KEY NOT NULL,
 departamento_id int,
-monto decimal(9,2),
+total decimal(9,2),
+restante decimal(9,2),
 CONSTRAINT FK_recursos_departamentos_cascade
 FOREIGN KEY (departamento_id)
 REFERENCES departamentos(id)
@@ -198,6 +199,7 @@ go
 CREATE TABLE actividades(
 id int identity PRIMARY KEY NOT NULL,
 departamento_id int,
+actividad varchar(255),
 monto decimal(9,2),
 fecha date,
 CONSTRAINT FK_actividades_departamentos_cascade
