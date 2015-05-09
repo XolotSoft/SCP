@@ -69,9 +69,9 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                    apellidoPat = texto.Capital(txbApePat.Text);
-                    apellidoMat = texto.Capital(txbApeMat.Text);
-                    nombre = texto.Capital(txbNom.Text);
+                    apellidoPat = texto.Capital(txbApePat.Text.Trim());
+                    apellidoMat = texto.Capital(txbApeMat.Text.Trim());
+                    nombre = texto.Capital(txbNom.Text.Trim());
                     fechaNac = dtpFecNac.Text;
                     entidadFed = cbxEntFed.Text;
                     sexo = cbxSex.Text;
@@ -198,14 +198,21 @@ namespace SistemadeControlPoliciaco
 
         }
         #region Genera RFC CURP
+        private void calcular()
+        {
+            string paterno = txbApePat.Text.Trim();
+            string materno = txbApeMat.Text.Trim();
+            string nombre = txbNom.Text.Trim();
+            txbCurAut.Text = cup.Curp(paterno, materno, nombre, dtpFecNac, cbxEntFed, cbxSex);
+            txbRfcAut.Text = cup.Rfc(paterno, materno, nombre, dtpFecNac);
+        }
+
         private void txbApePat_Leave(object sender, EventArgs e)
         {
-   
+            
             if (txbApePat.Text.Length > 1)
             {
-               
-                txbCurAut.Text = cup.Curp(txbApePat.Text,txbApeMat.Text,txbNom.Text,dtpFecNac,cbxEntFed,cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+                calcular();
             }
             else
 
@@ -216,9 +223,8 @@ namespace SistemadeControlPoliciaco
 
         private void txbApeMat_Leave(object sender, EventArgs e)
         {
-           
-                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+
+            calcular();
             
         }
 
@@ -226,38 +232,36 @@ namespace SistemadeControlPoliciaco
         {
             if (txbNom.Text.Length > 0)
             {
-                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+                calcular();
             }
         }
 
         private void dtpFecNac_Leave(object sender, EventArgs e)
         {
-            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-             txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+            calcular();
         }
          
         private void cbxSex_Leave(object sender, EventArgs e)
         {
             if (cbxSex.SelectedIndex != 0)
             {
-              txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+                calcular();
             }
         }
 
         private void cbxEntFed_Leave(object sender, EventArgs e)
         {
-            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+            calcular();
         }
 
         private void txbCurHom_Leave(object sender, EventArgs e)
         {
-            txbCurHom.Text = txbCurHom.Text.ToUpper();
+            txbCurHom.Text = txbCurHom.Text.ToUpper().Trim();
         }
 
         private void txbRfcHom_Leave(object sender, EventArgs e)
         {
-            txbRfcHom.Text = txbRfcHom.Text.ToUpper();
+            txbRfcHom.Text = txbRfcHom.Text.ToUpper().Trim();
         }
         #endregion
 
