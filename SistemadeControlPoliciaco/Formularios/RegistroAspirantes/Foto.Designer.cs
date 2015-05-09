@@ -40,6 +40,7 @@
             this.lblDisp = new System.Windows.Forms.Label();
             this.cmbDis = new System.Windows.Forms.ComboBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCamara)).BeginInit();
             this.SuspendLayout();
@@ -175,12 +176,25 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(690, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 29);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Etapa 4";
+            // 
             // Foto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.fotografia;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblDisp);
             this.Controls.Add(this.lblEstado);
@@ -220,5 +234,6 @@
         private System.Windows.Forms.Label lblDisp;
         private System.Windows.Forms.ComboBox cmbDis;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label18;
     }
 }

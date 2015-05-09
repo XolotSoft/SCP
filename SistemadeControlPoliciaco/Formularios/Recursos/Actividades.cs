@@ -23,6 +23,10 @@ namespace SistemadeControlPoliciaco
         }
 
         private static Actividades frmInst = null;
+        ManejoBD departamentos = new ManejoBD();
+        ManejoBD insertar = new ManejoBD();
+        ManejoBD recursos = new ManejoBD();
+        double porcentaje, restante;
 
         public static Actividades Instancia()
         {
@@ -36,16 +40,11 @@ namespace SistemadeControlPoliciaco
 
         private void Recursos_Load(object sender, EventArgs e)
         {
-            ManejoBD bd = new ManejoBD();
-            bd.buscarg("*", "departamentos");
-            cmbArea.DataSource = bd.ds.Tables[0].DefaultView;
+            departamentos.buscarg("*", "departamentos");
             cmbArea.DisplayMember = "nombre";
             cmbArea.ValueMember = "id";
-            ManejoBD ac = new ManejoBD();
-            string sql = "SELECT d.nombre AS Departamento, a.actividad AS Actividad, a.monto AS Monto, a.fecha AS Fecha FROM actividades a INNER JOIN departamentos d ON a.departamento_id = d.id";
-            ac.buscar(sql);
-            dgvActividades.DataSource = ac.ds.Tables[0];
-
+            cmbArea.DataSource = departamentos.ds.Tables[0].DefaultView;
+            CargarDgv();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -60,76 +59,85 @@ namespace SistemadeControlPoliciaco
             {
                 string area = Convert.ToString(cmbArea.SelectedValue);
                 string actividad = txbActividad.Text;
-                string monto = txbMonto.Text;
+                double monto = Convert.ToDouble(txbMonto.Text);
                 string fecha = dtpFecha.Text;
-               
-                ManejoBD insertar = new ManejoBD();
+
                 string sql = "INSERT INTO actividades(departamento_id,actividad,monto,fecha) VALUES('"+area+"','"+actividad+"','"+monto+"','"+fecha+"')";
-                if (insertar.insertarq(sql))
+                Recursos(area);
+                MessageBox.Show(Convert.ToString(restante));
+                if (monto < restante)
                 {
-                    ManejoBD res = new ManejoBD();
-                    string sql0 = "SELECT * FROM recursos WHERE departamento_id = "+area+"";
-                    res.buscar(sql0);
-                    string actual = Convert.ToString(Convert.ToDouble( res.ds.Tables[0].Rows[0]["restante"]) - Convert.ToDouble(monto));
-                    string sql1 = "UPDATE recursos SET restante ="+ actual +" WHERE departamento_id = "+ area +" ";
-                    if (insertar.modificar(sql1))
+                    if (insertar.insertarq(sql))
                     {
-                        MessageBox.Show("");
-                        string id = Convert.ToString(cmbArea.SelectedValue);
-                        if (id != "System.Data.DataRowView")
+                        Recursos(area);
+                        string actual = Convert.ToString(restante - monto);
+                        string sql1 = "UPDATE recursos SET restante =" + actual + " WHERE departamento_id = " + area + " ";
+                        if (insertar.modificar(sql1))
                         {
-                            ManejoBD rec = new ManejoBD();
-                            rec.buscare("*", "recursos", "id", id);
-                            if (rec.ds.Tables[0].Rows.Count > 0)
-                            {
-                                double por = (Convert.ToDouble(rec.ds.Tables[0].Rows[0]["restante"]) * 100) / Convert.ToDouble(rec.ds.Tables[0].Rows[0]["total"]);
-                                lblRestante.Text = "$ " + Convert.ToString(rec.ds.Tables[0].Rows[0]["restante"]);
-                                lblPorcentaje.Text = Convert.ToString(por) + "%";
-                            }
+                            MessageBox.Show("Se ha registrado correctamente la actividad");
+                            Actualizar(area);
+                            CargarDgv();
+                            Limpiar.txb(this);
+                            txbActividad.Focus();
+                            if (porcentaje <= 20) MessageBox.Show("Te queda el 20% o menos de recursos","Atencion");  
                         }
-                        ManejoBD ac = new ManejoBD();
-                        string sql2 = "SELECT d.nombre AS Departamento, a.actividad AS Actividad, a.monto AS Monto, a.fecha AS Fecha FROM actividades a INNER JOIN departamentos d ON a.departamento_id = d.id";
-                        ac.buscar(sql2);
-                        dgvActividades.DataSource = ac.ds.Tables[0];
-                        txbActividad.Text = "";
-                        txbMonto.Text = "";
-                        txbActividad.Focus();
+                        else
+                        {
+                            MessageBox.Show("No se registro la actividad");
+                        }
                     }
                     else
                     {
-
+                        MessageBox.Show("No se registro la actividad");
                     }
                 }
                 else
                 {
-
+                    MessageBox.Show("No alcanza el presupuesto");
                 }
+                
             }
             else
             {
-
+                MessageBox.Show("No dejes campos vacios");
             }
         }
 
         private void cmbArea_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            string id = Convert.ToString(cmbArea.SelectedValue);
+            Actualizar(id);
         }
 
-        private void cmbArea_SelectedValueChanged(object sender, EventArgs e)
+        private void Actualizar(string id)
         {
-            string id = Convert.ToString(cmbArea.SelectedValue);
-            if (id != "System.Data.DataRowView")
+            Recursos(id);               
+            lblRestante.Text = "$ " + Convert.ToString(restante);
+            lblPorcentaje.Text = Convert.ToString(porcentaje) + "%";
+            
+        }
+        private void CargarDgv()
+        {
+            ManejoBD ac = new ManejoBD();
+            string sql = "SELECT d.nombre AS Departamento, a.actividad AS Actividad, a.monto AS Monto, a.fecha AS Fecha"+
+                " FROM actividades a INNER JOIN departamentos d ON a.departamento_id = d.id";
+            ac.buscar(sql);
+            dgvActividades.DataSource = ac.ds.Tables[0];
+        }
+
+        private void Recursos(string id)
+        {
+            recursos.ds.Clear();
+            recursos.buscare("*", "recursos", "departamento_id", id);
+            if (recursos.ds.Tables[0].Rows.Count > 0)
             {
-                ManejoBD rec = new ManejoBD();
-                rec.buscare("*", "recursos", "departamento_id", id);
-                if (rec.ds.Tables[0].Rows.Count > 0)
-                {
-                    double por = (Convert.ToDouble(rec.ds.Tables[0].Rows[0]["restante"]) * 100)/ Convert.ToDouble(rec.ds.Tables[0].Rows[0]["total"]);
-                    lblRestante.Text = "$ " + Convert.ToString(rec.ds.Tables[0].Rows[0]["restante"]);
-                    lblPorcentaje.Text = Convert.ToString(por) + "%";
-                }
-                
+                porcentaje = Math.Round((Convert.ToDouble(recursos.ds.Tables[0].Rows[0]["restante"]) * 100) / Convert.ToDouble(recursos.ds.Tables[0].Rows[0]["total"]), 2);
+                restante = Convert.ToDouble(recursos.ds.Tables[0].Rows[0]["restante"]);
+            }
+            else
+            {
+                porcentaje = 0;
+                restante = 0;
             }
         }
     }

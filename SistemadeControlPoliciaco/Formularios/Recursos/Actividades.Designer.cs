@@ -124,7 +124,6 @@
             this.cmbArea.Size = new System.Drawing.Size(224, 24);
             this.cmbArea.TabIndex = 6;
             this.cmbArea.SelectedIndexChanged += new System.EventHandler(this.cmbArea_SelectedIndexChanged);
-            this.cmbArea.SelectedValueChanged += new System.EventHandler(this.cmbArea_SelectedValueChanged);
             // 
             // txbActividad
             // 
