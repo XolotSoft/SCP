@@ -16,6 +16,7 @@ namespace SistemadeControlPoliciaco
         public Escaneo()
         {
             InitializeComponent();
+            BTNregistrar.Enabled = false;
         }
         Huella huella = new Huella();
         private static Escaneo frmInst = null;
@@ -80,6 +81,7 @@ namespace SistemadeControlPoliciaco
                             MemoryStream ms = new MemoryStream();
                             huella.Stop(Capturador);
                             Enroller.Template.Serialize(ms);
+                            BTNregistrar.Enabled = true;
                             break;
 
                         case DPFP.Processing.Enrollment.Status.Failed:
@@ -130,5 +132,6 @@ namespace SistemadeControlPoliciaco
             }
         }
         #endregion
+
     }
 }

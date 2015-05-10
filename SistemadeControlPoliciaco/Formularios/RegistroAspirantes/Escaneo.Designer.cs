@@ -175,6 +175,7 @@
             this.Name = "Escaneo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escaneo";
+            this.Load += new System.EventHandler(this.Escaneo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).EndInit();
             this.ResumeLayout(false);
