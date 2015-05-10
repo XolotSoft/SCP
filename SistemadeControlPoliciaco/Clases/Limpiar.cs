@@ -29,6 +29,17 @@ namespace SistemadeControlPoliciaco
                     ctrl.ResetText();
                 }
             }
-        }    
+        }
+   
+        public static void trim(Form frm)
+        {
+            foreach (Control ctrl in frm.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ctrl.Text.Trim();
+                }
+            }
+        }
     }
 }
