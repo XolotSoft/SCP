@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SistemadeControlPoliciaco.exe.manifest" size="7256">
+    <dependentAssembly dependencyType="install" codebase="SistemadeControlPoliciaco.exe.manifest" size="7327">
       <assemblyIdentity name="SistemadeControlPoliciaco.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XkTogfoFeee1rV7R+aiuM1+DK4axngxrvlVXvYfNhbs=</dsig:DigestValue>
+        <dsig:DigestValue>0NbYspFgV0TsCW7iIZN9MeAy1UvrYc8kFPfAdL3JmHs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

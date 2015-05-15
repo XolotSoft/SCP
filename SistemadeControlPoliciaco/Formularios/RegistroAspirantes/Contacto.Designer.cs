@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbxPue = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -197,12 +198,25 @@
             this.cbxPue.Size = new System.Drawing.Size(170, 24);
             this.cbxPue.TabIndex = 2;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(690, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 29);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Etapa 3";
+            // 
             // Contacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.contacto;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.cbxPue);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -243,5 +257,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxPue;
+        private System.Windows.Forms.Label label18;
     }
 }

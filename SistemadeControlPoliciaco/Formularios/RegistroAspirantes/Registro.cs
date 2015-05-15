@@ -15,6 +15,9 @@ namespace SistemadeControlPoliciaco
         public Registro()
         {
             InitializeComponent();
+            DoubleBuffered = true;
+            dtpFecNac.Format = DateTimePickerFormat.Custom;
+            dtpFecNac.CustomFormat = "yyyy-MM-dd";
         }
 
         string apellidoPat, apellidoMat, nombre ,fechaNac, entidadFed, sexo, curp, rfc, estadoCivil;
@@ -23,7 +26,7 @@ namespace SistemadeControlPoliciaco
         ManejoBD aspirante = new ManejoBD();
         ManejoBD bd = new ManejoBD();
         Texto texto = new Texto();
-        Claves cup = new Claves();
+        Claves claves = new Claves();
 
         public static Registro Instancia()
         {
@@ -44,8 +47,7 @@ namespace SistemadeControlPoliciaco
             Limpiar.txb(this);
             Limpiar.cbx(this);
             dtpFecNac.ResetText();
-            dtpFecNac.Format = DateTimePickerFormat.Custom;
-            dtpFecNac.CustomFormat = "yyyy-MM-dd";
+            cbxSex.SelectedIndex = 0;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -69,9 +71,9 @@ namespace SistemadeControlPoliciaco
             {
                 if (Vacio.cbx(this))
                 {
-                    apellidoPat = texto.Capital(txbApePat.Text);
-                    apellidoMat = texto.Capital(txbApeMat.Text);
-                    nombre = texto.Capital(txbNom.Text);
+                    apellidoPat = txbApePat.Text;
+                    apellidoMat = txbApeMat.Text;
+                    nombre = txbNom.Text;
                     fechaNac = dtpFecNac.Text;
                     entidadFed = cbxEntFed.Text;
                     sexo = cbxSex.Text;
@@ -198,66 +200,63 @@ namespace SistemadeControlPoliciaco
 
         }
         #region Genera RFC CURP
+        private void calcular()
+        {
+            string paterno = txbApePat.Text.Trim();
+            string materno = txbApeMat.Text.Trim();
+            string nombre = txbNom.Text.Trim();
+            txbCurAut.Text = claves.Curp(paterno, materno, nombre, dtpFecNac, cbxEntFed, cbxSex);
+            txbRfcAut.Text = claves.Rfc(paterno, materno, nombre, dtpFecNac);
+        }
+
         private void txbApePat_Leave(object sender, EventArgs e)
         {
-   
-            if (txbApePat.Text.Length > 1)
-            {
-               
-                txbCurAut.Text = cup.Curp(txbApePat.Text,txbApeMat.Text,txbNom.Text,dtpFecNac,cbxEntFed,cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
-            }
-            else
-
-            {
-                txbApePat.Focus();
-            }
+            calcular();
+            txbApePat.Text = texto.Capital(txbApePat.Text.Trim());
         }
 
         private void txbApeMat_Leave(object sender, EventArgs e)
         {
-           
-                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
-            
+            calcular();
+            txbApeMat.Text = texto.Capital(txbApeMat.Text.Trim());
         }
 
         private void txbNom_Leave(object sender, EventArgs e)
         {
-            if (txbNom.Text.Length > 0)
+            if (txbNom.Text.Trim().Length > 0)
             {
-                txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-                txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+                calcular();
+                txbNom.Text = texto.Capital(txbNom.Text.Trim());
             }
         }
 
         private void dtpFecNac_Leave(object sender, EventArgs e)
         {
-            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
-             txbRfcAut.Text = cup.Rfc(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac);
+            calcular();
         }
          
         private void cbxSex_Leave(object sender, EventArgs e)
         {
-            if (cbxSex.SelectedIndex != 0)
+            if (cbxSex.SelectedIndex != -1)
             {
-              txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+                calcular();
             }
         }
 
         private void cbxEntFed_Leave(object sender, EventArgs e)
         {
-            txbCurAut.Text = cup.Curp(txbApePat.Text, txbApeMat.Text, txbNom.Text, dtpFecNac, cbxEntFed, cbxSex);
+            calcular();
         }
 
         private void txbCurHom_Leave(object sender, EventArgs e)
         {
-            txbCurHom.Text = txbCurHom.Text.ToUpper();
+            if (txbCurHom.Text.Trim().Length > 1) txbCurHom.Text = txbCurHom.Text.ToUpper().Trim();
+            else txbCurHom.Focus();
         }
 
         private void txbRfcHom_Leave(object sender, EventArgs e)
         {
-            txbRfcHom.Text = txbRfcHom.Text.ToUpper();
+            txbRfcHom.Text = txbRfcHom.Text.ToUpper().Trim();
         }
         #endregion
 

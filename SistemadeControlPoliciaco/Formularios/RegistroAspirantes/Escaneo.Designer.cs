@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pcbHuella = new System.Windows.Forms.PictureBox();
             this.BTNcerrar = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).BeginInit();
             this.SuspendLayout();
@@ -140,12 +141,25 @@
             this.BTNcerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTNcerrar.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(690, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 29);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Etapa 5";
+            // 
             // Escaneo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemadeControlPoliciaco.Properties.Resources.Escaneo;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.BTNcerrar);
             this.Controls.Add(this.pcbHuella);
             this.Controls.Add(this.pictureBox1);
@@ -161,6 +175,7 @@
             this.Name = "Escaneo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escaneo";
+            this.Load += new System.EventHandler(this.Escaneo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHuella)).EndInit();
             this.ResumeLayout(false);
@@ -178,5 +193,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pcbHuella;
         private System.Windows.Forms.Button BTNcerrar;
+        private System.Windows.Forms.Label label18;
     }
 }

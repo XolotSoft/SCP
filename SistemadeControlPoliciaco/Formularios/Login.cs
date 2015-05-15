@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace SistemadeControlPoliciaco
 {
@@ -30,7 +31,7 @@ namespace SistemadeControlPoliciaco
             string passStored;
             string userInput = txbUser.Text;
             string passInput = txbPass.Text;
-            string salt = "hbxOlOt23";
+            string salt = ConfigurationManager.AppSettings["salt"];
             passInput= Hash.sha1(Hash.md5(passInput + salt));
             string sql = "SELECT * FROM Usuarios WHERE username ='" + userInput + "' AND password ='" + passInput + "'";
 
