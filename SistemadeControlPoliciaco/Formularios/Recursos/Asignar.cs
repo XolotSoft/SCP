@@ -31,8 +31,15 @@ namespace SistemadeControlPoliciaco
 
         private void Asignar_Load(object sender, EventArgs e)
         {
+            dgvAsignaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAsignaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAsignaciones.RowHeadersVisible = false;
             ManejoBD bd = new ManejoBD();
+            ManejoBD db = new ManejoBD();
             bd.buscarg("*", "departamentos");
+            string sql3 = "SELECT d.nombre as Departamento, r.total as 'Cantidad Asignada' from recursos r INNER JOIN departamentos d ON d.id = r.departamento_id";
+            db.buscar(sql3);
+            dgvAsignaciones.DataSource = db.ds.Tables[0];  
             cmbArea.DataSource = bd.ds.Tables[0].DefaultView;
             cmbArea.DisplayMember = "nombre";
             cmbArea.ValueMember = "id";
@@ -53,6 +60,9 @@ namespace SistemadeControlPoliciaco
                 if (bd.insertarq(sql))
                 {
                     MessageBox.Show("Se asignaron correctamente los recursos", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Actividades acti = new Actividades();
+                    acti.Show();
+
                 }
                 else
                 {

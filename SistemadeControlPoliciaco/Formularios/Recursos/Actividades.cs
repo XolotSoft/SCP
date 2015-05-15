@@ -62,7 +62,7 @@ namespace SistemadeControlPoliciaco
                 string actividad = txbActividad.Text;
                 string monto = txbMonto.Text;
                 string fecha = dtpFecha.Text;
-               
+
                 ManejoBD insertar = new ManejoBD();
                 string sql = "INSERT INTO actividades(departamento_id,actividad,monto,fecha) VALUES('"+area+"','"+actividad+"','"+monto+"','"+fecha+"')";
                 if (insertar.insertarq(sql))
@@ -74,7 +74,25 @@ namespace SistemadeControlPoliciaco
                     string sql1 = "UPDATE recursos SET restante ="+ actual +" WHERE departamento_id = "+ area +" ";
                     if (insertar.modificar(sql1))
                     {
-                        MessageBox.Show("");
+                        string ida = Convert.ToString(cmbArea.SelectedValue);
+                        ManejoBD re = new ManejoBD();
+                        re.buscare("*", "recursos", "departamento_id", ida);
+                        if (re.ds.Tables[0].Rows.Count > 0)
+                        {
+                            double por = (Convert.ToDouble(re.ds.Tables[0].Rows[0]["restante"]) * 100) / Convert.ToDouble(re.ds.Tables[0].Rows[0]["total"]);
+                            if (por <= 20)
+                            {
+                               MessageBox.Show("Atencion,Cuidado te queda el 20% o menos del recurso asignado");
+                               //lblRestante.Text = "$ " + Convert.ToString(re.ds.Tables[0].Rows[0]["restante"]);
+                               lblPorcentaje.Text = Convert.ToString(por) + "%";
+                            }
+                            else
+                            {
+                                lblRestante.Text = "$ " + Convert.ToString(re.ds.Tables[0].Rows[0]["restante"]);
+                                lblPorcentaje.Text = Convert.ToString(por) + "%";
+                            }
+                        }
+                        MessageBox.Show("Se ha registrado correctamente la operacion");
                         string id = Convert.ToString(cmbArea.SelectedValue);
                         if (id != "System.Data.DataRowView")
                         {
@@ -126,6 +144,7 @@ namespace SistemadeControlPoliciaco
                 if (rec.ds.Tables[0].Rows.Count > 0)
                 {
                     double por = (Convert.ToDouble(rec.ds.Tables[0].Rows[0]["restante"]) * 100)/ Convert.ToDouble(rec.ds.Tables[0].Rows[0]["total"]);
+             
                     lblRestante.Text = "$ " + Convert.ToString(rec.ds.Tables[0].Rows[0]["restante"]);
                     lblPorcentaje.Text = Convert.ToString(por) + "%";
                 }
